@@ -79,3 +79,10 @@ mongod
 *.ntvs*
 *.njsproj
 *.sln
+
+
+# Heroku
+# =========
+npm-debug.log
+.DS_Store
+/*.env
