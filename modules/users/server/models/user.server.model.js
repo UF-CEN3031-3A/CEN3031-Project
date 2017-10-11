@@ -94,10 +94,6 @@ var UserSchema = new Schema({
   salt: {
     type: String
   },
-  profileImageURL: {
-    type: String,
-    default: 'modules/users/client/img/profile/default.png'
-  },
   provider: {
     type: String,
     required: 'Provider is required'
@@ -107,9 +103,9 @@ var UserSchema = new Schema({
   roles: {
     type: [{
       type: String,
-      enum: ['user', 'admin']
+      enum: ['admin']
     }],
-    default: ['user'],
+    default: ['admin'],
     required: 'Please provide at least one role'
   },
   updated: {
