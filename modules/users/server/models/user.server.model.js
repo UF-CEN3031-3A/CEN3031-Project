@@ -15,7 +15,6 @@ var mongoose = require('mongoose'),
 
 owasp.config(config.shared.owasp);
 
-
 /**
  * A Validation function for local strategy properties
  */
@@ -72,7 +71,7 @@ var UserSchema = new Schema({
     type: String,
     index: {
       unique: true,
-      spare: true,
+      spare: true
     },
     lowercase: true,
     trim: true,

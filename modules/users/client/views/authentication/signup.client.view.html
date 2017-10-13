@@ -15,7 +15,7 @@
         <!-- Add new links to site management here !-->
       </ul>
     </nav>
-    <div class="col-sm-9 col-md-8 settings-view">
+    <div class="col-sm-9 col-md-5 settings-view">
       <div class="page-header">
         <form name="vm.userForm" ng-submit="vm.signup(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
           <fieldset>
@@ -65,8 +65,6 @@
             </div>
             <div class="text-center form-group">
               <button type="submit" class="btn btn-primary">Sign up</button>
-              &nbsp; or&nbsp;
-              <a ui-sref="authentication.signin" class="show-signup">Sign in</a>
             </div>
           </fieldset>
         </form>

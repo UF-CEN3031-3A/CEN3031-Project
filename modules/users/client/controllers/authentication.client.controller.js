@@ -38,6 +38,8 @@
       UsersService.userSignup(vm.credentials)
         .then(onUserSignupSuccess)
         .catch(onUserSignupError);
+
+      $window.location.href = "/admin/users"
     }
 
     function signin(isValid) {

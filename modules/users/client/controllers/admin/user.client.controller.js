@@ -14,21 +14,7 @@
     vm.user = user;
     vm.remove = remove;
     vm.update = update;
-    vm.new = new_user;
     vm.isContextUserSelf = isContextUserSelf;
-
-    function new_user(user) {
-
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'vm.userForm');
-
-        return false;
-      }
-
-      UsersService.userSignup(vm.credentials)
-        .then(onUserSignupSuccess)
-        .catch(onUserSignupError);
-    }
 
     function remove(user) {
       if ($window.confirm('Are you sure you want to delete this user?')) {
