@@ -7,10 +7,10 @@
       <ul class="nav nav-pills nav-stacked">
         <li ui-sref-active="active">
           <!-- articles edit page!-->
-          <a ui-sref="admin.articles.list">Edit Blog Posts</a>
+          <a ui-sref="admin.articles.list">Blog</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="admin.users">Edit Users</a>
+          <a ui-sref="admin.users">Users</a>
         </li>
         <!-- Add new links to site management here !-->
       </ul>
@@ -18,10 +18,10 @@
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
         <div class="row">
-          <div class="col-md-4">
-            <h1>Users</h1>
+          <div class="col-md-9" style="margin-top: 2em">
+            <a class="btn btn-primary" ui-sref="authentication.signup()">New User</a>
           </div>
-          <div class="col-md-4" style="margin-top: 2em">
+          <div class="col-md-3" style="margin-top: 2em">
             <input class="form-control col-md-4" type="text" ng-model="vm.search" placeholder="Search" ng-change="vm.figureOutItemsToDisplay()" />
           </div>
         </div>

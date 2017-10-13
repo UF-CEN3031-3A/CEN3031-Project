@@ -16,6 +16,37 @@ var noReturnUrls = [
 ];
 
 /**
+ * newusersetup
+ */
+exports.newUserSetup = function (req, res) {
+
+};
+
+/**
+ * newuser
+ */
+exports.newUser = function (req, res) {
+  // For security measurement we remove the roles from the req.body object
+  delete req.body.roles;
+
+  // Init user and add missing fields
+  var user = new User(req.body);
+  user.provider = 'local';
+  user.displayName = user.firstName + ' ' + user.lastName;
+  console.log(user)
+  // Then save the user
+  user.save(function (err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      return res.status(200).send("User Saved!")
+    }
+  });
+};
+
+/**
  * Signup
  */
 exports.signup = function (req, res) {

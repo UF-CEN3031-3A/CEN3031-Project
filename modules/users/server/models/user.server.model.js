@@ -72,7 +72,7 @@ var UserSchema = new Schema({
     type: String,
     index: {
       unique: true,
-      sparse: true // For this to work on a previously indexed field, the index must be dropped & the application restarted.
+      spare: true,
     },
     lowercase: true,
     trim: true,
@@ -103,7 +103,7 @@ var UserSchema = new Schema({
   roles: {
     type: [{
       type: String,
-      enum: ['admin']
+      enum: ['user', 'admin']
     }],
     default: ['admin'],
     required: 'Please provide at least one role'
