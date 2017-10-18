@@ -1,0 +1,18 @@
+<section>
+  <div class="page-header">
+    <h1>Faqs</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="faq in vm.faqs" ui-sref="faqs.view({ faqId: faq._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="faq.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="faq.user" ng-bind="faq.user.displayName"></span>
+        <span ng-if="!faq.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="faq.title"></h4>
+      <p class="list-group-item-text" ng-bind="faq.content"></p>
+    </a>
+  </div>
+</section>
