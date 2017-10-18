@@ -6,17 +6,19 @@
     <nav class="col-sm-3 col-md-3">
       <ul class="nav nav-pills nav-stacked">
         <li ui-sref-active="active">
-          <a ui-sref="settings.profile">Edit Profile</a>
+          <!-- articles edit page!-->
+          <a ui-sref="admin.articles.list">Blog</a>
+        </li>
+        <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
+          <a ui-sref="admin.users">Users</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="settings.picture">Change Profile Picture</a>
+          <a ui-sref="settings.profile">Profile</a>
         </li>
         <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
           <a ui-sref="settings.password">Change Password</a>
         </li>
-        <li ui-sref-active="active">
-          <a ui-sref="settings.accounts">Manage Social Accounts</a>
-        </li>
+        <!-- Add new links to site management here !-->
       </ul>
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">

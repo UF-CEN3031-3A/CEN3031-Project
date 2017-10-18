@@ -13,16 +13,3 @@
   right: 10px;
   top: 10px;
 }
-.user-profile-picture {
-  max-height: 150px;
-  min-height: 150px;
-}
-.social-button {
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-.social-button:hover {
-  opacity: 0.65;
-}
