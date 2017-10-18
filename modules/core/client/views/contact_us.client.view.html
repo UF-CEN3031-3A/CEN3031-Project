@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/core.css">
+  </head>
+  <body ng-app="site">
+
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-6 text-center">
+    <div class="contact-section container-fluid">
+          <h2>Contact Us</h2>
+          <p>Feel free to shout us by feeling the contact form or visiting our social network sites like Fackebook and Twitter.</p>
+          <div class="row">
+            <div class="col-md-12">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label for="exampleInputName2">Name</label>
+                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail2">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+                <div class="form-group ">
+                  <label for="exampleInputText">Your Message</label>
+                 <textarea  class="form-control" placeholder="Description"></textarea> 
+                </div>
+                <button type="submit" class="btn btn-default">Send Message</button>
+              </form>
+
+              <hr>
+                <h3>Our Social Sites</h3>
+              <ul class="list-inline banner-social-buttons">
+                <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter"> <span class="network-name">Twitter</span></i></a></li>
+                <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a></li>
+                <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-youtube-play"> <span class="network-name">Youtube</span></i></a></li>
+              </ul>
+            </div>
+          </div>
+    </div>
+  </div>
+
+<div class="col-md-6 text-center">
+
+<h2>FAQ</h2>
+<div class="panel-group text-center" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Collapsible Group 1</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Collapsible Group 2</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Collapsible Group 3</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+      <!-- <div ui-view></div> -->
+    </div>
+    <!-- Dependencies -->
+    <script src="/public/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/public/lib/angular/angular.js"></script>
+    <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <!-- Application Source Code -->
+    <script src="app/app.js"></script>
+    <script src="app/config/listings.client.routes.js"></script>
+    <script src="app/factories/listings.client.factory.js"></script>
+    <script src="app/controllers/listings.client.controller.js"></script>
+  </body>
+</html>
