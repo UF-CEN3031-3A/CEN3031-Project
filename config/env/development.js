@@ -83,6 +83,7 @@ module.exports = {
           email: 'admin@localhost.com',
           firstName: 'Admin',
           lastName: 'Local',
+          password: 'test',
           roles: ['admin', 'user']
         }
       }, {
