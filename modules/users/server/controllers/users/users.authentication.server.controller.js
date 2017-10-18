@@ -42,8 +42,8 @@ exports.signup = function (req, res) {
       });
     } else {
       return res.redirect('/admin/users').send({
-        message: "User created!"
-      })
+        message: 'User created!'
+      });
     }
   });
 };

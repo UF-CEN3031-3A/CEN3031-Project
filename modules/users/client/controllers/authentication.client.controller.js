@@ -39,7 +39,7 @@
         .then(onUserSignupSuccess)
         .catch(onUserSignupError);
 
-      $window.location.href = "/admin/users"
+      $window.location.href = '/admin/users';
     }
 
     function signin(isValid) {
