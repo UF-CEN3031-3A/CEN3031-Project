@@ -1,12 +1,15 @@
-CEN3031 Group 3A Project
+# t*Rez
 
-Tess is adding a line.
+## Starting the server in development
+`npm start`
 
-Mike is adding a line.
+## Seeding the server 
+```
+$ npm install -g gulp
+% gulp seed
+```
 
-Matthew Avellanosa
+Seeding will provide some example blog posts, FAQ, and press releases for you to build off of. It will also create an admin user which you can use to login to the admin panel.
 
-Juan Gonzalez
-
-
-Hello, world.
+## Admin Access
+The url `http://localhost/authentication/signin` will take you to the signin page. Likewise, `http://localhost/admin/users` will take you to the admin panel if you are already logged in. From here you can manage most aspects of the website content as well as user management and password management. 
