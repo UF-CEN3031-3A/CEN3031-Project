@@ -6,7 +6,7 @@
 ## Seeding the server 
 ```
 $ npm install -g gulp
-% gulp seed
+$ gulp seed
 ```
 
 Seeding will provide some example blog posts, FAQ, and press releases for you to build off of. It will also create an admin user which you can use to login to the admin panel.
