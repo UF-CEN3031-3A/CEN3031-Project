@@ -26,12 +26,15 @@
         <li ui-sref-active="active">
           <a ui-sref="settings.password">Change Password</a>
         </li>
+        <li ui-sref-active="active">
+          <a href="/api/auth/signout" target="_self">Signout</a>
+        </li>
         <!-- Add new links to site management here !-->
       </ul>
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
-        <h1>{{vm.article._id ? 'Edit Article' : 'New Article'}}</h1>
+        <h1>{{vm.article._id ? 'Edit Blog Post' : 'New Blog Post'}}</h1>
       </div>
       <div class="pull-right">
         <a ng-show="vm.article._id" class="btn btn-primary" ng-click="vm.remove()">
