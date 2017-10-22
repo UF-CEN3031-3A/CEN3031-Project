@@ -9,13 +9,21 @@
           <!-- articles edit page!-->
           <a ui-sref="admin.articles.list">Blog</a>
         </li>
-        <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
+        <li ui-sref-active="active">
+          <!-- releases edit page!-->
+          <a ui-sref="admin.releases.list">Press Releases</a>
+        </li>
+        <li ui-sref-active="active">
+          <!-- releases edit page!-->
+          <a ui-sref="admin.faqs.list">FAQ</a>
+        </li>
+        <li ui-sref-active="active">
           <a ui-sref="admin.users">Users</a>
         </li>
         <li ui-sref-active="active">
           <a ui-sref="settings.profile">Profile</a>
         </li>
-        <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
+        <li ui-sref-active="active">
           <a ui-sref="settings.password">Change Password</a>
         </li>
         <!-- Add new links to site management here !-->
