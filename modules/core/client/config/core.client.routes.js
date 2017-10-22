@@ -67,6 +67,13 @@
         data: {
           ignoreState: true
         }
+      })
+      .state('about_us', {
+        url: '/about',
+        templateUrl: '/modules/core/client/views/about_us.client.view.html',
+        data: {
+          ignoreState: true
+        }
       });
   }
 }());
