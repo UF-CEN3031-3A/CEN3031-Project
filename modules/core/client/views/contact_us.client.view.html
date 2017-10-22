@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <base href="/">
-    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/core.css">
   </head>
-  <body ng-app="site">
+  <body>
 
 
   <nav class="navbar navbar-default">
@@ -63,70 +62,17 @@
 <div class="col-md-6 text-center">
 
 <h2>FAQ</h2>
-<div class="panel-group text-center" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Collapsible Group 1</a>
-      </h4>
+
+<uib-accordion close-others="oneAtATime">
+    <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
     </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Collapsible Group 2</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Collapsible Group 3</a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-</div>
-</div>
+</uib-accordion>
 
 </div>
 </div>
+</div>
+</div>
+</body>
 
-
-
-      <!-- <div ui-view></div> -->
-    </div>
-    <!-- Dependencies -->
-    <script src="/public/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/public/lib/angular/angular.js"></script>
-    <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-    <!-- Application Source Code -->
-    <script src="app/app.js"></script>
-    <script src="app/config/listings.client.routes.js"></script>
-    <script src="app/factories/listings.client.factory.js"></script>
-    <script src="app/controllers/listings.client.controller.js"></script>
-  </body>
 </html>
