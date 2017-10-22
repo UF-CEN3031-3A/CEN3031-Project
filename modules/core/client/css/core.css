@@ -41,3 +41,10 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+
+/* This is for the contact pages*/
+.form-control{
+    display:table;
+    margin:auto;
+    max-width: 700px;
+}

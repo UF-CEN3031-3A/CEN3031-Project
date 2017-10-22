@@ -74,6 +74,17 @@
         data: {
           ignoreState: true
         }
+      })
+       .state('contact_us', {
+        url: '/contact',
+        templateUrl: '/modules/core/client/views/contact_us.client.view.html',
+        data: {
+          ignoreState: true
+        },
+        controller: 'ContactUsController',
+        controllerAs: 'vm'
+
+
       });
   }
 }());
