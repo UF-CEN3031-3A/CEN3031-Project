@@ -24,7 +24,7 @@
 
     // If user is signed in then redirect back home
     if (vm.authentication.user) {
-      $location.path('/');
+      $location.path('/admin/users');
     }
 
     function signup(isValid) {
@@ -38,6 +38,8 @@
       UsersService.userSignup(vm.credentials)
         .then(onUserSignupSuccess)
         .catch(onUserSignupError);
+
+      $window.location.href = '/admin/users';
     }
 
     function signin(isValid) {

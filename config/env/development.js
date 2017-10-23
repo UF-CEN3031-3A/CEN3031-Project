@@ -83,6 +83,7 @@ module.exports = {
           email: 'admin@localhost.com',
           firstName: 'Admin',
           lastName: 'Local',
+          password: 'test',
           roles: ['admin', 'user']
         }
       }, {
@@ -115,6 +116,24 @@ module.exports = {
         data: {
           title: 'First Article',
           content: 'This is a seeded Article for the development environment'
+        }
+      }]
+    }, {
+      model: 'Faq',
+      options: {
+        // Override log results setting at the
+        // collection level.
+        logResults: true
+      },
+      skip: {
+        // Skip collection when this query returns results.
+        // e.g. {}: Only seeds collection when it is empty.
+        when: {} // Mongoose qualified query
+      },
+      docs: [{
+        data: {
+          title: 'Frequently Asked Question #1',
+          content: 'This is a frequently asked question'
         }
       }]
     }]

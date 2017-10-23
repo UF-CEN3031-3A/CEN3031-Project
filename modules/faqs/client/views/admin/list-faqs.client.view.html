@@ -1,0 +1,63 @@
+
+
+<section>
+  <div class="page-header">
+    <h1>Admin</h1>
+  </div>
+  <div class="row">
+    <nav class="col-sm-3 col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li ui-sref-active="active">
+          <!-- articles edit page!-->
+          <a ui-sref="admin.articles.list">Blog</a>
+        </li>
+        <li ui-sref-active="active">
+          <!-- releases edit page!-->
+          <a ui-sref="admin.releases.list">Press Releases</a>
+        </li>
+        <li ui-sref-active="active">
+          <!-- releases edit page!-->
+          <a ui-sref="admin.faqs.list">FAQ</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.users">Users</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="settings.profile">Profile</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="settings.password">Change Password</a>
+        </li>
+        <li ui-sref-active="active">
+          <a href="/api/auth/signout" target="_self">Signout</a>
+        </li>
+        <!-- Add new links to site management here !-->
+      </ul>
+    </nav>
+    <div class="col-sm-9 col-md-8 settings-view">
+      <div class="page-header">
+          <h1>
+            Faqs
+            <a class="btn btn-primary pull-right" data-ui-sref="admin.faqs.create">
+              <i class="glyphicon glyphicon-plus"></i>
+            </a>
+          </h1>
+        </div>
+        <div class="list-group">
+          <a data-ng-repeat="faq in vm.faqs" data-ui-sref="admin.faqs.edit({faqId: faq._id})" class="list-group-item">
+            <small class="list-group-item-text">
+              Posted on
+              <span data-ng-bind="faq.created | date:'mediumDate'"></span>
+              by
+              <span ng-if="faq.user" ng-bind="faq.user.displayName"></span>
+              <span ng-if="!faq.user">Deleted User</span>
+            </small>
+            <h4 class="list-group-item-heading" data-ng-bind="faq.title"></h4>
+            <p class="list-group-item-text" data-ng-bind="faq.content"></p>
+          </a>
+        </div>
+        <div class="alert alert-warning text-center" data-ng-if="faqs.$resolved && !faqs.length">
+          No faqs yet, why don't you <a data-ui-sref="admin.faqs.create">create one</a>?
+      </div>
+  </div>
+</section>
