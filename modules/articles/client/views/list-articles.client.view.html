@@ -8,7 +8,6 @@
   <div class="page-header text-center">
     <h1>t*Rez Blog</h1>
   </div>
-
   <div class="col-md-8">
     <uib-accordion close-others="vm.oneAtATime">
       <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" ng-repeat="article in vm.articles">
@@ -20,7 +19,7 @@
             by
             <span ng-if="article.user" ng-bind="article.user.displayName"></span>
             <span ng-if="!article.user">Deleted User</span>
-            
+
             <span class="pull-right" ng-bind="article.created | date:'mediumDate'"></span>
             <span class="pull-right">Posted on &nbsp;</span>
           </uib-accordion-heading>
@@ -34,10 +33,9 @@
           <p class="list-group-item-text" ng-bind="article.content"></p>
         </a>
       </div>
-    </uib-accordion>  
+    </uib-accordion>
 </div>
-
-<div class="panel panel-info col-md-4">
+  <div class="panel panel-info col-md-4">
     <div class="panel-heading">
       Archive
     </div>
