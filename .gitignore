@@ -86,3 +86,5 @@ mongod
 npm-debug.log
 .DS_Store
 /*.env
+
+config/env/development.js
