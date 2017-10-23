@@ -34,29 +34,29 @@
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
-        <h1>{{vm.release._id ? 'Edit Press Release' : 'New Press Release'}}</h1>
+        <h1>{{vm.faq._id ? 'Edit Faq' : 'New Faq'}}</h1>
       </div>
       <div class="pull-right">
-        <a ng-show="vm.release._id" class="btn btn-primary" ng-click="vm.remove()">
+        <a ng-show="vm.faq._id" class="btn btn-primary" ng-click="vm.remove()">
           <i class="glyphicon glyphicon-trash"></i>
         </a>
       </div>
       <div class="col-md-12">
-        <form name="vm.form.releaseForm" class="form-horizontal" ng-submit="vm.save(vm.form.releaseForm.$valid)" novalidate>
+        <form name="vm.form.faqForm" class="form-horizontal" ng-submit="vm.save(vm.form.faqForm.$valid)" novalidate>
           <fieldset>
             <div class="form-group" show-errors>
               <label class="control-label" for="title">Title</label>
-              <input name="title" type="text" ng-model="vm.release.title" id="title" class="form-control" placeholder="Title" required autofocus>
-              <div ng-messages="vm.form.releaseForm.title.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Release title is required.</p>
+              <input name="title" type="text" ng-model="vm.faq.title" id="title" class="form-control" placeholder="Title" required autofocus>
+              <div ng-messages="vm.form.faqForm.title.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Faq title is required.</p>
               </div>
             </div>
             <div class="form-group">
               <label class="control-label" for="content">Content</label>
-              <textarea name="content" data-ng-model="vm.release.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+              <textarea name="content" data-ng-model="vm.faq.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-default">{{vm.release._id ? 'Update' : 'Create'}}</button>
+              <button type="submit" class="btn btn-default">{{vm.faq._id ? 'Update' : 'Create'}}</button>
             </div>
           </fieldset>
         </form>

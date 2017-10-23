@@ -119,7 +119,7 @@ module.exports = {
         }
       }]
     }, {
-      model: 'Release',
+      model: 'Faq',
       options: {
         // Override log results setting at the
         // collection level.
@@ -132,8 +132,8 @@ module.exports = {
       },
       docs: [{
         data: {
-          title: 'First Press Release',
-          content: 'This is a seeded Press Release for the development environment'
+          title: 'Frequently Asked Question #1',
+          content: 'This is a frequently asked question'
         }
       }]
     }]

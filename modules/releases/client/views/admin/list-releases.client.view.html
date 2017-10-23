@@ -8,8 +8,16 @@
     <nav class="col-sm-3 col-md-3">
       <ul class="nav nav-pills nav-stacked">
         <li ui-sref-active="active">
+          <!-- articles edit page!-->
+          <a ui-sref="admin.articles.list">Blog</a>
+        </li>
+        <li ui-sref-active="active">
           <!-- releases edit page!-->
-          <a ui-sref="admin.releases.list">Blog</a>
+          <a ui-sref="admin.releases.list">Press Releases</a>
+        </li>
+        <li ui-sref-active="active">
+          <!-- releases edit page!-->
+          <a ui-sref="admin.faqs.list">FAQ</a>
         </li>
         <li ui-sref-active="active">
           <a ui-sref="admin.users">Users</a>
@@ -20,13 +28,16 @@
         <li ui-sref-active="active">
           <a ui-sref="settings.password">Change Password</a>
         </li>
+        <li ui-sref-active="active">
+          <a href="/api/auth/signout" target="_self">Signout</a>
+        </li>
         <!-- Add new links to site management here !-->
       </ul>
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
           <h1>
-            Releases
+            Press Releases
             <a class="btn btn-primary pull-right" data-ui-sref="admin.releases.create">
               <i class="glyphicon glyphicon-plus"></i>
             </a>
