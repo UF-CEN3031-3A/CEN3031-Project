@@ -75,7 +75,7 @@
           ignoreState: true
         }
       })
-       .state('contact_us', {
+      .state('contact_us', {
         url: '/contact',
         templateUrl: '/modules/core/client/views/contact_us.client.view.html',
         data: {
@@ -83,8 +83,6 @@
         },
         controller: 'ContactUsController',
         controllerAs: 'vm'
-
-
       });
   }
 }());
