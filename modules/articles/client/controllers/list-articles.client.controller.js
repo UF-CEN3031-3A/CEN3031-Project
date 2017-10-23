@@ -11,5 +11,33 @@
     var vm = this;
 
     vm.articles = ArticlesService.query();
-  }
+
+    vm.oneAtATime = true;
+
+    vm.years = [
+    	{number: '2017'},
+    	{number: '2016'},
+    	{number: '2015'}
+    ];
+
+    vm.months = [
+    	{name: 'January'},
+    	{name: 'February'},
+    	{name: 'March'},
+    	{name: 'April'},
+    	{name: 'May'},
+    	{name: 'June'},
+    	{name: 'July'},
+    	{name: 'August'},
+    	{name: 'September'},
+    	{name: 'October'},
+    	{name: 'November'},
+    	{name: 'December'}
+    ];
+
+    vm.status = {
+    	isCustomHeaderOpen: false, 
+    	isFirstOpen: true, 
+    	isFirstDisabled: false};
+  	}
 }());

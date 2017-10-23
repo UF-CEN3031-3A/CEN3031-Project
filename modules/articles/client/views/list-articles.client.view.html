@@ -5,70 +5,62 @@
 <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
 
 <section>
-  <div class="page-header">
+  <div class="page-header text-center">
     <h1>t*Rez Blog</h1>
   </div>
 
-  <div id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="card">
-    <div class="card-header" role="tab" id="headingOne">
-      <h5 class="mb-0">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
+  <div class="col-md-8">
+    <uib-accordion close-others="vm.oneAtATime">
+      <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" ng-repeat="article in vm.articles">
+        <a class="list-group-item">
+          <uib-accordion-heading>
+            <i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}">
+            </i>
+            {{article.title}}
+            by
+            <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+            <span ng-if="!article.user">Deleted User</span>
+            
+            <span class="pull-right" ng-bind="article.created | date:'mediumDate'"></span>
+            <span class="pull-right">Posted on &nbsp;</span>
+          </uib-accordion-heading>
+          <small class="list-group-item-text">
+            Posted on
+            <span ng-bind="article.created | date:'mediumDate'"></span>
+            by
+            <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+            <span ng-if="!article.user">Deleted User</span>
+          </small>
+          <p class="list-group-item-text" ng-bind="article.content"></p>
         </a>
-      </h5>
-    </div>
-
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-      <div class="card-block">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab" id="headingTwo">
-      <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </a>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="card-block">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab" id="headingThree">
-      <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </a>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="card-block">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
+    </uib-accordion>  
 </div>
 
+<div class="panel panel-info col-md-4">
+    <div class="panel-heading">
+      Archive
+    </div>
+    <div class="panel-body">
+      <uib-accordion>
+        <div uib-accordion-group class="panel-default" ng-repeat="year in vm.years">
+          <uib-accordion-heading>
+            <i class="glyphicon glyphicon-folder-open">
+            </i>
+            {{year.number}}
 
-
-
-  <div class="list-group">
-    <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="article.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-        <span ng-if="!article.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" ng-bind="article.title"></h4>
-      <p class="list-group-item-text" ng-bind="article.content"></p>
-    </a>
-  </div>
+          </uib-accordion-heading>
+          <uib-accordion>
+            <div uib-accordion-group class="panel-default" ng-repeat="month in vm.months">
+              <uib-accordion-heading>
+                <i class="glyphicon glyphicon-folder-open">
+                </i>
+                {{month.name}}
+              </uib-accordion-heading>
+            </div>
+          </uib-accordion>
+        </div>
+      </uib-accordion>
+    </div>
+</div>
 </section>
