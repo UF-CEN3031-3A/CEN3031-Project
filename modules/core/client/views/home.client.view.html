@@ -1,6 +1,5 @@
 <body>
 
-
   <!-- Site banner? -->
   <section>
     <div class="jumbotron text-center" style="background-color: gold">
@@ -14,6 +13,39 @@
   </section>
 
   <!-- News articles/related images -->
+  <section>
+    <h2 class="text-center" style="background-color: gold">News</h2>
+    <div class="row">
+      <div class="col-sm-offset-1 col-md-4">
+        <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
+      </div>
+      <div class="col-md-offset-1 col-md-6">
+        <uib-accordion close-others="oneAtATime">
+          <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
+            <h4>Author: {{group.author}}</h4>
+            {{group.content}}
+          </div>
+        </uib-accordion>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-1 col-md-6">
+        <uib-accordion close-others="oneAtATime">
+          <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
+            <h4>Author: {{group.author}}</h4>
+            {{group.content}}
+          </div>
+        </uib-accordion>
+      </div>
+      <div class="col-sm-offset-1 col-md-4">
+        <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Old code for news stuff -->
+  <!-- 
   <section>
     <h2 class="text-center" style="background-color: gold">News</h2>
     <div class="row">
@@ -52,74 +84,7 @@
       </div>
     </div>   
   </section>
-
-
-  <!-- Stuff I was testing to get accordions to work. Can probably delete later -->
-  <!--
-  <section>
-    <h1 class="text-center" style="background-color: gold"> Accordion test using just bootstrap </h1>
-
-    <div class="container">
-      <h2>Accordion Example</h2>
-      <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-            </h4>
-          </div>
-          <div id="collapse1" class="panel-collapse collapse in">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
-            </h4>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-            </h4>
-          </div>
-          <div id="collapse3" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-      </div> 
-    </div>
-  </section>
-
-
-  <section>
-    <h3 style="background-color: gold">Accordion using ng-model</h3>
-
-
-    <div>
-      <input ng-model=collapse type=color> title
-      <div ng-show=collapse>
-        only show when checkbox is clicked
-      </div>
-    </div>
-  </section>
-
-
-  -->
-
-
+ -->
     
   <!-- Dependencies -->
       
