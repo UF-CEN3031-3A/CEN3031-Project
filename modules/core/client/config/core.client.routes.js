@@ -75,6 +75,13 @@
           ignoreState: true
         }
       })
+      .state('business_inquiry', {
+        url: '/business_inquiry',
+        templateUrl: '/modules/core/client/views/business_inquiry.client.view.html',
+        data: {
+          ignoreState: true
+        }
+      })
       .state('contact_us', {
         url: '/contact',
         templateUrl: '/modules/core/client/views/contact_us.client.view.html',
