@@ -48,3 +48,53 @@ a:hover .header-profile-image {
     margin:auto;
     max-width: 700px;
 }
+
+/* Our stuff */
+
+.subtitle {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3%;
+  width: 100%;
+  height: 100%;
+}
+
+/* Gradient banner */
+.gradient-banner {
+  background: linear-gradient(231deg, #f7ff48, #ff3371);
+  background-size: 400% 400%;
+
+  -webkit-animation: gradient-banner 30s ease infinite;
+  -moz-animation: gradient-banner 30s ease infinite;
+  animation: gradient-banner 30s ease infinite;
+}
+
+@-webkit-keyframes gradient-banner {
+  0%{background-position:84% 0%}
+  50%{background-position:17% 100%}
+  100%{background-position:84% 0%}
+}
+@-moz-keyframes gradient-banner {
+  0%{background-position:84% 0%}
+  50%{background-position:17% 100%}
+  100%{background-position:84% 0%}
+}
+@keyframes gradient-banner { 
+  0%{background-position:84% 0%}
+  50%{background-position:17% 100%}
+  100%{background-position:84% 0%}
+}
