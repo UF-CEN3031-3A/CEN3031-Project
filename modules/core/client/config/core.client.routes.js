@@ -68,13 +68,6 @@
           ignoreState: true
         }
       })
-      .state('about_us', {
-        url: '/about',
-        templateUrl: '/modules/core/client/views/about_us.client.view.html',
-        data: {
-          ignoreState: true
-        }
-      })
       .state('business_inquiry', {
         url: '/business_inquiry',
         templateUrl: '/modules/core/client/views/business_inquiry.client.view.html',

@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <div class="page-header">
     <h1>Abouts</h1>
   </div>
@@ -16,3 +16,140 @@
     </a>
   </div>
 </section>
+
+-->
+
+<!--ABOOUT US PAGE ORIGINALLY CREATED AND DEVELOPED BY MICHAEL LEVECQUE-->
+<!--Initial: 10/19/2017 from 2:20 PM to 6:50 PM-->
+<!--Updated:  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- Experimentation with styling-->
+  <style>
+    button.accordion {
+      background-color: Lemonchiffon;
+      color: Black;
+      cursor: pointer;
+      padding: 20px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: hidden;
+      font-size: 20px;
+      transition: 0.5s;
+    }
+
+    button.accordion.active, button.accordion:hover {
+      background-color: Gold;
+    }
+
+    div.panel {
+      padding: 0 20px;
+      display: none;
+      background-color: LightYellow;
+    }
+
+    div.card {
+      background-color: White;
+      padding: 18px;
+    }
+
+    img {
+      padding: 4px;
+    }
+
+    div.jumbotron {
+      background-color: PaleVioletRed;
+      text-align: center;
+      color: White;
+      padding: 20px;
+    }
+
+  </style>
+  </head>
+
+  <body>
+    <!--Not sure if these are necessary but Tess advised me to include the just in case-->
+    <script src="/public/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/public/lib/angular/angular.js"></script>
+    <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
+
+    <!-- Start of the section-->
+    <section>
+
+    <!--Placeholder for banner, image or anything we/client decide is most appropriate-->
+    <img class="card-img-top img-responsive center-block img-rounded" src="/modules/core/client/img/testImages/antioxidants.jpg" alt="Image not displaying">
+
+      <!-- Jumbotron Set Up for the Page title-->
+      <div class="jumbotron">
+        <h1>Get To Know</h1>
+        <h1>Heart Healthy Spirits!</h1>
+      </div>
+
+      <!-- Setting up permanent display for the team memver profiles-->
+      <div class="card text-center" style="background-color: LemonChiffon">
+          <h1 class="card-header">MEET OUR TEAM</h1>
+      </div>
+
+      <!-- Not sure how nice the ordering will be for this  ¯\_(ツ)_/¯ -->
+      <!-- Card deck for the three team member profiles-->
+      <div class="card-deck">
+        <div class="card col-md-4" ng-repeat="about in vm.abouts">
+          <img class="card-img-top img-responsive center-block" src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
+          <div class="card-header text-center">
+            <h3 ng-bind="about.title"></h3>
+          </div>
+          <div class="card-block">
+            <p class="card-text" ng-bind="about.content"></p>
+          </div>
+        </div>
+      </div>
+
+      <!--***************************************************************************************************************************************************-->
+      <!--Accordion setup for the Mission Statement and the Gallery Accordions-->
+      <button class="accordion">OUR MISSION</button>
+      <div class="panel">
+        <p>TEST PLACEHOLDER FOR CONTENT</p>
+        <!--Need to make placeholder/capability for them to add either stock video or photo to their mission statement-->
+      </div>
+
+      <button class="accordion">GALLERY</button>
+      <div class="panel">
+        <p>TEST PLACEHOLDER FOR CONTENT</p>
+        <!--WOULD BE COOL IF WE COULD PUT THEIR GALLERY PHOTOS IN A CAROUSEL UNDER THIS ACCORDION TAB-->
+      </div>
+
+      <!-- SCRIPT THAT I FOUND THAT IS SUPPOSE TO MAKE THE ACCORDIONS FUNCTIONAL-->
+      <!-- CURRENTLY NOT WORKING-->
+      <script>
+      var acc = this.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+          acc[i].onclick = function(){
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                  panel.style.display = "none";
+              } else {
+                  panel.style.display = "block";
+              }
+          }
+      }
+      </script>
+      <!--***************************************************************************************************************************************************-->
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+    </section>
+  </body>
+</html>
