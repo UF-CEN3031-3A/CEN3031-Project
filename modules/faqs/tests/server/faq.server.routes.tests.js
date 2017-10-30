@@ -61,27 +61,6 @@ describe('Faq CRUD tests', function () {
       .catch(done);
   });
 
-  it('should not be able to save an faq if logged in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/faqs')
-          .send(faq)
-          .expect(403)
-          .end(function (faqSaveErr, faqSaveRes) {
-            // Call the assertion callback
-            done(faqSaveErr);
-          });
-
-      });
-  });
-
   it('should not be able to save an faq if not logged in', function (done) {
     agent.post('/api/faqs')
       .send(faq)
@@ -89,26 +68,6 @@ describe('Faq CRUD tests', function () {
       .end(function (faqSaveErr, faqSaveRes) {
         // Call the assertion callback
         done(faqSaveErr);
-      });
-  });
-
-  it('should not be able to update an faq if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/faqs')
-          .send(faq)
-          .expect(403)
-          .end(function (faqSaveErr, faqSaveRes) {
-            // Call the assertion callback
-            done(faqSaveErr);
-          });
       });
   });
 
@@ -169,26 +128,6 @@ describe('Faq CRUD tests', function () {
 
         // Call the assertion callback
         done();
-      });
-  });
-
-  it('should not be able to delete an faq if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/faqs')
-          .send(faq)
-          .expect(403)
-          .end(function (faqSaveErr, faqSaveRes) {
-            // Call the assertion callback
-            done(faqSaveErr);
-          });
       });
   });
 

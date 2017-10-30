@@ -60,28 +60,7 @@ describe('Release CRUD tests', function () {
       })
       .catch(done);
   });
-
-  it('should not be able to save an release if logged in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/releases')
-          .send(release)
-          .expect(403)
-          .end(function (releaseSaveErr, releaseSaveRes) {
-            // Call the assertion callback
-            done(releaseSaveErr);
-          });
-
-      });
-  });
-
+  
   it('should not be able to save an release if not logged in', function (done) {
     agent.post('/api/releases')
       .send(release)
@@ -89,26 +68,6 @@ describe('Release CRUD tests', function () {
       .end(function (releaseSaveErr, releaseSaveRes) {
         // Call the assertion callback
         done(releaseSaveErr);
-      });
-  });
-
-  it('should not be able to update an release if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/releases')
-          .send(release)
-          .expect(403)
-          .end(function (releaseSaveErr, releaseSaveRes) {
-            // Call the assertion callback
-            done(releaseSaveErr);
-          });
       });
   });
 
@@ -169,26 +128,6 @@ describe('Release CRUD tests', function () {
 
         // Call the assertion callback
         done();
-      });
-  });
-
-  it('should not be able to delete an release if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/releases')
-          .send(release)
-          .expect(403)
-          .end(function (releaseSaveErr, releaseSaveRes) {
-            // Call the assertion callback
-            done(releaseSaveErr);
-          });
       });
   });
 
