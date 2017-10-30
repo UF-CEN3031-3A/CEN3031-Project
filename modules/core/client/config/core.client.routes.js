@@ -72,7 +72,8 @@
         url: '/business_inquiry',
         templateUrl: '/modules/core/client/views/business_inquiry.client.view.html',
         controller: 'BusinessInquiryController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        reloadOnSearch: false
       });
   }
 }());

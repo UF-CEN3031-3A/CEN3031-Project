@@ -1,16 +1,39 @@
 <!-- MAIN VIEW FOR HOME PAGE OF SITE -->
 <!-- Originally created by: Matthew Avellanosa -->
 <!-- Styled and edited by: Michael Levecque and Jonathan Osorio -->
-<!-- Further edited by: Matthew Avellanosa, Jonathan Osorio, and Michael Levecque -->
+<!-- Further edited by: Matthew Avellanosa, Jonathan Osorio, and Michael Levecque, Tess Bianchi -->
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Referencing core.css style sheet under modules/core/client/css -->
-    <link rel="stylesheet" href="css/core.css">
-  </head>
+<!-- Animation -->
+<div class="gradient-banner text-center fade" ng-hide="hide_animation" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+<svg viewBox="0 0 1200 1200" >
+  <text class="fade-in txtTitle"
+        text-anchor="middle"
+        x="600"
+        y="290"
+        dy="0px"
+        class="text"
+        font-size="25"
+        font-family="Verdana"
+        >
+      JUST ONE DROP
+      <animate id="text" attributeName="y" values={{vm.text_path}} fill="freeze" begin="2s" dur="{{vm.animation_length}}" />
 
-  <body>
+  </text>
+    
+
+  <circle cx="700" cy="-20" r="3" fill="white">
+    <animate id="drop" attributeName="cy" values={{vm.drop_path}} fill="freeze" begin="2s" dur="{{vm.animation_length}}" />
+  </circle>
+
+  <path  d="M0,300 L 760, 300" stroke="white" stroke-width="2" fill="none">
+    <animate id="line" attributeName="d" values={{vm.line_path}} fill="freeze" begin="2s" dur="{{vm.animation_length}}" />
+  </path>
+  </svg>
+</div>
+<!-- End Animation -->
+
+
+<section class="fade" ng-hide="hide_main">
 
     <!-- Consistent gradient banner under navbar -->
     <section>
@@ -91,21 +114,4 @@
         </div>
       </div>
     </section>
-      
-    <!-- Dependencies -->
-        
-    <script src="/public/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/public/lib/angular/angular.js"></script>
-    <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-
-    <!-- Application Source Code -->
-    
-    <script src="app/app.js"></script>
-    <script src="app/config/listings.client.routes.js"></script>
-    <script src="app/factories/listings.client.factory.js"></script>
-    <script src="app/controllers/listings.client.controller.js"></script>
-  </body>
-</html>
+</section>

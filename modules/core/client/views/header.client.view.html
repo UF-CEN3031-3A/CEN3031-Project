@@ -1,4 +1,5 @@
-<div class="container" ng-controller="HeaderController as vm">
+<div class="container fade-in" ng-hide=hide_header ng-controller="HeaderController as vm">
+  <div>
   <div class="navbar-header">
     <button class="navbar-toggle" type="button" ng-click="vm.isCollapsed = !vm.isCollapsed">
       <span class="sr-only">Toggle navigation</span>
@@ -10,10 +11,10 @@
   </div>
   <nav class="navbar-collapse" uib-collapse="!vm.isCollapsed" role="navigation">
     <ul class="nav navbar-nav">
-      <li ui-sref-active="active"><a ui-sref="business_inquiry" target="_top">Business Inquiry</a></li>
-      <li ui-sref-active="active"><a ui-sref="faqs.list" target="_top">Public Inquiry</a></li>
-      <li ui-sref-active="active"><a ui-sref="abouts.list" target="_top">About Us</a></li>
-      <li ui-sref-active="active"><a ui-sref="articles.list" target="_top">Blog</a></li>
+      <li ui-sref-active="active"><a ng-click="business_inquiry()">Business Inquiry</a></li>
+      <li ui-sref-active="active"><a ng-click="public_inquiry()">Public Inquiry</a></li>
+      <li ui-sref-active="active"><a ng-click="about_us()">About Us</a></li>
+      <li ui-sref-active="active"><a ng-click="blog()">Blog</a></li>
     </ul>
   </nav>
 </div>

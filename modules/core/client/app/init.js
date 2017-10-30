@@ -19,7 +19,6 @@
     }).hashPrefix('!');
 
     $httpProvider.interceptors.push('authInterceptor');
-
     // Disable debug data for production environment
     // @link https://docs.angularjs.org/guide/production
     $compileProvider.debugInfoEnabled(app.applicationEnvironment !== 'production');
@@ -30,7 +29,7 @@
   // Then define the init function for starting up the application
   angular.element(document).ready(init);
 
-  function init() {
+  function init($scope) {
     // Fixing facebook bug with redirect
     if (window.location.hash && window.location.hash === '#_=_') {
       if (window.history && history.pushState) {

@@ -22,7 +22,7 @@
   }
 
   // Angular-ui-notification configuration
-  angular.module('ui-notification').config(function (NotificationProvider) {
+  var app = angular.module('ui-notification').config(function (NotificationProvider) {
     NotificationProvider.setOptions({
       delay: 2000,
       startTop: 20,
@@ -33,4 +33,26 @@
       positionY: 'bottom'
     });
   });
+
+  app.run(function ($rootScope, $state) {
+    $rootScope.$on('$stateChangeSuccess', function () {
+      window.scrollTo(0, 0);
+    });
+
+    $rootScope.business_inquiry = function () {
+      $state.go('business_inquiry');
+    };
+    $rootScope.public_inquiry = function () {
+      $state.go('faqs.list');
+    };
+    $rootScope.about_us = function () {
+      $state.go('abouts.list');
+    };
+    $rootScope.blog = function () {
+      $state.go('articles.list');
+    };
+
+  });
+
+
 }(window));
