@@ -11,5 +11,15 @@
     var vm = this;
 
     vm.faqs = FaqsService.query();
+
+    vm.oneAtATime = false;
+
+    vm.status = {
+      isCustomHeaderOpen: false,
+      isFirstOpen: true,
+      isFirstDisabled: false
+    };
+
+
   }
 }());
