@@ -5,84 +5,67 @@
     </div>
   </section>
 
-  <!-- promotional Video Embed -->
-  <div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/si0TOwUMlIM?rel=0" frameborder="0" allowfullscreen></iframe>
+  <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+   <img class="img-responsive" src="/modules/core/client/img/testImages/res.png" style="cursor:pointer" />
+  </div>
+  <div style="display:none">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/si0TOwUMlIM?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="parallax-drop">
+    <div class="parallax-window">
+      <span class="subtitle">Just one drop.</span>
+    </div>
+  </div>
+
+  <div class="container container-padding">
+    <h1>This is h1</h1>
+    <h2>This is h2</h2>
+    <h3>This is h3</h3>
+    <h4>This is h4</h4>
+    <h5>This is h5</h5>
+    <p>Developing writers can often benefit from examining an essay, a paragraph, or even a sentence to determine what makes it effective. On the following pages are several paragraphs for you to evaluate on your own, along with the Writing Center's explanation. Note: These passages are excerpted from actual student papers and retain the original wording. Some of the sentences are imperfect, but we have chosen these passages to highlight areas in which the author was successful. Thanks to the students who provided their writing for this page of our website. Do you have a discussion post, paper, or other writing assignment that you are particularly proud of? We would love to use it as a sample. Contact us at writingsupport@waldenu.edu if you would like to share.</p>
+  </div>
+
+  <div class="parallax-news">
+    <div class="parallax-window">
+      <span class="subtitle">In the news.</span>
+    </div>
   </div>
 
   <!-- News articles/related images -->
   <section>
-    <h2 class="text-center" style="background-color: gold">News</h2>
-    <div class="row">
-      <div class="col-sm-offset-1 col-md-4">
-        <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-md-4">
+          <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
+        </div>
+        <div class="col-md-8">
+          <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
+              <h4>Author: {{group.author}}</h4>
+              {{group.content}}
+            </div>
+          </uib-accordion>
+        </div>
       </div>
-      <div class="col-md-offset-1 col-md-6">
-        <uib-accordion close-others="oneAtATime">
-          <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
-            <h4>Author: {{group.author}}</h4>
-            {{group.content}}
-          </div>
-        </uib-accordion>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-offset-1 col-md-6">
-        <uib-accordion close-others="oneAtATime">
-          <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
-            <h4>Author: {{group.author}}</h4>
-            {{group.content}}
-          </div>
-        </uib-accordion>
-      </div>
-      <div class="col-sm-offset-1 col-md-4">
-        <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- Old code for news stuff -->
-  <!-- 
-  <section>
-    <h2 class="text-center" style="background-color: gold">News</h2>
-    <div class="row">
-      <div class="col-sm-offset-1 col-md-4">
-        <div>
+      <div class="row">
+        <div class="col-md-offset-1 col-md-6">
+          <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
+              <h4>Author: {{group.author}}</h4>
+              {{group.content}}
+            </div>
+          </uib-accordion>
+        </div>
+        <div class="col-sm-offset-1 col-md-4">
           <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
         </div>
       </div>
-      <div class="col-md-offset-1 col-md-6">
-        <h3 data-toggle="collapse" data-target="#body1">Title: Lorem Ipsum </h3>
-        <h4>Author: Mr. Ipsum </h4>
-        <p id="body1" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        <h3 data-toggle="collapse" data-target="#body2">Title: Lorem Ipsum </h3>
-        <h4>Author: Mr. Ipsum </h4>  
-        <p id="body2" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>    
-      </div>
     </div>
-    <div class="row">
-      <div class="col-md-offset-1 col-md-6">
-        <h3 data-toggle="collapse" data-target="#body3">Title: Lorem Ipsum </h3>
-        <h4>Author: Mr. Ipsum </h4>  
-        <p id="body3" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-        <h3 data-toggle="collapse" data-target="#body4">
-          Title: Lorem Ipsum 
-        </h3>
-        <h4>
-          Author: Mr. Ipsum 
-        </h4>  
-        <p id="body4" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      </div>
-      <div class="col-md-offset-1 col-md-4">
-        <div>
-          <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
-        </div>
-      </div>
-    </div>   
   </section>
- -->
     
   <!-- Dependencies -->
       
