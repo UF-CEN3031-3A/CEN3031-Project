@@ -1,9 +1,11 @@
 .content {
   margin-top: 50px;
 }
+
 .undecorated-link:hover {
   text-decoration: none;
 }
+
 [ng\:cloak],
 [ng-cloak],
 [x-ng-cloak],
@@ -11,6 +13,7 @@
 .x-ng-cloak {
   display: none !important;
 }
+
 .header-profile-image {
   border-radius: 50%;
   height: 28px;
@@ -18,26 +21,32 @@
   opacity: 0.8;
   width: 28px;
 }
+
 .open .header-profile-image,
 a:hover .header-profile-image {
   opacity: 1;
 }
+
 .user-header-dropdown-toggle {
   padding-bottom: 11px !important;
   padding-top: 11px !important;
 }
+
 .user-primary-account {
   font-size: 30px;
   position: absolute;
   right: 10px;
   top: 10px;
 }
+
 .error-text {
   display: none;
 }
+
 .has-error .help-block.error-text {
   display: block;
 }
+
 .has-error .help-inline.error-text {
   display: inline;
 }
@@ -51,10 +60,91 @@ a:hover .header-profile-image {
 
 /* Our stuff */
 
+.display {
+  background-color: #ff1031;
+}
+
+.jumbotron {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 0px;
+}
+
+.navbar {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+
+}
+
+.navbar-default .navbar-brand {
+  /*color: #750647;*/
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #750647;
+}
+
+.navbar-default .navbar-nav > .active > a{
+  background-image: linear-gradient(to bottom, #FF3371 20%, #FF86AF 100%);
+}
+
+.navbar-default {
+  background-image: linear-gradient(to bottom, #FF3371 25%, #DB2C65 100%);
+  border-color: #DB2C65;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  padding: 20px 25px 20px 25px;
+}
+
+.parallax {
+    /* The image used */
+
+    /*IMAGE CREDIT:https://seasonsmedical.com/wp-content/uploads/Less-Than-3-Percent-of-Americans-Live-a-Healthy-Lifestyle-01.jpg*/
+    /*background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");*/
+    /*IMAGE CREDIT:https://www.honeycolony.com/wp-content/uploads/2017/05/antioxidants.jpg*/
+    background-image: url("/modules/core/client/img/testImages/blue.jpg"), url("/modules/core/client/img/testImages/hearthealthyTest.jpg");
+
+    /* Set a specific height */
+    min-height: 200px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-nav > li > a{
+  padding: 20px 25px 20px 25px;
+  color: #750647;
+
+  
+  /*padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 25px;*/
+}
+
 .subtitle {
   color: white;
   font-family: 'Oswald', sans-serif;
-  font-size: 48px;
+  font-size: 30px;
+}
+
+.head {
+  font-family: 'Merriwether';
+  font-size: 40px;
+  text-align: center;
+/*  background-image: linear-gradient(to bottom, #FFC076 50%, #FF9827 100%);
+*/  background-color: #FF7961;
+  padding: 20px 25px 20px 25px;
+}
+
+.row{
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .video-wrapper {
@@ -68,7 +158,7 @@ a:hover .header-profile-image {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 3%;
+  /*padding: 3%;*/
   width: 100%;
   height: 100%;
 }
