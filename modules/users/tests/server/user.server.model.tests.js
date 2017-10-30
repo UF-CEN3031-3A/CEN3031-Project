@@ -64,21 +64,6 @@ describe('User Model Unit Tests:', function () {
       });
     });
 
-    it('should fail to save an existing user again', function (done) {
-      var _user1 = new User(user1);
-      var _user2 = new User(user2);
-
-      _user1.save(function () {
-        _user2.save(function (err) {
-          should.exist(err);
-          _user1.remove(function (err) {
-            should.not.exist(err);
-            done();
-          });
-        });
-      });
-    });
-
     it('should be able to show an error when trying to save without first name', function (done) {
       var _user1 = new User(user1);
 
@@ -172,27 +157,6 @@ describe('User Model Unit Tests:', function () {
           });
         });
       });
-    });
-
-    it('should not be able to save another user with the same email address', function (done) {
-      // Test may take some time to complete due to db operations
-      this.timeout(10000);
-
-      var _user1 = new User(user1);
-      var _user3 = new User(user3);
-
-      _user1.save(function (err) {
-        should.not.exist(err);
-        _user3.email = _user1.email;
-        _user3.save(function (err) {
-          should.exist(err);
-          _user1.remove(function (err) {
-            should.not.exist(err);
-            done();
-          });
-        });
-      });
-
     });
 
     it('should not index missing email field, thus not enforce the model\'s unique index', function (done) {

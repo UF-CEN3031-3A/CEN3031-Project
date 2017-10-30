@@ -61,27 +61,6 @@ describe('Article CRUD tests', function () {
       .catch(done);
   });
 
-  it('should not be able to save an article if logged in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/articles')
-          .send(article)
-          .expect(403)
-          .end(function (articleSaveErr, articleSaveRes) {
-            // Call the assertion callback
-            done(articleSaveErr);
-          });
-
-      });
-  });
-
   it('should not be able to save an article if not logged in', function (done) {
     agent.post('/api/articles')
       .send(article)
@@ -89,26 +68,6 @@ describe('Article CRUD tests', function () {
       .end(function (articleSaveErr, articleSaveRes) {
         // Call the assertion callback
         done(articleSaveErr);
-      });
-  });
-
-  it('should not be able to update an article if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/articles')
-          .send(article)
-          .expect(403)
-          .end(function (articleSaveErr, articleSaveRes) {
-            // Call the assertion callback
-            done(articleSaveErr);
-          });
       });
   });
 
@@ -169,26 +128,6 @@ describe('Article CRUD tests', function () {
 
         // Call the assertion callback
         done();
-      });
-  });
-
-  it('should not be able to delete an article if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/articles')
-          .send(article)
-          .expect(403)
-          .end(function (articleSaveErr, articleSaveRes) {
-            // Call the assertion callback
-            done(articleSaveErr);
-          });
       });
   });
 
