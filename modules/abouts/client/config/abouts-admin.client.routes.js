@@ -14,6 +14,16 @@
         url: '/abouts',
         template: '<ui-view/>'
       })
+      .state('admin.abouts_picture', {
+        url: '/:aboutId/change_picture',
+        templateUrl: '/modules/abouts/client/views/admin/picture-abouts.client.view.html',
+        controller: 'ChangeAboutPictureController',
+        controllerAs: 'vm',
+        data: {
+          roles: ['admin'],
+          pageTitle: '{{ aboutResolve.title }}'
+        }
+      })
       .state('admin.abouts.list', {
         url: '',
         templateUrl: '/modules/abouts/client/views/admin/list-abouts.client.view.html',
