@@ -3,11 +3,55 @@
 <script src="/public/lib/angular/angular.js"></script>
 <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="/modules/core/client/css/core.css"></script>
+
+<style> 
+.panel-title{
+  font-size: 25px;
+}
+
+.col-md-8{
+  padding-right: 10px;
+  padding-left: 0px;
+}
+
+.panel-info > .panel-heading {
+  color: #000000;
+  background-image: linear-gradient(to bottom, #FE4848 60%, #FF8484 100%);
+  border-color: #FF8484;
+}
+
+.panel-info{
+  border-color: #FF8484;
+}
+
+
+</style>
 
 <section>
-  <div class="page-header text-center">
-    <h1>t*Rez Blog</h1>
+    <div class="jumbotron gradient-banner text-center">
+      <span class="subtitle">Just One Drop.</span>
+    </div>
+</section>
+
+<div class="parallax-heart">
+  <div class="parallax-window">
+    <div class="container para-caption img-resposive">The Official Heart Healthy Blog</div>
   </div>
+</div>
+
+<div class="container container-padding">
+  <h1>We've Got You Covered</h1>
+  <br>
+  <p>Keep up to date with all the latest company news and announcements.</p>
+</div>
+
+<!-- <div class="container text-center">
+    <h1>t*Rez Blog</h1>
+</div> -->
+
+
+  <div class="container container-padding">
   <div class="col-md-8">
     <uib-accordion close-others="vm.oneAtATime">
       <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" ng-repeat="article in vm.articles">
@@ -34,9 +78,9 @@
         </a>
       </div>
     </uib-accordion>
-</div>
+  </div>
   <div class="panel panel-info col-md-4">
-    <div class="panel-heading">
+    <div class="panel-heading" style="font-family: 'Oswald', sans-serif; font-size: 30px">
       Archive
     </div>
     <div class="panel-body">
@@ -60,5 +104,6 @@
         </div>
       </uib-accordion>
     </div>
+  </div>
+  
 </div>
-</section>
