@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/modules/core/client/css/core.css">
 
   <!-- Experimentation with styling-->
   <style>
@@ -40,8 +40,8 @@
     }*/
 
     div.card-deck{
-      padding: 20px 100px 20px 100px;
-      background-color: #FFFBCA;
+      padding: 0px 100px 20px 100px;
+      background-color: #FFFFFF;
     }
 
     div.card {
@@ -87,8 +87,16 @@
     <!-- <img class="card-img-top img-responsive center-block img-rounded" src="/modules/core/client/img/testImages/antioxidants.jpg" alt="Image not displaying"> -->
 
       <div class="parallax">
-        <div class="subtitle" style="font-size: 75px"><b>Meet Our Team</b></div>
-      </div>
+        <div class="parallax-window">
+          <span class="para-caption">Meet Our Team</span>
+        </div>
+     </div>
+
+     <div class="container container-padding">
+        <h1>Allow Us to Introduce Ourselves</h1>
+        <br>
+        <p>At Heart Healthy Spirits, this is a blurb to serve as a brief introduction for introducing a personal team who is dedicated to bring the heart healthy benefits of t*Rez, and put a face to the representatives and advocates who are working to get their antioxidant boost into all products.</p>
+     </div>
       <!-- Jumbotron Set Up for the Page title-->
       <!-- <div class="jumbotron">
         <h1>Get To Know</h1>
@@ -99,7 +107,7 @@
 
       <!-- Setting up permanent display for the team memver profiles-->
       <!-- <div class="card text-center"> -->
-      <div class="head"><i><b>Allow us to introduce ourselves</b></i></div>
+      <!-- <div class="head"><i><b>Allow us to introduce ourselves</b></i></div> -->
       <!-- </div> -->
 
       <!-- Card deck for the three team member profiles-->
@@ -107,7 +115,7 @@
         <div class="card col-md-4">
           <img class="card-img-top img-responsive center-block " src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
           <div class="card-header text-center">
-            <p>Kim Popejoy</p>
+            <h2>Kim Popejoy</h2>
           </div>
           <div class="card-block">
             <p class="card-text">This is placeholder text for the description of the first team member.</p>
@@ -119,7 +127,7 @@
         <div class="card col-md-4">
           <img class="card-img-top img-responsive center-block" src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
           <div class="card-header text-center">
-            <p>Michael Bainum</p>
+            <h2>Michael Bainum</h2>
           </div>
           <div class="card-block">
             <p class="card-text">This is placeholder text for the description of the first team member. Even longer placeholder text.</p>
@@ -131,7 +139,7 @@
         <div class="card col-md-4">
           <img class="card-img-top img-responsive center-block" src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
           <div class="card-header text-center">
-            <p>Gene Gamble</p>
+            <h2>Gene Gamble</h2>
           </div>
           <div class="card-block">
             <p class="card-text">This is placeholder text for the description of the first team member. Even longer and longer and longer and longer and longer and longer and longer and longer and longer and longer and longer placeholder text for testing equal space.</p>
@@ -148,28 +156,44 @@
 
       <!-- <div class="row"> -->
       <div class="parallax">
-        <div class="subtitle" style="font-size: 75px"><b>Our Mission</b></div>
+        <div class="parallax-window">
+          <span class="para-caption">Our Mission</span>
+        </div>
       </div>
 
-      <div class="head"><i><b>Let us tell you what we are all about</b></i></div>
+      <div class="container container-padding">
+        <h1>Let Us Tell You What We Are All About</h1>
+        <br>
+        <p> Very brief blurb urging the user to click to expand the more detailed information about Heart Healthy Spirit's Mission and vision.</p>
+      </div>
 
-      <uib-accordion>
-        <div uib-accordion-group class="panel-default" heading="Click to Expand"> 
-          <p> THIS IS PLACEHOLDER TEXT </p>
-        </div>
-      </uib-accordion>
+      <div class="container">
+        <uib-accordion>
+          <div uib-accordion-group class="panel-default" heading="Click to Expand"> 
+            <p> THIS IS PLACEHOLDER CONTENT </p>
+          </div>
+        </uib-accordion>
+      </div>
 
       <div class="parallax">
-        <div class="subtitle" style="font-size: 75px"><b>Gallery</b></div>
+        <div class="parallax-window">
+          <span class="para-caption">Gallery</span>
+        </div>
       </div>
 
-      <div class="head"><i><b>Feel free to explore and get to know us</b></i></div>
+      <div class="container container-padding">
+        <h1>Feel Free to Explore and Get to Know Us</h1>
+        <br>
+        <p> Very brief blurb urging the user to click to expand to explore other company content (stock photos, videos, etc.)</p>
+      </div>
 
-      <uib-accordion>
-        <div uib-accordion-group class="panel-default" heading="Click to Expand">
-          <p> THIS IS PLACEHOLDER TEXT </p>
-        </div>
-      </uib-accordion>
+      <div class="container">
+        <uib-accordion>
+          <div uib-accordion-group class="panel-default" heading="Click to Expand">
+            <p> THIS IS PLACEHOLDER TEXT </p>
+          </div>
+        </uib-accordion>
+      </div>
       <!-- </div> -->
       
 <!--       <button class="accordion">OUR MISSION</button>

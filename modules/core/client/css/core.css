@@ -54,8 +54,8 @@ a:hover .header-profile-image {
 /* This is for the contact pages*/
 .form-control{
     display:table;
-    margin:auto;
-    max-width: 700px;
+    /*margin:auto;*/
+    max-width: 500px;
 }
 
 /* custom css */
@@ -150,16 +150,25 @@ p {
     /*IMAGE CREDIT:https://seasonsmedical.com/wp-content/uploads/Less-Than-3-Percent-of-Americans-Live-a-Healthy-Lifestyle-01.jpg*/
     /*background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");*/
     /*IMAGE CREDIT:https://www.honeycolony.com/wp-content/uploads/2017/05/antioxidants.jpg*/
-    background-image: url("/modules/core/client/img/testImages/blue.jpg"), url("/modules/core/client/img/testImages/hearthealthyTest.jpg");
+    background-image: url("/modules/core/client/img/testImages/blue.jpg");
 
     /* Set a specific height */
-    min-height: 200px; 
+    height: 30vh; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax-heart {
+  background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");
+  height: 30vh; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .parallax-drop { 
@@ -193,7 +202,15 @@ p {
 .subtitle {
   color: white;
   font-family: 'Oswald', sans-serif;
-  font-size: 40px; 
+  font-size: 30px; 
+  text-align: left;
+}
+
+.para-caption {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 70px;
+  text-align: middle;
 }
 
 .head {
@@ -231,9 +248,9 @@ p {
   background: linear-gradient(231deg, #f7ff48, #ff3371);
   background-size: 400% 400%;
 
-  -webkit-animation: gradient-banner 30s ease infinite;
-  -moz-animation: gradient-banner 30s ease infinite;
-  animation: gradient-banner 30s ease infinite;
+  -webkit-animation: gradient-banner 15s ease infinite;
+  -moz-animation: gradient-banner 15s ease infinite;
+  animation: gradient-banner 15s ease infinite;
 }
 
 @-webkit-keyframes gradient-banner {
