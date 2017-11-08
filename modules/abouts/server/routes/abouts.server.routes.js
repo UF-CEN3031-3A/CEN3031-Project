@@ -18,9 +18,6 @@ module.exports = function (app) {
     .put(abouts.update)
     .delete(abouts.delete);
 
-  app.route('/api/abouts/picture').post(abouts.changeAboutPicture);
-
-
   // Finish by binding the about middleware
   app.param('aboutId', abouts.aboutByID);
 };

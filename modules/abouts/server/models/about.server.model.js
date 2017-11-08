@@ -23,7 +23,7 @@ var AboutSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
-  aboutImageURL: {
+  image: {
     type: String,
     default: '/modules/core/client/img/testImages/noProfPic.gif'
   },

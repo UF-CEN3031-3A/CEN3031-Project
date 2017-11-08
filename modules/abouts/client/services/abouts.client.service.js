@@ -18,6 +18,7 @@
 
     angular.extend(About.prototype, {
       createOrUpdate: function () {
+        console.log(this)
         var about = this;
         return createOrUpdate(about);
       }
