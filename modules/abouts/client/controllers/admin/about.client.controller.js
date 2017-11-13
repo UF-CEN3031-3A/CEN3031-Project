@@ -28,7 +28,6 @@
 
     // Save About
     function save(isValid) {
-
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'vm.form.aboutForm');
         return false;

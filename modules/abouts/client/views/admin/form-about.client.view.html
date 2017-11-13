@@ -58,31 +58,19 @@
               <label class="control-label" for="content">Content</label>
               <textarea name="content" data-ng-model="vm.about.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
             </div>
-
-            <fieldset>
-              <div class="form-group text-center">
-                  <img ngf-src="vm.fileSelected ? picFile : vm.about.image" alt="No Photo Selected" class="img-thumbnail user-profile-picture" ngf-drop>
-              </div>
-              <div ng-show="vm.loading" class="form-group text-center">
-                  <img ng-src="/modules/core/client/img/loaders/loader.gif" height="50" width="50" alt="Loading image...">
-              </div>
-              <div ng-show="!vm.fileSelected" class="text-center form-group">
-                  <button class="btn btn-default btn-file" ngf-select="(vm.fileSelected = true) && (vm.loading = false)" ng-model="vm.about.image" accept="image/*" ngf-before-model-change="vm.loading = true" ngf-resize="{width: 400}" ngf-resize-if="$width > 400 || $height > 400">Select Picture</button>
-              </div>
-              <div ng-show="vm.fileSelected" class="text-center form-group">
-                  <!-- <button class="btn btn-primary" ng-click="vm.upload(picFile)">Use This Picture</button> -->
-                  <button class="btn btn-default" ng-click="vm.fileSelected = false">Cancel</button>
-              </div>
-            </fieldset>
-
-            <!--
-            <div class="form-group">
-                <label class="control-label" for="image">
-                  Photo
-                </label>
-                <input data-ng-model="vm.about.image" nv-file-select uploader="uploader" id="image" type="file" hidden>
+            <div class="form-group text-center">
+                <img ngf-src="vm.fileSelected ? picFile : vm.about.image" alt="No Photo Selected" class="img-thumbnail user-profile-picture" ngf-drop>
             </div>
-          -->
+            <div ng-show="vm.loading" class="form-group text-center">
+                <img ng-src="/modules/core/client/img/loaders/loader.gif" height="50" width="50" alt="Loading image...">
+            </div>
+            <div ng-show="!vm.fileSelected" class="text-center form-group">
+                <button class="btn btn-default btn-file" ngf-select="(vm.fileSelected = true) && (vm.loading = false)" ng-model="vm.about.image" accept="image/*" ngf-before-model-change="vm.loading = true" ngf-resize="{width: 400}" ngf-resize-if="$width > 400 || $height > 400">Select Picture</button>
+            </div>
+            <div ng-show="vm.fileSelected" class="text-center form-group">
+                <!-- <button class="btn btn-primary" ng-click="vm.upload(picFile)">Use This Picture</button> -->
+                <button class="btn btn-default" ng-click="vm.fileSelected = false">Cancel</button>
+            </div>
             <div class="form-group">
               <button type="submit" class="btn btn-default">{{vm.about._id ? 'Update' : 'Create'}}</button>
             </div>
