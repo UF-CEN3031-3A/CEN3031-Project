@@ -41,7 +41,6 @@
       };
 
       var base64Data = vm.about.image.$ngfDataUrl;
-      // console.log(base64Data);
 
       vm.about.image = base64Data;
       console.log(vm.about.image);
