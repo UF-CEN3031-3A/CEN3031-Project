@@ -33,44 +33,18 @@
         return false;
       }
 
-/*
-      $scope.uploadedFile = function () {
-        var f = document.getElementById('file').files[0];
-        var r = new FileReader();
-        r.onloadend = function (e) {
-          var data = e.target.result;
-        };
-        console.log()
-        r.readAsBinaryString(f);
+      console.log(vm.about.image.$ngfBlobUrl);
+
+      var reader = new window.FileReader();
+      reader.onloadend = function(e) {
+        vm.about.image = e.target.result;
       };
 
-      console.log($scope.uploadedFile);
-*/
-/*
-      console.log("about to convert to base64")
-      var reader = new FileReader();
-      reader.onloadend = function () {
-        vm.about.image = reader.result;
-        console.log("IMAGE");
-        console.log(vm.about.image);
-      };
-*/
-      /*
-      function updateAboutWithBase64Image() {
-        // encode as base 64
-        var reader = new FileReader();
-        reader.onloadend = function () {
-          vm.about.image = reader.result;
-          var user = new UsersService(vm.user);
-          about.$update(function (response) {
-            Authentication.user = response;
-          }, function (response) {
-            // do nada
-          });
-        };
-        reader.readAsDataURL($scope.picFile);
-      }
-      */
+      var base64Data = vm.about.image.$ngfDataUrl;
+      // console.log(base64Data);
+
+      vm.about.image = base64Data;
+      console.log(vm.about.image);
 
       // Create a new about, or update the current instance
       vm.about.createOrUpdate()
