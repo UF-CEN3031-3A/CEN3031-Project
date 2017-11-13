@@ -101,7 +101,7 @@
       <!-- Card deck for the three team member profiles-->
       <div class="card-deck">
         <div class="card col-md-4" ng-repeat="about in vm.abouts">
-          <img class="card-img-top img-responsive center-block" src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
+          <img class="card-img-top img-responsive center-block" ng-src="{{about.image}}" alt="Picture not up">
           <div class="card-header text-center">
             <h3 ng-bind="about.title"></h3>
           </div>
