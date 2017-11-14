@@ -101,15 +101,14 @@ p {
 }
 
 .jumbotron {
-  padding-top: 25px;
   padding-bottom: 25px;
-  margin-bottom: 0px;
+  padding-top: 25px;
 }
 
 .navbar {
+  color: #fff;
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
-  color: #fff;
 }
 
 .navbar-default .navbar-brand {
@@ -139,59 +138,56 @@ p {
 }
 
 .parallax-window {
+  line-height: 30vh;
   text-align: center;
   vertical-align: middle;
-  line-height: 30vh;   
 }
 
 .parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
     /* The image used */
-
     /*IMAGE CREDIT:https://seasonsmedical.com/wp-content/uploads/Less-Than-3-Percent-of-Americans-Live-a-Healthy-Lifestyle-01.jpg*/
     /*background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");*/
     /*IMAGE CREDIT:https://www.honeycolony.com/wp-content/uploads/2017/05/antioxidants.jpg*/
     background-image: url("/modules/core/client/img/testImages/blue.jpg");
-
-    /* Set a specific height */
-    height: 30vh; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* Set a specific height */
+    height: 30vh; 
 }
 
 .parallax-heart {
-  background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");
-  height: 30vh; 
   background-attachment: fixed;
+  background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 30vh; 
 }
 
 .parallax-drop { 
-  background-image: url("/modules/core/client/img/testImages/wine.jpg");
-  height: 30vh; 
   background-attachment: fixed;
+  background-image: url("/modules/core/client/img/testImages/wine.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 30vh; 
 }
 
 .parallax-news { 
-  background-image: url("/modules/core/client/img/testImages/news.jpg");
-  height: 30vh; 
   background-attachment: fixed;
+  background-image: url("/modules/core/client/img/testImages/news.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 30vh; 
 }
 
 .navbar-nav > li > a{
-  padding: 20px 25px 20px 25px;
   color: #750647;
+  padding: 20px 25px 20px 25px;
 
   
   /*padding-top: 20px;
@@ -214,57 +210,52 @@ p {
 }
 
 .head {
+  /*  background-image: linear-gradient(to bottom, #FFC076 50%, #FF9827 100%);
+*/background-color: #FF7961;
   font-family: 'Merriwether';
   font-size: 40px;
-  text-align: center;
-/*  background-image: linear-gradient(to bottom, #FFC076 50%, #FF9827 100%);
-*/  background-color: #FF7961;
   padding: 20px 25px 20px 25px;
-}
-
-.row{
-  margin-right: 0px;
-  margin-left: 0px;
+  text-align: center;
 }
 
 .video-wrapper {
-  position: relative;
+  height: 0;
   padding-bottom: 35.5%; /* 16:9 is 56.25% */
   padding-top: 25px;
-  height: 0;
+  position: relative;
 }
 
 .video-wrapper iframe {
-  position: absolute;
-  top: 0;
+  height: 100%;
   left: 0;
   padding: 0 10vw 0 10vw;
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 100%;
 }
 
 /* Gradient banner */
 .gradient-banner {
+  -moz-animation: gradient-banner 15s ease infinite;
+  -webkit-animation: gradient-banner 15s ease infinite;
+  animation: gradient-banner 15s ease infinite;
+
   background: linear-gradient(231deg, #f7ff48, #ff3371);
   background-size: 400% 400%;
-
-  -webkit-animation: gradient-banner 15s ease infinite;
-  -moz-animation: gradient-banner 15s ease infinite;
-  animation: gradient-banner 15s ease infinite;
 }
 
 @-webkit-keyframes gradient-banner {
-  0%{background-position:84% 0%}
+  0%{background-position:84%}
   50%{background-position:17% 100%}
-  100%{background-position:84% 0%}
+  100%{background-position:84%}
 }
 @-moz-keyframes gradient-banner {
-  0%{background-position:84% 0%}
+  0%{background-position:84%}
   50%{background-position:17% 100%}
-  100%{background-position:84% 0%}
+  100%{background-position:84%}
 }
 @keyframes gradient-banner { 
-  0%{background-position:84% 0%}
+  0%{background-position:84%}
   50%{background-position:17% 100%}
-  100%{background-position:84% 0%}
+  100%{background-position:84%}
 }
