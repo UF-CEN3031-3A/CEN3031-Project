@@ -60,7 +60,7 @@ describe('Release CRUD tests', function () {
       })
       .catch(done);
   });
-  
+
   it('should not be able to save an release if not logged in', function (done) {
     agent.post('/api/releases')
       .send(release)
