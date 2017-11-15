@@ -7,7 +7,6 @@
     <!-- Referencing core.css style sheet under modules/core/client/css -->
     <link rel="stylesheet" href="css/core.css">
   </head>
-
   <body>
 
     <!-- Consistent gradient banner under navbar. -->
@@ -45,32 +44,34 @@
 
         <!-- Left-most column section for business inquiry form -->
         <div class="col-md-6">
-          <form class="form-horizontal">
 
-            <div class="form-group">
-              <h3 for="exampleInputName2">Name</h3>
-              <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-            </div>
 
-            <div class="form-group">
-              <h3 for="exampleInputEmail2">Email</h3>
-              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-            </div>
+        <form class="form-horizontal" name="business_inq_form">
+          <div class="form-group">
+            <h3 for="exampleInputName2">Name</h3>
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" ng-model="vm.data.contactName" required="true">
+          </div>
+          <div class="form-group">
+            <h3 for="exampleInputEmail2">Email</h3>
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" ng-model="vm.data.contactEmail" required="true">
+          </div>
 
-            <!-- ADDED EXTRA PARAMETER FOR COMPANY NAME FORM INPUT -->
-            <div class="form-group">
-              <h3 for="exampleInputCompanyName2">Company Name</h3>
-              <input type="company" class="form-control" id="exampleInputCompanyName2" placeholder="Antioxidant Infusion 'R' Us">
-            </div>
-            
-            <div class="form-group ">
-              <h3 for="exampleInputText">Your Message</h3>
-             <textarea  class="form-control" placeholder="Description"></textarea> 
-            </div>
+          <!-- ADDED EXTRA PARAMETER FOR COMPANY NAME FORM INPUT, NEED TO MAKE SURE THIS IS CONNECTED ALSO -->
+          <div class="form-group">
+            <h3 for="exampleInputCompanyName2">Company Name</h3>
+            <input type="company" class="form-control" id="exampleInputCompanyName2" placeholder="Antioxidant Infusion 'R' Us" ng-model="vm.data.comapanyName" required="true">
+          </div>
+          <!-- ********************************************************************************************* -->
 
-            <button type="submit" class="btn btn-default">Send Message</button>
+          <div class="form-group ">
+            <h3 for="exampleInputText">Your Message</h3>
+           <textarea  class="form-control" placeholder="Description" ng-model="vm.data.contactMsg" required="true"></textarea> 
+          </div>
+          <button type="submit" class="btn btn-default" ng-disabled="business_inq_form.$invalid" ng-click="vm.sendMail()">Send Message</button>
+        </form>
 
-          </form>
+
+
         </div>
 
         <!-- Rightmost column section (next to business inquiry form section) to serve as a placeholder for stock content (photos, videos, or other) -->
