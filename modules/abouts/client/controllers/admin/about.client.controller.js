@@ -5,9 +5,9 @@
     .module('abouts.admin')
     .controller('AboutsAdminController', AboutsAdminController);
 
-  AboutsAdminController.$inject = ['$scope', '$state', '$window', 'aboutResolve', 'Authentication', 'Notification'];
+  AboutsAdminController.$inject = ['$scope', '$state', '$window', 'aboutResolve', 'Authentication', 'Notification', 'Upload'];
 
-  function AboutsAdminController($scope, $state, $window, about, Authentication, Notification) {
+  function AboutsAdminController($scope, $state, $window, about, Authentication, Notification, Upload) {
     var vm = this;
 
     vm.about = about;
@@ -33,22 +33,33 @@
         return false;
       }
 
-      console.log(vm.about.image.$ngfBlobUrl);
-
-      var reader = new window.FileReader();
-      reader.onloadend = function(e) {
-        vm.about.image = e.target.result;
+      var uploadedImageBase64 = null;
+      $scope.uploadImage = function (file) {
+        console.log("IN THE FUNCTION!!");
+        console.log(file);
+        if (file) {
+          console.log("file is VALID");
+          Upload.base64DataUrl(file).then(
+            function(url){
+              console.log("in the url func");
+              console.log(url);
+              vm.about.image = url;
+              vm.about.createOrUpdate()
+                .then(successCallback)
+                .catch(errorCallback);
+            }
+          )
+        } else {
+          vm.about.createOrUpdate()
+            .then(successCallback)
+            .catch(errorCallback);
+        }
       };
 
-      var base64Data = vm.about.image.$ngfDataUrl;
-
-      vm.about.image = base64Data;
-      console.log(vm.about.image);
-
       // Create a new about, or update the current instance
-      vm.about.createOrUpdate()
-        .then(successCallback)
-        .catch(errorCallback);
+      $scope.uploadImage(vm.about.image);
+
+
 
       function successCallback(res) {
         $state.go('admin.abouts.list'); // should we send the User to the list or the updated About's view?
