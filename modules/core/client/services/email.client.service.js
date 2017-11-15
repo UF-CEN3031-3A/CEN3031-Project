@@ -8,7 +8,7 @@
   EmailService.$inject = ['$http', 'Notification'];
 
   var link_to_pdf = 'docs.google.com';
-  var admin_email = "tesshbianchi@gmail.com"
+  var admin_email = "tess.bianchi@yahoo.com"
 
   function EmailService($http, Notification)
   {
@@ -21,7 +21,7 @@
           - *contactEmail : email address
           - *contactName : Name of the person
           - companyName : Name of the company
-          - contactMessage : Message to write to the user
+          - contactMsg : Message to write to the user
         */ 
         // All email data should AT LEAST have an email address and contact name. If it doesn't. Nope. No email!
         if(!data.contactEmail || !data.contactName || (data.type != "business" && data.type != "public" & data.type != "slide_deck"))
@@ -36,7 +36,7 @@
           email_data.subject = "Public Inquiry from " + data.contactName;
           email_data.text = "Name: " + data.contactName + "\n" + 
                             "Email: " + data.contactEmail + "\n" + 
-                            "Message: " + data.contactMessage + "\n";
+                            "Message: " + data.contactMsg + "\n";
           email_data.sendSlideDeck = false;
           send_with_feedback(email_data);
 
@@ -49,7 +49,7 @@
           email_data.text = "Name: " + data.contactName + "\n" + 
                             "Company Name: " + data.companyName + "\n" +
                             "Email: " + data.contactEmail + "\n" + 
-                            "Message: " + data.contactMessage + "\n";
+                            "Message: " + data.contactMsg + "\n";
           email_data.sendSlideDeck = false;
           send_with_feedback(email_data);
 
