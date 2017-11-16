@@ -70,11 +70,11 @@ exports.renderNotFound = function (req, res) {
 /**
  * Send an email when the contact from is submitted
  */
-exports.sendMail = function(req, res) {
+exports.sendMail = function (req, res) {
 
-    var data = req.body;
+  var data = req.body;
 
-    console.log(data);
+  console.log(data);
 
     /*
       'data' has the following properties
@@ -82,15 +82,15 @@ exports.sendMail = function(req, res) {
       - subject : subject line
       - text : Message to write to the user
       - sendSlideDeck : boolean whether or not to send the slide deck
-    */ 
+    */
 
-    const msg = {
-      to: data.contactEmail,
-      from: process.env.MAILER_FROM,
-      subject: data.subject,
-      text: data.text,
-    };
-    sgMail.send(msg);
+  const msg = {
+    to: data.contactEmail,
+    from: process.env.MAILER_FROM,
+    subject: data.subject,
+    text: data.text
+  };
+  sgMail.send(msg);
 
-    res.json(data);
+  res.json(data);
 };

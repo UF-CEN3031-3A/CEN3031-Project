@@ -5,16 +5,15 @@
     .module('core')
     .controller('AboutUsController', AboutUsController);
 
-  AboutUsController.$inject = ["SlideDeckModalService"];
+  AboutUsController.$inject = ['SlideDeckModalService'];
 
   function AboutUsController(SlideDeckModalService) {
     var vm = this;
     vm.data = {};
 
-    this.slideDeckModal = function()
-    {
+    this.slideDeckModal = function () {
       SlideDeckModalService.showModal({});
-    }
+    };
   }
 
 }());

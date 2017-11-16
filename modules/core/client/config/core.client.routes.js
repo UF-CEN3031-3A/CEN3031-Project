@@ -72,13 +72,13 @@
         url: '/about',
         templateUrl: '/modules/core/client/views/about_us.client.view.html',
         controller: 'AboutUsController',
-        controllerAs: 'vm',
+        controllerAs: 'vm'
       })
       .state('business_inquiry', {
         url: '/business_inquiry',
         templateUrl: '/modules/core/client/views/business_inquiry.client.view.html',
         controller: 'BusinessInquiryController',
         controllerAs: 'vm'
-      })
+      });
   }
 }());
