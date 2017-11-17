@@ -37,7 +37,6 @@
     "seed:test": "gulp seed:test"
   },
   "dependencies": {
-    "@sendgrid/mail": "^6.1.4",
     "acl": "~0.4.10",
     "async": "~2.5.0",
     "body-parser": "~1.17.1",
