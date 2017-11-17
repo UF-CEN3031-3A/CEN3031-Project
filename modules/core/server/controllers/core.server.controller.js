@@ -2,7 +2,12 @@
 
 var validator = require('validator'),
   path = require('path'),
-  config = require(path.resolve('./config/config'));
+  config = require(path.resolve('./config/config')),
+  nodemailer = require('nodemailer');
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 
 /**
  * Render the main application page
@@ -60,4 +65,32 @@ exports.renderNotFound = function (req, res) {
       res.send('Path not found');
     }
   });
+};
+
+/**
+ * Send an email when the contact from is submitted
+ */
+exports.sendMail = function (req, res) {
+
+  var data = req.body;
+
+  console.log(data);
+
+    /*
+      'data' has the following properties
+      - contactEmail : email address
+      - subject : subject line
+      - text : Message to write to the user
+      - sendSlideDeck : boolean whether or not to send the slide deck
+    */
+
+  const msg = {
+    to: data.contactEmail,
+    from: process.env.MAILER_FROM,
+    subject: data.subject,
+    text: data.text
+  };
+  sgMail.send(msg);
+
+  res.json(data);
 };

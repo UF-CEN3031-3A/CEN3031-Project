@@ -71,9 +71,8 @@
       .state('business_inquiry', {
         url: '/business_inquiry',
         templateUrl: '/modules/core/client/views/business_inquiry.client.view.html',
-        data: {
-          ignoreState: true
-        }
+        controller: 'BusinessInquiryController',
+        controllerAs: 'vm'
       });
   }
 }());
