@@ -1,21 +1,21 @@
 <!--ABOOUT US PAGE ORIGINALLY CREATED AND DEVELOPED BY MICHAEL LEVECQUE-->
 <!--Initial: 10/19/2017 from 2:20 PM to 6:50 PM-->
-<!--Updated:  -->
+<!--Updated: 10/29/2017 from 6:15 PM to 11:30 PM-->
 
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/modules/core/client/css/core.css">
 
   <!-- Experimentation with styling-->
   <style>
-    button.accordion {
+    uib-accordion {
       background-color: Lemonchiffon;
       color: Black;
       cursor: pointer;
-      padding: 20px;
+/*      padding: 20px 20px;
+*/      border: none;
       width: 100%;
-      border: none;
       text-align: center;
       outline: hidden;
       font-size: 20px;
@@ -26,112 +26,189 @@
       background-color: Gold;
     }
 
-    div.panel {
+    .subtitle {
+      text-align: left;
+      font-size: 30px;
+      padding-left: 50px;
+      padding-top: 50px;
+    }
+
+/*    div.panel {
       padding: 0 20px;
       display: none;
       background-color: LightYellow;
+    }*/
+
+    div.card-deck{
+      padding: 0px 100px 20px 100px;
+      background-color: #FFFFFF;
     }
 
     div.card {
-      background-color: White;
-      padding: 18px;
+      
+      padding: 50px 70px 50px 70px;
+    }
+
+    div.card-header {
+      font-family: 'Oswald', sans-serif;
+      font-size: 50px;
+    }
+
+    div.card-block {
+      font-family: 'Merriwether';
     }
 
     img {
       padding: 4px;
     }
 
-    div.jumbotron {
-      background-color: PaleVioletRed;
+    div.head {
+      /*background-color: PaleVioletRed;*/
       text-align: center;
       color: White;
-      padding: 20px;
-    }
+/*      padding: 20px;
+*/    }
 
   </style>
   </head>
 
   <body>
-    <!--Not sure if these are necessary but Tess advised me to include the just in case-->
-    <script src="/public/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/public/lib/angular/angular.js"></script>
-    <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
+
+    <section>
+      <div class="jumbotron gradient-banner text-center">
+        <span class="subtitle">Just One Drop.</span>
+      </div>
+    </section>
 
     <!-- Start of the section-->
     <section>
 
     <!--Placeholder for banner, image or anything we/client decide is most appropriate-->
-    <img class="card-img-top img-responsive center-block img-rounded" src="/modules/core/client/img/testImages/antioxidants.jpg" alt="Image not displaying">
+    <!-- <img class="card-img-top img-responsive center-block img-rounded" src="/modules/core/client/img/testImages/antioxidants.jpg" alt="Image not displaying"> -->
 
+      <div class="parallax">
+        <div class="parallax-window">
+          <span class="para-caption">Meet Our Team</span>
+        </div>
+     </div>
+
+     <div class="container container-padding">
+        <h1>Allow Us to Introduce Ourselves</h1>
+        <br>
+        <p>At Heart Healthy Spirits, this is a blurb to serve as a brief introduction for introducing a personal team who is dedicated to bring the heart healthy benefits of t*Rez, and put a face to the representatives and advocates who are working to get their antioxidant boost into all products.</p>
+     </div>
       <!-- Jumbotron Set Up for the Page title-->
-      <div class="jumbotron">
+      <!-- <div class="jumbotron">
         <h1>Get To Know</h1>
         <h1>Heart Healthy Spirits!</h1>
-      </div>
+      </div> -->
+
+
 
       <!-- Setting up permanent display for the team memver profiles-->
-      <div class="card text-center" style="background-color: LemonChiffon">
-          <h1 class="card-header">MEET OUR TEAM</h1>
-      </div>
+      <!-- <div class="card text-center"> -->
+      <!-- <div class="head"><i><b>Allow us to introduce ourselves</b></i></div> -->
+      <!-- </div> -->
 
       <!-- Card deck for the three team member profiles-->
-      <div class="card-deck">
+      <div class="row card-deck">
         <div class="card col-md-4">
-          <img class="card-img-top img-responsive center-block" src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
+          <img class="card-img-top img-responsive center-block " src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
           <div class="card-header text-center">
-            <h3>Kim Popejoy</h3>
+            <h2>Kim Popejoy</h2>
           </div>
           <div class="card-block">
             <p class="card-text">This is placeholder text for the description of the first team member.</p>
           </div>
-          <div class="card-footer">
+          <!-- <div class="card-footer">
             <small class="text-muted">Some example placeholder text</small>
-          </div>
+          </div> -->
         </div>
         <div class="card col-md-4">
           <img class="card-img-top img-responsive center-block" src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
           <div class="card-header text-center">
-            <h3>Michael Bainum</h3>
+            <h2>Michael Bainum</h2>
           </div>
           <div class="card-block">
             <p class="card-text">This is placeholder text for the description of the first team member. Even longer placeholder text.</p>
           </div>
-          <div class="card-footer">
+          <!-- <div class="card-footer">
             <small class="text-muted">Some example placeholder text</small>
-          </div>
+          </div> -->
         </div>
         <div class="card col-md-4">
           <img class="card-img-top img-responsive center-block" src="/modules/core/client/img/testImages/noProfPic.gif" alt="Picture not up">
           <div class="card-header text-center">
-            <h3>Gene Gamble</h3>
+            <h2>Gene Gamble</h2>
           </div>
           <div class="card-block">
             <p class="card-text">This is placeholder text for the description of the first team member. Even longer and longer and longer and longer and longer and longer and longer and longer and longer and longer and longer placeholder text for testing equal space.</p>
           </div>
-          <div class="card-footer">
+          <!-- <div class="card-footer">
             <small class="text-muted">Some example placeholder text</small>
-          </div>
+          </div> -->
         </div>
       </div>
 
+
       <!--***************************************************************************************************************************************************-->
       <!--Accordion setup for the Mission Statement and the Gallery Accordions-->
-      <button class="accordion">OUR MISSION</button>
+
+      <!-- <div class="row"> -->
+      <div class="parallax">
+        <div class="parallax-window">
+          <span class="para-caption">Our Mission</span>
+        </div>
+      </div>
+
+      <div class="container container-padding">
+        <h1>Let Us Tell You What We Are All About</h1>
+        <br>
+        <p> Very brief blurb urging the user to click to expand the more detailed information about Heart Healthy Spirit's Mission and vision.</p>
+      </div>
+
+      <div class="container">
+        <uib-accordion>
+          <div uib-accordion-group class="panel-default" heading="Click to Expand"> 
+            <p> THIS IS PLACEHOLDER CONTENT </p>
+          </div>
+        </uib-accordion>
+      </div>
+
+      <div class="parallax">
+        <div class="parallax-window">
+          <span class="para-caption">Gallery</span>
+        </div>
+      </div>
+
+      <div class="container container-padding">
+        <h1>Feel Free to Explore and Get to Know Us</h1>
+        <br>
+        <p> Very brief blurb urging the user to click to expand to explore other company content (stock photos, videos, etc.)</p>
+      </div>
+
+      <div class="container">
+        <uib-accordion>
+          <div uib-accordion-group class="panel-default" heading="Click to Expand">
+            <p> THIS IS PLACEHOLDER TEXT </p>
+          </div>
+        </uib-accordion>
+      </div>
+      <!-- </div> -->
+      
+<!--       <button class="accordion">OUR MISSION</button>
       <div class="panel">
         <p>TEST PLACEHOLDER FOR CONTENT</p>
-        <!--Need to make placeholder/capability for them to add either stock video or photo to their mission statement-->
+        
       </div>
 
       <button class="accordion">GALLERY</button>
       <div class="panel">
         <p>TEST PLACEHOLDER FOR CONTENT</p>
-        <!--WOULD BE COOL IF WE COULD PUT THEIR GALLERY PHOTOS IN A CAROUSEL UNDER THIS ACCORDION TAB-->
+        
       </div>
     
-      <!-- SCRIPT THAT I FOUND THAT IS SUPPOSE TO MAKE THE ACCORDIONS FUNCTIONAL-->
-      <!-- CURRENTLY NOT WORKING-->
+      
       <script>
       var acc = this.getElementsByClassName("accordion");
       var i;
@@ -148,13 +225,12 @@
           }
       }
       </script>
-      <!--***************************************************************************************************************************************************-->
+ -->      <!--***************************************************************************************************************************************************-->
       
       <br>
       <br>
       <br>
       <br>
-
     </section>
   </body>
 </html>

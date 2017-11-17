@@ -1,18 +1,120 @@
-<section>
-  <div class="page-header">
-    <h1>Faqs</h1>
-  </div>
-  <div class="list-group">
-    <a ng-repeat="faq in vm.faqs" ui-sref="faqs.view({ faqId: faq._id })" class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="faq.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="faq.user" ng-bind="faq.user.displayName"></span>
-        <span ng-if="!faq.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" ng-bind="faq.title"></h4>
-      <p class="list-group-item-text" ng-bind="faq.content"></p>
-    </a>
-  </div>
-</section>
+<!-- Original page view document created by Tess Bianchi -->
+<!-- Major style updates made by Michael Levecque -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Referencing core.css style sheet under modules/core/client/css -->
+    <link rel="stylesheet" href="/core/client/css/core.css">
+  </head>
+
+  <body>
+
+  <!-- Consistent gradient banner under navbar. -->
+    <section>
+      <div class="jumbotron gradient-banner text-center">
+        <span class="subtitle">Just One Drop.</span>
+      </div>
+    </section>
+
+    <!-- Parallax with stock heart healthy photo, see core.css -->
+    <div class="parallax-heart">
+      <div class="parallax-window">
+        <div class="container para-caption img-resposive">Public Inquiry</div>
+      </div>
+    </div>
+
+    <!-- "Snack" header with blurb -->
+    <div class="container container-padding">
+      <h1>What We Want for You</h1>
+      <p>This is a blurb statement to express the company's commitment to the general public (the user viewing this page) health and the desire to establish a connection with the user</p>
+    </div>
+
+    <!-- Parllax divider -->
+    <div class="parallax-heart">
+      <div class="parallax-window">
+        <div class="container para-caption img-resposive">Frequently Asked Questions</div>
+      </div>
+    </div>
+
+    <!-- Beginning FAQ section  with header and short blurb -->
+    <div class="container container-padding">
+      <h1>Let Us Clarify Some Quick Things</h1>
+      <p>Very short blurb to introduce the FAQs.</p>
+    </div>
+
+    <!-- Container for all added FAQ collapsibles -->
+    <div class="container container-padding">
+      <div class="row">
+        <uib-accordion close-others="vm.oneAtATime">
+          <div uib-accordion-group class="panel-default" heading="{{faq.title}}" ng-repeat="faq in vm.faqs">
+            {{faq.content}}
+          </div>
+        </uib-accordion>
+      </div>
+      <!-- Message at end of FAQ section to let the user know that they are able to submit a inquiry to the company -->
+      <h2 style="text-align: center;">Still got something on your mind? Want to voice your opinion? <div style="color: #DB2C65"><b>Submit an inquiry below!</b></div></h2>
+    </div>
+
+    <!-- Parallax divider -->
+    <div class="parallax-heart">
+      <div class="parallax-window">
+        <div class="container para-caption img-resposive">We Want to Hear from You!</div>
+      </div>
+    </div>
+
+    <!-- Beginning of Section for the public inquiry form -->
+    <div class="container container-padding">
+      <div class="row">
+        <h1>We Value Your Interest</h1>
+        <p>Very short blurb saying that the company is there to address any questions and thank the user in advance for their support.</p>
+
+        <!-- Column section for inquiry form to keep style consistent with form on Business Inquiry page.-->
+        <div class="col-md-6">
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <h3 for="exampleInputName2">Name</h3>
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            </div>
+
+            <div class="form-group">
+              <h3 for="exampleInputEmail2">Email</h3>
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+            </div>
+
+            <div class="form-group ">
+              <h3 for="exampleInputText">Your Message</h3>
+              <textarea  class="form-control" placeholder="Description"></textarea> 
+            </div>
+
+            <button type="submit" class="btn btn-default">Send Message</button>
+        
+          </form>
+        </div>
+
+        <!-- Column section to the right of the public inquiry form to serve as a placeholder area for stock content (photos, videos, or other) -->
+        <div class="col-md-6">
+          <h3>PLACEHOLDER FOR STOCK IMAGE</h3>
+        </div>
+      </div>
+
+      <!-- Final centered section for social media links -->
+      <!-- WILL HAVE TO ADAPT THESE TO THE SOCIAL MEDIA ACCOUNTS THEY ACTUALLY HAVE -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <hr>
+          <h2>Visit Our Social Sites</h2>
+          <ul class="list-inline banner-social-buttons">
+
+            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter"> <span class="network-name">Twitter</span></i></a></li>
+
+            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a></li>
+
+            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-youtube-play"> <span class="network-name">Youtube</span></i></a></li>
+          </ul>
+        </div>
+      </div>    
+    </div>
+  </body>
+</html>

@@ -35,20 +35,16 @@
 
       var uploadedImageBase64 = null;
       $scope.uploadImage = function (file) {
-        console.log("IN THE FUNCTION!!");
-        console.log(file);
         if (file) {
-          console.log("file is VALID");
           Upload.base64DataUrl(file).then(
-            function(url){
-              console.log("in the url func");
-              console.log(url);
+            function (url) {
+              // console.log(url);
               vm.about.image = url;
               vm.about.createOrUpdate()
                 .then(successCallback)
                 .catch(errorCallback);
             }
-          )
+          );
         } else {
           vm.about.createOrUpdate()
             .then(successCallback)
@@ -58,8 +54,6 @@
 
       // Create a new about, or update the current instance
       $scope.uploadImage(vm.about.image);
-
-
 
       function successCallback(res) {
         $state.go('admin.abouts.list'); // should we send the User to the list or the updated About's view?

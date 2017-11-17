@@ -5,84 +5,77 @@
     </div>
   </section>
 
-  <!-- promotional Video Embed -->
-  <div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/si0TOwUMlIM?rel=0" frameborder="0" allowfullscreen></iframe>
+  <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+   <img class="img-responsive" src="/modules/core/client/img/testImages/res.png" style="cursor:pointer" />
+  </div>
+  <div style="display:none">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/si0TOwUMlIM?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="parallax-drop">
+    <div class="parallax-window">
+      <span class="para-caption">Introducing: t*Rez</span>
+    </div>
+  </div>
+
+  <div class="container container-padding">
+    <h1>Your Next Source of Antioxidant Benefits</h1>
+    <h1>Now Making its Way in to All Your Favorite Products</h1>
+    <br>
+    <p>This is a blurb that serves to briefly summarize the initial product video featured above, and reaffirm the impact and power of this product to bring the heart-healthy, antioxidant-based benefits of resveratrol into the new t*Rez solution.  This blurb should entice the reader to continue down the page to explore different artifacts (articles, releases, studies, etc).</p>
+  </div>
+
+  <div class="parallax-news">
+    <div class="parallax-window">
+      <span class="para-caption">In the News</span>
+    </div>
+  </div>
+
+  <div class="container container-padding">
+    <h1>This Just In</h1>
+    <br>
+    <p>This is a blurb that introduces what the world is saying about antioxidants, resveratrol, and t*Rez.</p>
   </div>
 
   <!-- News articles/related images -->
   <section>
-    <h2 class="text-center" style="background-color: gold">News</h2>
-    <div class="row">
-      <div class="col-sm-offset-1 col-md-4">
-        <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
+    <div class="container container-padding">
+      <div class="row">
+        <div class="col-md-4">
+          <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
+        </div>
+        <div class="col-md-8">
+          <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" ng-repeat="group in groups">
+              <uib-accordion-heading>
+                Title: {{group.title}}<span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+              </uib-accordion-heading>
+              <h4>Author: {{group.author}}</h4>
+              {{group.content}}
+            </div>
+          </uib-accordion>
+        </div>
       </div>
-      <div class="col-md-offset-1 col-md-6">
-        <uib-accordion close-others="oneAtATime">
-          <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
-            <h4>Author: {{group.author}}</h4>
-            {{group.content}}
-          </div>
-        </uib-accordion>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-offset-1 col-md-6">
-        <uib-accordion close-others="oneAtATime">
-          <div uib-accordion-group class="panel-default" heading="Title: {{group.title}}" ng-repeat="group in groups">
-            <h4>Author: {{group.author}}</h4>
-            {{group.content}}
-          </div>
-        </uib-accordion>
-      </div>
-      <div class="col-sm-offset-1 col-md-4">
-        <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- Old code for news stuff -->
-  <!-- 
-  <section>
-    <h2 class="text-center" style="background-color: gold">News</h2>
-    <div class="row">
-      <div class="col-sm-offset-1 col-md-4">
-        <div>
+      <div class="row">
+        <div class="col-md-8">
+          <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" ng-repeat="group in groups">
+              <uib-accordion-heading>
+                Title: {{group.title}}<span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+              </uib-accordion-heading>
+              <h4>Author: {{group.author}}</h4>
+              {{group.content}}
+            </div>
+          </uib-accordion>
+        </div>
+        <div class="col-md-4">
           <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
         </div>
       </div>
-      <div class="col-md-offset-1 col-md-6">
-        <h3 data-toggle="collapse" data-target="#body1">Title: Lorem Ipsum </h3>
-        <h4>Author: Mr. Ipsum </h4>
-        <p id="body1" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        <h3 data-toggle="collapse" data-target="#body2">Title: Lorem Ipsum </h3>
-        <h4>Author: Mr. Ipsum </h4>  
-        <p id="body2" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>    
-      </div>
     </div>
-    <div class="row">
-      <div class="col-md-offset-1 col-md-6">
-        <h3 data-toggle="collapse" data-target="#body3">Title: Lorem Ipsum </h3>
-        <h4>Author: Mr. Ipsum </h4>  
-        <p id="body3" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-        <h3 data-toggle="collapse" data-target="#body4">
-          Title: Lorem Ipsum 
-        </h3>
-        <h4>
-          Author: Mr. Ipsum 
-        </h4>  
-        <p id="body4" class="collapse in">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      </div>
-      <div class="col-md-offset-1 col-md-4">
-        <div>
-          <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
-        </div>
-      </div>
-    </div>   
   </section>
- -->
     
   <!-- Dependencies -->
       
@@ -99,7 +92,4 @@
   <script src="app/config/listings.client.routes.js"></script>
   <script src="app/factories/listings.client.factory.js"></script>
   <script src="app/controllers/listings.client.controller.js"></script>
-    
-
 </body>
-

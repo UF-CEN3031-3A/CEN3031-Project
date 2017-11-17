@@ -1,18 +1,109 @@
+<script src="/public/lib/jquery/dist/jquery.min.js"></script>
+<script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/public/lib/angular/angular.js"></script>
+<script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="/modules/core/client/css/core.css"></script>
+
+<style> 
+.panel-title{
+  font-size: 25px;
+}
+
+.col-md-8{
+  padding-right: 10px;
+  padding-left: 0px;
+}
+
+.panel-info > .panel-heading {
+  color: #000000;
+  background-image: linear-gradient(to bottom, #FE4848 60%, #FF8484 100%);
+  border-color: #FF8484;
+}
+
+.panel-info{
+  border-color: #FF8484;
+}
+
+
+</style>
+
 <section>
-  <div class="page-header">
-    <h1>Articles</h1>
-  </div>
-  <div class="list-group">
-    <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="article.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-        <span ng-if="!article.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" ng-bind="article.title"></h4>
-      <p class="list-group-item-text" ng-bind="article.content"></p>
-    </a>
-  </div>
+    <div class="jumbotron gradient-banner text-center">
+      <span class="subtitle">Just One Drop.</span>
+    </div>
 </section>
+
+<div class="parallax-heart">
+  <div class="parallax-window">
+    <div class="container para-caption img-resposive">The Official Heart Healthy Blog</div>
+  </div>
+</div>
+
+<div class="container container-padding">
+  <h1>We've Got You Covered</h1>
+  <br>
+  <p>Keep up to date with all the latest company news and announcements.</p>
+</div>
+
+<!-- <div class="container text-center">
+    <h1>t*Rez Blog</h1>
+</div> -->
+
+
+  <div class="container container-padding">
+  <div class="col-md-8">
+    <uib-accordion close-others="vm.oneAtATime">
+      <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" ng-repeat="article in vm.articles">
+        <a class="list-group-item">
+          <uib-accordion-heading>
+            <i class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}">
+            </i>
+            {{article.title}}
+            by
+            <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+            <span ng-if="!article.user">Deleted User</span>
+
+            <span class="pull-right" ng-bind="article.created | date:'mediumDate'"></span>
+            <span class="pull-right">Posted on &nbsp;</span>
+          </uib-accordion-heading>
+          <small class="list-group-item-text">
+            Posted on
+            <span ng-bind="article.created | date:'mediumDate'"></span>
+            by
+            <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+            <span ng-if="!article.user">Deleted User</span>
+          </small>
+          <p class="list-group-item-text" ng-bind="article.content"></p>
+        </a>
+      </div>
+    </uib-accordion>
+  </div>
+  <div class="panel panel-info col-md-4">
+    <div class="panel-heading" style="font-family: 'Oswald', sans-serif; font-size: 30px">
+      Archive
+    </div>
+    <div class="panel-body">
+      <uib-accordion>
+        <div uib-accordion-group class="panel-default" ng-repeat="year in vm.years">
+          <uib-accordion-heading>
+            <i class="glyphicon glyphicon-folder-open">
+            </i>
+            {{year.number}}
+
+          </uib-accordion-heading>
+          <uib-accordion>
+            <div uib-accordion-group class="panel-default" ng-repeat="month in vm.months">
+              <uib-accordion-heading>
+                <i class="glyphicon glyphicon-folder-open">
+                </i>
+                {{month.name}}
+              </uib-accordion-heading>
+            </div>
+          </uib-accordion>
+        </div>
+      </uib-accordion>
+    </div>
+  </div>
+  
+</div>

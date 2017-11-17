@@ -11,7 +11,7 @@
     $stateProvider
       .state('faqs', {
         abstract: true,
-        url: '/faqs',
+        url: '/contact_us',
         template: '<ui-view/>'
       })
       .state('faqs.list', {
@@ -19,18 +19,6 @@
         templateUrl: '/modules/faqs/client/views/list-faqs.client.view.html',
         controller: 'FaqsListController',
         controllerAs: 'vm'
-      })
-      .state('faqs.view', {
-        url: '/:faqId',
-        templateUrl: '/modules/faqs/client/views/view-faq.client.view.html',
-        controller: 'FaqsController',
-        controllerAs: 'vm',
-        resolve: {
-          faqResolve: getFaq
-        },
-        data: {
-          pageTitle: '{{ faqResolve.title }}'
-        }
       });
   }
 
