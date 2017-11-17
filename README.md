@@ -13,3 +13,5 @@ Seeding will provide some example blog posts, FAQ, and press releases for you to
 
 ## Admin Access
 The url `http://localhost:8080/authentication/signin` will take you to the signin page. Likewise, `http://localhost:8080/admin/users` will take you to the admin panel if you are already logged in. From here you can manage most aspects of the website content as well as user management and password management. 
+
+

@@ -20,7 +20,7 @@
           <a ui-sref="admin.faqs.list">FAQ</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="admin.abouts.list">About Us</a>
+          <a ui-sref="admin.abouts">About Us</a>
         </li>
         <li ui-sref-active="active">
           <a ui-sref="admin.users">Users</a>
@@ -40,27 +40,27 @@
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
           <h1>
-            Press Releases
-            <a class="btn btn-primary pull-right" data-ui-sref="admin.releases.create">
+            Abouts
+            <a class="btn btn-primary pull-right" data-ui-sref="admin.abouts.create">
               <i class="glyphicon glyphicon-plus"></i>
             </a>
           </h1>
         </div>
         <div class="list-group">
-          <a data-ng-repeat="release in vm.releases" data-ui-sref="admin.releases.edit({releaseId: release._id})" class="list-group-item">
+          <a data-ng-repeat="about in vm.abouts" data-ui-sref="admin.abouts.edit({aboutId: about._id})" class="list-group-item">
             <small class="list-group-item-text">
               Posted on
-              <span data-ng-bind="release.created | date:'mediumDate'"></span>
+              <span data-ng-bind="about.created | date:'mediumDate'"></span>
               by
-              <span ng-if="release.user" ng-bind="release.user.displayName"></span>
-              <span ng-if="!release.user">Deleted User</span>
+              <span ng-if="about.user" ng-bind="about.user.displayName"></span>
+              <span ng-if="!about.user">Deleted User</span>
             </small>
-            <h4 class="list-group-item-heading" data-ng-bind="release.title"></h4>
-            <p class="list-group-item-text" data-ng-bind="release.content"></p>
+            <h4 class="list-group-item-heading" data-ng-bind="about.title"></h4>
+            <p class="list-group-item-text" data-ng-bind="about.content"></p>
           </a>
         </div>
-        <div class="alert alert-warning text-center" data-ng-if="releases.$resolved && !releases.length">
-          No releases yet, why don't you <a data-ui-sref="admin.releases.create">create one</a>?
+        <div class="alert alert-warning text-center" data-ng-if="abouts.$resolved && !abouts.length">
+          No abouts yet, why don't you <a data-ui-sref="admin.abouts.create">create one</a>?
       </div>
   </div>
 </section>

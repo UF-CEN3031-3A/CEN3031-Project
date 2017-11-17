@@ -119,6 +119,34 @@ module.exports = {
         }
       }]
     }, {
+      model: 'About',
+      options: {
+        // Override log results setting at the
+        // collection level.
+        logResults: true
+      },
+      skip: {
+        // Skip collection when this query returns results.
+        // e.g. {}: Only seeds collection when it is empty.
+        when: {} // Mongoose qualified query
+      },
+      docs: [{
+        data: {
+          title: 'Kim Popejoy',
+          content: 'A short bio about Kim Popejoy'
+        }
+      }, {
+        data: {
+          title: 'Michael Bainum',
+          content: 'A short bio about Michael Bainum'
+        }
+      }, {
+        data: {
+          title: 'Gene Gamble',
+          content: 'A short bio about Gene Gamble'
+        }
+      }]
+    }, {
       model: 'Faq',
       options: {
         // Override log results setting at the

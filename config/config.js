@@ -224,6 +224,8 @@ var initGlobalConfig = function () {
   return config;
 };
 
+var applicationModuleVendorDependencies = ['ngResource', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils'];
+
 /**
  * Set configuration object
  */
