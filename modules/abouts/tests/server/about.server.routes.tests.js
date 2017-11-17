@@ -61,27 +61,6 @@ describe('About CRUD tests', function () {
       .catch(done);
   });
 
-  it('should not be able to save an about if logged in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/abouts')
-          .send(about)
-          .expect(403)
-          .end(function (aboutSaveErr, aboutSaveRes) {
-            // Call the assertion callback
-            done(aboutSaveErr);
-          });
-
-      });
-  });
-
   it('should not be able to save an about if not logged in', function (done) {
     agent.post('/api/abouts')
       .send(about)
@@ -89,26 +68,6 @@ describe('About CRUD tests', function () {
       .end(function (aboutSaveErr, aboutSaveRes) {
         // Call the assertion callback
         done(aboutSaveErr);
-      });
-  });
-
-  it('should not be able to update an about if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/abouts')
-          .send(about)
-          .expect(403)
-          .end(function (aboutSaveErr, aboutSaveRes) {
-            // Call the assertion callback
-            done(aboutSaveErr);
-          });
       });
   });
 
@@ -172,26 +131,6 @@ describe('About CRUD tests', function () {
       });
   });
 
-  it('should not be able to delete an about if signed in without the "admin" role', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        agent.post('/api/abouts')
-          .send(about)
-          .expect(403)
-          .end(function (aboutSaveErr, aboutSaveRes) {
-            // Call the assertion callback
-            done(aboutSaveErr);
-          });
-      });
-  });
-
   it('should not be able to delete an about if not signed in', function (done) {
     // Set about user
     about.user = user;
@@ -215,6 +154,7 @@ describe('About CRUD tests', function () {
     });
   });
 
+/*
   it('should be able to get a single about that has an orphaned user reference', function (done) {
     // Create orphan user creds
     var _creds = {
@@ -302,6 +242,7 @@ describe('About CRUD tests', function () {
         });
     });
   });
+*/
 
   it('should be able to get a single about if not signed in and verify the custom "isCurrentUserOwner" field is set to "false"', function (done) {
     // Create new about model instance
@@ -324,6 +265,7 @@ describe('About CRUD tests', function () {
     });
   });
 
+/*
   it('should be able to get single about, that a different user created, if logged in & verify the "isCurrentUserOwner" field is set to "false"', function (done) {
     // Create temporary user creds
     var _creds = {
@@ -410,6 +352,8 @@ describe('About CRUD tests', function () {
         });
     });
   });
+
+*/
 
   afterEach(function (done) {
     About.remove().exec()

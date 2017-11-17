@@ -61,51 +61,6 @@ describe('About Admin CRUD tests', function () {
       .catch(done);
   });
 
-  it('should be able to save an about if logged in', function (done) {
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        // Get the userId
-        var userId = user.id;
-
-        // Save a new about
-        agent.post('/api/abouts')
-          .send(about)
-          .expect(200)
-          .end(function (aboutSaveErr, aboutSaveRes) {
-            // Handle about save error
-            if (aboutSaveErr) {
-              return done(aboutSaveErr);
-            }
-
-            // Get a list of abouts
-            agent.get('/api/abouts')
-              .end(function (aboutsGetErr, aboutsGetRes) {
-                // Handle about save error
-                if (aboutsGetErr) {
-                  return done(aboutsGetErr);
-                }
-
-                // Get abouts list
-                var abouts = aboutsGetRes.body;
-
-                // Set assertions
-                (abouts[0].user._id).should.equal(userId);
-                (abouts[0].title).should.match('About Title');
-
-                // Call the assertion callback
-                done();
-              });
-          });
-      });
-  });
-
   it('should be able to update an about if signed in', function (done) {
     agent.post('/api/auth/signin')
       .send(credentials)
@@ -218,56 +173,6 @@ describe('About Admin CRUD tests', function () {
 
                 // Set assertions
                 (aboutDeleteRes.body._id).should.equal(aboutSaveRes.body._id);
-
-                // Call the assertion callback
-                done();
-              });
-          });
-      });
-  });
-
-  it('should be able to get a single about if signed in and verify the custom "isCurrentUserOwner" field is set to "true"', function (done) {
-    // Create new about model instance
-    about.user = user;
-    var aboutObj = new About(about);
-
-    agent.post('/api/auth/signin')
-      .send(credentials)
-      .expect(200)
-      .end(function (signinErr, signinRes) {
-        // Handle signin error
-        if (signinErr) {
-          return done(signinErr);
-        }
-
-        // Get the userId
-        var userId = user.id;
-
-        // Save a new about
-        agent.post('/api/abouts')
-          .send(about)
-          .expect(200)
-          .end(function (aboutSaveErr, aboutSaveRes) {
-            // Handle about save error
-            if (aboutSaveErr) {
-              return done(aboutSaveErr);
-            }
-
-            // Get the about
-            agent.get('/api/abouts/' + aboutSaveRes.body._id)
-              .expect(200)
-              .end(function (aboutInfoErr, aboutInfoRes) {
-                // Handle about error
-                if (aboutInfoErr) {
-                  return done(aboutInfoErr);
-                }
-
-                // Set assertions
-                (aboutInfoRes.body._id).should.equal(aboutSaveRes.body._id);
-                (aboutInfoRes.body.title).should.equal(about.title);
-
-                // Assert that the "isCurrentUserOwner" field is set to true since the current User created it
-                (aboutInfoRes.body.isCurrentUserOwner).should.equal(true);
 
                 // Call the assertion callback
                 done();
