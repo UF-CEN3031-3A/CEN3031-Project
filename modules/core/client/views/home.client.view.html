@@ -33,45 +33,26 @@
     </div>
   </div>
 
-  <div class="container container-padding">
-    <h1>This Just In</h1>
-    <br>
-    <p>This is a blurb that introduces what the world is saying about antioxidants, resveratrol, and t*Rez.</p>
-  </div>
-
   <!-- News articles/related images -->
   <section>
     <div class="container container-padding">
+      <h1>This Just In</h1>
+      <p>This is a blurb that introduces what the world is saying about antioxidants, resveratrol, and t*Rez.</p>
+
       <div class="row">
-        <div class="col-md-4">
-          <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-12">
           <uib-accordion close-others="oneAtATime">
             <div uib-accordion-group class="panel-default" ng-repeat="group in groups">
               <uib-accordion-heading>
-                Title: {{group.title}}<span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                <div class="accordion-block">
+                  <div class="accordion-source">Source: {{group.title}}<span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span></div>
+                  <span class="accordion-title">Title: {{group.title}},</span>
+                  <span class="accordion-author">Author: {{group.author}}</span>
+                </div>
               </uib-accordion-heading>
-              <h4>Author: {{group.author}}</h4>
               {{group.content}}
             </div>
           </uib-accordion>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <uib-accordion close-others="oneAtATime">
-            <div uib-accordion-group class="panel-default" ng-repeat="group in groups">
-              <uib-accordion-heading>
-                Title: {{group.title}}<span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-              </uib-accordion-heading>
-              <h4>Author: {{group.author}}</h4>
-              {{group.content}}
-            </div>
-          </uib-accordion>
-        </div>
-        <div class="col-md-4">
-          <img alt="grapeTest" class="img-responsive text-center" src="/modules/core/client/img/testImages/Red-Grapes-PNG.png"/>
         </div>
       </div>
     </div>
