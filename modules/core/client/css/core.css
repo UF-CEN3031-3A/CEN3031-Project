@@ -83,7 +83,6 @@ h5 {
 
 p {
   font-family: 'Merriweather', serif;
-  font-size: 20px;
   line-height: 30px;
 }
 
@@ -94,6 +93,10 @@ a:hover, a:visited, a:link, a:active {
 .container-padding {
   padding-top: 10vh;
   padding-bottom: 10vh;
+}
+
+.row-padding {
+  padding: 10px 0 10px 0;
 }
 
 .display {
@@ -122,7 +125,15 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color:#cecece;
+  color: #cecece;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #cecece;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #b9b9b9;
 }
 
 .navbar-default .navbar-nav > .active > a{
@@ -143,21 +154,6 @@ a:hover, a:visited, a:link, a:active {
   line-height: 30vh;
   text-align: center;
   vertical-align: middle;
-}
-
-.parallax {
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    /* The image used */
-    /*IMAGE CREDIT:https://seasonsmedical.com/wp-content/uploads/Less-Than-3-Percent-of-Americans-Live-a-Healthy-Lifestyle-01.jpg*/
-    /*background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");*/
-    /*IMAGE CREDIT:https://www.honeycolony.com/wp-content/uploads/2017/05/antioxidants.jpg*/
-    background-image: url("/modules/core/client/img/testImages/blue.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Set a specific height */
-    height: 30vh; 
 }
 
 .parallax-heart {
@@ -190,11 +186,6 @@ a:hover, a:visited, a:link, a:active {
 .navbar-nav > li > a{
   color: #750647;
   padding: 20px 25px 20px 25px;
-
-  
-  /*padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 25px;*/
 }
 
 .subtitle {
@@ -212,8 +203,7 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .head {
-  /*  background-image: linear-gradient(to bottom, #FFC076 50%, #FF9827 100%);
-*/background-color: #FF7961;
+  background-color: #FF7961;
   font-family: 'Merriwether';
   font-size: 40px;
   padding: 20px 25px 20px 25px;
@@ -318,6 +308,16 @@ a:hover, a:visited, a:link, a:active {
   color: #000;
 }
 
+.footer-text {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+
+.footer-link {
+  font-family: 'Oswald', sans-serif;
+  color: #FF3371;
+}
+
 @media screen and (min-width: 240px) {
   h1 {
     font-size: 36px;
@@ -334,14 +334,57 @@ a:hover, a:visited, a:link, a:active {
   h5 {
     font-size: 14px;
   }
+  p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .container-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .para-caption {
     font-size: 40px;
+  }
+  .footer-text {
+    font-size: 20px;
+  }
+  .footer-link {
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 425px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .container-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
   .para-caption {
     font-size: 48px;
+  }
+  .footer-text {
+    font-size: 20px;
+  }
+  .footer-link {
+    font-size: 18px;
   }
 }
 
@@ -361,13 +404,37 @@ a:hover, a:visited, a:link, a:active {
   h5 {
     font-size: 22px;
   }
+  p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .container-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .para-caption {
     font-size: 54px;
+  }
+  .footer-text {
+    font-size: 24px;
+  }
+  .footer-link {
+    font-size: 22px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .container-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .para-caption {
     font-size: 62px;
+  }
+  .footer-text {
+    font-size: 28px;
+  }
+  .footer-link {
+    font-size: 24px;
   }
 }
