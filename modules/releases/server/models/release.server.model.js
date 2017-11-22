@@ -23,6 +23,18 @@ var ReleaseSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
+  source: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Source cannot be blank'
+  },
+  author: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Author cannot be blank'
+  },
   content: {
     type: String,
     default: '',

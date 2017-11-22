@@ -54,6 +54,21 @@
                 <p class="help-block error-text" ng-message="required">Release title is required.</p>
               </div>
             </div>
+            <div class="form-group" show-errors>
+              <label class="control-label" for="title">Source</label>
+              <input name="source" type="text" ng-model="vm.release.source" id="title" class="form-control" placeholder="Source" required autofocus>
+              <div ng-messages="vm.form.releaseForm.title.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Release source is required.</p>
+              </div>
+            </div>
+            <div class="form-group" show-errors>
+              <label class="control-label" for="title">Author</label>
+              <input name="author" type="text" ng-model="vm.release.author" id="title" class="form-control" placeholder="Author" required autofocus>
+              <div ng-messages="vm.form.releaseForm.title.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Release author is required.</p>
+              </div>
+            </div>
+
             <div class="form-group">
               <label class="control-label" for="content">Content</label>
               <textarea name="content" data-ng-model="vm.release.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
