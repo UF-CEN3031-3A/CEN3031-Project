@@ -94,8 +94,8 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .container-padding {
-  padding-top: 10vh;
   padding-bottom: 10vh;
+  padding-top: 10vh;
 }
 
 .row-padding {
@@ -107,9 +107,9 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .jumbotron {
+  margin-bottom: 0;
   padding-bottom: 25px;
   padding-top: 25px;
-  margin-bottom: 0;
 }
 
 .navbar {
@@ -265,7 +265,7 @@ a:hover, a:visited, a:link, a:active {
 @keyframes gradient-banner { 
   0%{background-position:84%}
   50%{background-position:17% 100%}
-  100%{background-position:84% 0%}
+  100%{background-position:84%}
 }
 
 .panel {
@@ -281,16 +281,16 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .panel-heading {
-  padding: 20px 0 20px 0;
   border: 0;
-  border-top-right-radius: 0;
   border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 20px 0 20px 0;  
 }
 
 .panel-default > .panel-heading {
-  color: #FF3371;
-  background-image: none;
   background-color: transparent;
+  background-image: none;
+  color: #FF3371;
 }
 
 .panel-default > .panel-heading:hover {
@@ -306,44 +306,42 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .accordion-source {
-  font-size: 35px;
-  font-family: 'Oswald', sans-serif;
   color: #FF3371;
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
   padding: 10px 0 10px 0;
 }
 
 .accordion-title {
-  font-size: 30px;
-  font-family: 'Oswald', sans-serif;
   color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
 }
 
 .accordion-author {
-  font-size: 24px;
-  font-family: 'Oswald', sans-serif;
   color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
 }
 
 .footer-text {
-  font-family: 'Oswald', sans-serif;
   color: #fff;
+  font-family: 'Oswald', sans-serif;
 }
 
 .footer-link {
-  font-family: 'Oswald', sans-serif;
   color: #FF3371;
+  font-family: 'Oswald', sans-serif;
 }
 
 /*Attempted to restyle button, will most likely have to work with Jon to do it correctly/effectively/efficiently.*/
 
 .custom-button {
-  font-size: 20px;
-  font-family: 'Oswald', sans-serif;
-  color: #FF3371;
-  padding: 10px 0 10px 0;
-
   border: none;
-
+  color: #FF3371;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  padding: 10px 0 10px 0;
  /* text-align: center;
   align-items: center;
   background-color: white;
@@ -373,8 +371,8 @@ a:hover, a:visited, a:link, a:active {
     line-height: 28px;
   }
   .container-padding {
-    padding-top: 20px;
     padding-bottom: 20px;
+    padding-top: 20px;
   }
   .para-caption {
     font-size: 40px;
@@ -408,8 +406,8 @@ a:hover, a:visited, a:link, a:active {
     line-height: 30px;
   }
   .container-padding {
-    padding-top: 25px;
     padding-bottom: 25px;
+    padding-top: 25px;
   }
   .para-caption {
     font-size: 48px;
@@ -443,8 +441,8 @@ a:hover, a:visited, a:link, a:active {
     line-height: 30px;
   }
   .container-padding {
-    padding-top: 30px;
     padding-bottom: 30px;
+    padding-top: 30px;
   }
   .para-caption {
     font-size: 54px;
@@ -459,8 +457,8 @@ a:hover, a:visited, a:link, a:active {
 
 @media screen and (min-width: 1024px) {
   .container-padding {
-    padding-top: 40px;
     padding-bottom: 40px;
+    padding-top: 40px;
   }
   .para-caption {
     font-size: 62px;

@@ -15,7 +15,7 @@
 
     vm.releases = ReleasesService.query();
 
-    //Variables to hold text for different titles and blurbs in the view
+    // Variables to hold text for different titles and blurbs in the view
     vm.bannerText = 'Just One Drop.';
     vm.ParallaxCaption1 = 'Introducing: t*Rez';
     vm.Heading1 = 'Your Next Source of Antioxidant Benefits';
@@ -25,7 +25,6 @@
     vm.ReleasesHeading = 'This Just In';
     vm.ReleasesText = 'This is a blurb that introduces what the world is saying about antioxidants, resveratrol, and t*Rez.';
 
-    
     vm.status = { isCustomHeaderOpen: false, isFirstOpen: true, isFirstDisabled: false };
   }
 }());
