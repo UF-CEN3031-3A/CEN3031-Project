@@ -1,3 +1,6 @@
+/*CORE.CSS FILE THAT CONTROLS THE STYLIUNG FOR WHOLE SITE*/
+/*EDITED BY: JONATHAN OSORIO AND MICHAEL LEVECQUE*/
+
 .content {
   margin-top: 50px;
 }
@@ -156,6 +159,17 @@ a:hover, a:visited, a:link, a:active {
   vertical-align: middle;
 }
 
+/*PArallax custom class for blueberry background*/
+.parallax-blue {
+  background-attachment: fixed;
+  background-image: url("/modules/core/client/img/testImages/blue.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+/*Parallax custom class for heart healthy background*/
 .parallax-heart {
   background-attachment: fixed;
   background-image: url("/modules/core/client/img/testImages/hearthealthyTest.jpg");
@@ -165,6 +179,7 @@ a:hover, a:visited, a:link, a:active {
   height: 30vh; 
 }
 
+/*Parallax custom class for wine background*/
 .parallax-drop { 
   background-attachment: fixed;
   background-image: url("/modules/core/client/img/testImages/wine.jpg");
@@ -174,6 +189,7 @@ a:hover, a:visited, a:link, a:active {
   height: 30vh; 
 }
 
+/*Parallax custom class for news background*/
 .parallax-news { 
   background-attachment: fixed;
   background-image: url("/modules/core/client/img/testImages/news.jpg");
@@ -316,6 +332,24 @@ a:hover, a:visited, a:link, a:active {
 .footer-link {
   font-family: 'Oswald', sans-serif;
   color: #FF3371;
+}
+
+/*Attempted to restyle button, will most likely have to work with Jon to do it correctly/effectively/efficiently.*/
+
+.custom-button {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  color: #FF3371;
+  padding: 10px 0 10px 0;
+
+  border: none;
+
+ /* text-align: center;
+  align-items: center;
+  background-color: white;
+  vertical-align: middle;
+  align-self: center;
+*/
 }
 
 @media screen and (min-width: 240px) {
