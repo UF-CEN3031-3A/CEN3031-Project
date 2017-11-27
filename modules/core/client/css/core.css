@@ -125,6 +125,8 @@ a:hover, a:visited, a:link, a:active {
 .navbar-default .navbar-nav > li > a {
   color: #fff;
   font-size: 18px;
+  cursor:pointer;
+
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -332,6 +334,8 @@ a:hover, a:visited, a:link, a:active {
 .footer-link {
   color: #FF3371;
   font-family: 'Oswald', sans-serif;
+  cursor:pointer;
+
 }
 
 /*Attempted to restyle button, will most likely have to work with Jon to do it correctly/effectively/efficiently.*/
@@ -469,4 +473,43 @@ a:hover, a:visited, a:link, a:active {
   .footer-link {
     font-size: 24px;
   }
+}
+.fade {
+    opacity: 1;
+}
+.fade.ng-hide {
+    opacity: 0;
+}
+
+/* showing something */
+.fade.ng-hide-remove {
+    transition: all 4.0s linear;
+    display: block !important;
+}
+
+/* hiding something */
+.fade.ng-hide-add {
+    transition: all 2.0s linear;
+    display: block !important;
+}
+
+.fade-in {
+    opacity: 1;
+}
+.fade-in.ng-hide {
+    opacity: 0;
+}
+/* showing something */
+.fade-in.ng-hide-remove {
+    transition: all 4.0s linear;
+    display: block !important;
+}
+
+
+
+
+.txtTitle {
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-width: 2px;
 }
