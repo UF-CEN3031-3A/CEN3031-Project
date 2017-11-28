@@ -1,4 +1,4 @@
-/*CORE.CSS FILE THAT CONTROLS THE STYLIUNG FOR WHOLE SITE*/
+/*CORE.CSS FILE THAT CONTROLS THE STYLING FOR WHOLE SITE*/
 /*EDITED BY: JONATHAN OSORIO AND MICHAEL LEVECQUE*/
 
 .content {
@@ -125,8 +125,6 @@ a:hover, a:visited, a:link, a:active {
 .navbar-default .navbar-nav > li > a {
   color: #fff;
   font-size: 18px;
-  cursor:pointer;
-
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -155,20 +153,25 @@ a:hover, a:visited, a:link, a:active {
   padding: 20px 25px 20px 25px;
 }
 
+.video-cover {
+  background-image: url("/modules/core/client/img/testImages/res.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .parallax-window {
-  line-height: 30vh;
   text-align: center;
   vertical-align: middle;
 }
 
-/*PArallax custom class for blueberry background*/
+/*Parallax custom class for blueberry background*/
 .parallax-blue {
   background-attachment: fixed;
   background-image: url("/modules/core/client/img/testImages/blue.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh;
 }
 
 /*Parallax custom class for heart healthy background*/
@@ -178,7 +181,6 @@ a:hover, a:visited, a:link, a:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh; 
 }
 
 /*Parallax custom class for wine background*/
@@ -188,7 +190,6 @@ a:hover, a:visited, a:link, a:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh; 
 }
 
 /*Parallax custom class for news background*/
@@ -198,7 +199,6 @@ a:hover, a:visited, a:link, a:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh; 
 }
 
 .navbar-nav > li > a{
@@ -229,16 +229,13 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .video-wrapper {
-  height: 0;
-  padding-bottom: 35.5%; /* 16:9 is 56.25% */
-  padding-top: 25px;
+  background-color: #000;
   position: relative;
 }
 
 .video-wrapper iframe {
   height: 100%;
   left: 0;
-  padding: 0 10vw 0 10vw;
   position: absolute;
   top: 0;
   width: 100%;
@@ -334,8 +331,7 @@ a:hover, a:visited, a:link, a:active {
 .footer-link {
   color: #FF3371;
   font-family: 'Oswald', sans-serif;
-  cursor:pointer;
-
+  cursor: pointer; 
 }
 
 /*Attempted to restyle button, will most likely have to work with Jon to do it correctly/effectively/efficiently.*/
@@ -387,6 +383,15 @@ a:hover, a:visited, a:link, a:active {
   .footer-link {
     font-size: 18px;
   }
+  .parallax-window {
+    padding: 20px 0 20px 0;
+  }
+  .video-cover {
+    height: 150px;
+  }
+  .video-wrapper {
+    padding-bottom: 150px;
+  }
 }
 
 @media screen and (min-width: 425px) {
@@ -421,6 +426,15 @@ a:hover, a:visited, a:link, a:active {
   }
   .footer-link {
     font-size: 18px;
+  }
+  .parallax-window {
+    padding: 5vh 0 5vh 0;
+  }
+  .video-cover {
+    height: 200px;
+  }
+  .video-wrapper {
+    padding-bottom: 200px;
   }
 }
 
@@ -457,6 +471,15 @@ a:hover, a:visited, a:link, a:active {
   .footer-link {
     font-size: 22px;
   }
+  .parallax-window {
+    padding: 7vh 0 7vh 0;
+  }
+  .video-cover {
+    height: 350px;
+  }
+  .video-wrapper {
+    padding-bottom: 350px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -473,7 +496,17 @@ a:hover, a:visited, a:link, a:active {
   .footer-link {
     font-size: 24px;
   }
+  .parallax-window {
+    padding: 10vh 0 10vh 0;
+  }
+  .video-cover {
+    height: 450px;
+  }
+  .video-wrapper {
+    padding-bottom: 450px;
+  }
 }
+
 .fade {
     opacity: 1;
 }
@@ -504,9 +537,6 @@ a:hover, a:visited, a:link, a:active {
     transition: all 4.0s linear;
     display: block !important;
 }
-
-
-
 
 .txtTitle {
   fill: #ffffff;
