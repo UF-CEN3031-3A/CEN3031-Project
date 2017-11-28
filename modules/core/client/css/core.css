@@ -297,7 +297,7 @@ a:hover, a:visited, a:link, a:active {
   border: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  padding: 20px 0 20px 0;  
+  padding: 10px 0 10px 0;  
 }
 
 .panel-default > .panel-heading {
@@ -312,6 +312,13 @@ a:hover, a:visited, a:link, a:active {
 
 .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
   border: 0;
+}
+
+.archive-title {
+  color: #fff;
+  background-color: #DB2C65;
+  padding: 15px;
+  font-size: 26px; 
 }
 
 /*Accordion styling to control structure for press release collapsibles*/
