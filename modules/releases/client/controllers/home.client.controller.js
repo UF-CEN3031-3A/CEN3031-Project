@@ -37,19 +37,6 @@
       $rootScope.hide_animation = false;
       $rootScope.hide_footer = true;
       $rootScope.hide_header = true;
-
-
-      $timeout(function () {
-        $rootScope.hide_animation = true;
-        $rootScope.first_time = true;
-      }, 6000);
-
-      $timeout(function () {
-        $rootScope.hide_main = false;
-        $rootScope.hide_footer = false;
-        $rootScope.hide_header = false;
-
-      }, 7500);
     }
 
     // Animation stuff
@@ -159,8 +146,19 @@
           vm.line_path += line_frames[line_frame_index];
           vm.text_path += '290;';
         }
+      } // end for loop
 
-      }
+      // Setting the timeout after the csv loads
+      $timeout(function () {
+        $rootScope.hide_animation = true;
+        $rootScope.first_time = true;
+      }, 6000);
+
+      $timeout(function () {
+        $rootScope.hide_main = false;
+        $rootScope.hide_footer = false;
+        $rootScope.hide_header = false;
+      }, 7500);
     };
 
     if ($rootScope.first_time === undefined) {
