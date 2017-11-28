@@ -49,21 +49,26 @@
       <h1 class="wow animated fadeInLeft">{{vm.publictext[0].heading2}}</h1>
       <!-- Animated blurb -->
       <p class="wow animated fadeIn">{{vm.publictext[0].shortText2}}</p>
-    </div>
+    <!-- </div> -->
 
     <!-- Container for all added FAQ collapsibles -->
-    <div class="container container-padding">
+    <!-- <div class="container container-padding"> -->
       <div class="row">
         <div class="col-md-12">
+
+          <!-- Accordion structure for the FAQs -->
           <uib-accordion close-others="vm.oneAtATime">
             <div uib-accordion-group class="panel-default" heading="{{faq.title}}" ng-repeat="faq in vm.faqs">
               {{faq.content}}
             </div>
           </uib-accordion>
+
         </div>
       </div>
+
       <!-- Message at end of FAQ section to let the user know that they are able to submit a inquiry to the company -->
-      <h2 style="text-align: center;">Still got something on your mind? Want to voice your opinion? <div style="color: #DB2C65"><b>Submit an inquiry below!</b></div></h2>
+      <h2 style="text-align: center;">Still got something on your mind? Want to voice your opinion? <div style="color: #DB2C65"><b>Submit your inquiry below!</b></div></h2>
+
     </div>
 
     <!-- Parallax divider -->
@@ -81,23 +86,24 @@
       <!-- Animated blurb -->
       <p class="wow animated fadeIn">{{vm.publictext[0].shortText3}}</p>
 
-
+      <!-- Column section for inquiry form to keep style consistent with form on Business Inquiry page.-->
       <div class="row">
-        <!-- Column section for inquiry form to keep style consistent with form on Business Inquiry page.-->
         <div class="col-md-12">
+
+          <!-- Public Inquiry submission form -->
           <form class="form-horizontal">
+
             <div>
-            <!-- <div class="form-group"> -->
               <h3 for="exampleInputName2">Name</h3>
               <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
             </div>
 
-            <div class="form-group">
+            <div>
               <h3 for="exampleInputEmail2">Email</h3>
               <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
             </div>
 
-            <div class="form-group ">
+            <div>
               <h3 for="exampleInputText">Your Message</h3>
               <textarea  class="form-control" placeholder="Description"></textarea> 
             </div>
@@ -105,6 +111,7 @@
             <div class="row-padding">
               <button type="submit" class="custom-button" ng-click="vm.sendMail()">Send Message</button>
             </div>
+
           </form>
         </div>
       </div>
@@ -117,6 +124,7 @@
 
       <div class="row">
         <div class="col-md-12 text-center">
+
           <hr>
           <h2>Visit Our Social Sites</h2>
           <ul class="list-inline banner-social-buttons">
@@ -127,6 +135,7 @@
 
             <li><a href="#"><i class="fa fa-youtube-play" style="font-size:36px;color:#CC181E"></i></a></li>
           </ul>
+
         </div>
       </div>    
     </div>
