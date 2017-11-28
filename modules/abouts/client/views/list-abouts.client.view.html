@@ -1,6 +1,7 @@
 <!--ABOOUT US PAGE ORIGINALLY CREATED AND DEVELOPED BY MICHAEL LEVECQUE-->
 <!--Initial: 10/19/2017 from 2:20 PM to 6:50 PM-->
 <!--Updated: 10/29/2017 from 6:15 PM to 11:30 PM-->
+<!-- Updates and edits made by: Jonathan Osorio and Michael Levecque -->
 
 <!DOCTYPE html>
 <html>
@@ -27,18 +28,20 @@
       </div>
 
       <div class="container container-padding">
+
+        <!-- Animated header -->
         <h1 class="wow animated fadeInLeft">{{vm.abouttext[0].heading1}}</h1>
-        <br>
+        <!-- Animated blurb -->
         <p class="wow animated fadeIn">{{vm.abouttext[0].shortText1}}</p>
 
         <div class="row card-deck">
           <div class="card col-md-4" ng-repeat="about in vm.abouts">
             <img class="card-img-top img-responsive center-block" ng-src="{{about.image}}" alt="Picture not up">
             <div class="card-header text-center">
-              <h3 ng-bind="about.title"></h3>
+              <h3 class="wow animated fadeInLeft" ng-bind="about.title"></h3>
             </div>
             <div class="card-block">
-              <p class="card-text" ng-bind="about.content"></p>
+              <p class="card-text wow animated fadeIn" ng-bind="about.content"></p>
             </div>
           </div>
         </div>
@@ -54,12 +57,14 @@
       </div>
 
       <div class="container container-padding">
-        <h1 class="wow animated fadeInLeft">{{vm.abouttext[0].heading2}}</h1>
-        <br>
-        <p class="wow animated fadeIn">{{vm.abouttext[0].shortText2}}</p>
-      </div>
 
-      <div class="container">
+        <!-- Animated header -->
+        <h1 class="wow animated fadeInLeft">{{vm.abouttext[0].heading2}}</h1>
+        <!-- Animated blurb -->
+        <p class="wow animated fadeIn">{{vm.abouttext[0].shortText2}}</p>
+      <!-- </div> -->
+
+      <!-- <div class="container"> -->
         <uib-accordion>
           <div uib-accordion-group class="panel-default" heading="Click to Expand">
             <p> THIS IS PLACEHOLDER CONTENT </p>
@@ -82,12 +87,12 @@
         <h1 class="wow animated fadeInLeft">{{vm.abouttext[0].heading3}}</h1>
         <br>
         <p class="wow animated fadeIn">{{vm.abouttext[0].shortText3}}</p>
-      </div>
+      <!-- </div>
 
-      <div class="container">
+      <div class="container"> -->
         <uib-accordion>
           <div uib-accordion-group class="panel-default" heading="Click to Expand">
-            <p> THIS IS PLACEHOLDER TEXT </p>
+            <p>Coming Soon!</p>
           </div>
         </uib-accordion>
       </div>
