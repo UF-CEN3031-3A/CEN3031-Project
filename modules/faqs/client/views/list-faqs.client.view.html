@@ -22,7 +22,7 @@
     <!-- Parallax with stock heart healthy photo, see core.css -->
     <div class="parallax-heart">
       <div class="parallax-window">
-        <div class="container para-caption wow animated fadeInDown img-resposive">{{vm.publictext[0].parallaxCapt1}}</div>
+        <span class="para-caption wow animated fadeInDown">{{vm.publictext[0].parallaxCapt1}}</span>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
     <!-- Parllax divider -->
     <div class="parallax-heart">
       <div class="parallax-window">
-        <div class="container para-caption wow animated fadeInDown img-resposive">{{vm.publictext[0].parallaxCapt2}}</div>
+        <span class="para-caption wow animated fadeInDown">{{vm.publictext[0].parallaxCapt2}}</span>
       </div>
     </div>
 
@@ -67,21 +67,21 @@
     <!-- Parallax divider -->
     <div class="parallax-heart">
       <div class="parallax-window">
-        <div class="container para-caption wow animated fadeInDown img-resposive">{{vm.publictext[0].parallaxCapt3}}</div>
+        <span class="para-caption wow animated fadeInDown">{{vm.publictext[0].parallaxCapt3}}</span>
       </div>
     </div>
 
     <!-- Beginning of Section for the public inquiry form -->
     <div class="container container-padding">
-      <div class="row">
+      
+      <!-- Animated header -->
+      <h1 class="wow animated fadeInLeft">{{vm.publictext[0].heading3}}</h1>
+      <!-- Animated blurb -->
+      <p class="wow animated fadeIn">{{vm.publictext[0].shortText3}}</p>
 
-        <!-- Animated header -->
-        <h1 class="wow animated fadeInLeft">{{vm.publictext[0].heading3}}</h1>
-        <!-- Animated blurb -->
-        <p class="wow animated fadeIn">{{vm.publictext[0].shortText3}}</p>
-
+        <div class="row">
         <!-- Column section for inquiry form to keep style consistent with form on Business Inquiry page.-->
-        <div class="col-md-6">
+        <div class="col-md-12">
           <form class="form-horizontal">
 
             <div class="form-group">
@@ -102,11 +102,6 @@
             <button type="submit" class="btn btn-default">Send Message</button>
         
           </form>
-        </div>
-
-        <!-- Column section to the right of the public inquiry form to serve as a placeholder area for stock content (photos, videos, or other) -->
-        <div class="col-md-6">
-          <h3>PLACEHOLDER FOR STOCK IMAGE</h3>
         </div>
       </div>
 
