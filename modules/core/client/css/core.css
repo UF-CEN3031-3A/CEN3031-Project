@@ -148,6 +148,7 @@ a:hover, a:visited, a:link, a:active {
   /*Scrapped the linear gradient navbar for a solid call-to-action color*/
   background-color: #DB2C65;
   background-image: none;
+  border-color: #DB2C65;
 }
 
 .navbar-brand {
