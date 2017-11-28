@@ -56,9 +56,7 @@ a:hover .header-profile-image {
 
 /* This is for the contact pages*/
 .form-control{
-    display:table;
-    /*margin:auto;*/
-    max-width: 500px;
+  display:table;
 }
 
 /* custom css */
@@ -125,26 +123,27 @@ a:hover, a:visited, a:link, a:active {
 .navbar-default .navbar-nav > li > a {
   color: #fff;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #cecece;
+  color: #333;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #cecece;
+  color: #333;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #b9b9b9;
 }
 
-.navbar-default .navbar-nav > .active > a{
-  background-image: linear-gradient(to bottom, #FF3371 20%, #FF86AF 100%);
+.navbar-default .navbar-nav > .active > a {
+  background-color: #DB2C65;
 }
 
 .navbar-default {
-  background-image: linear-gradient(to bottom, #FF3371 25%, #DB2C65 100%);
+  background-color: #DB2C65;
   border-color: #DB2C65;
 }
 
@@ -337,17 +336,12 @@ a:hover, a:visited, a:link, a:active {
 /*Attempted to restyle button, will most likely have to work with Jon to do it correctly/effectively/efficiently.*/
 
 .custom-button {
-  border: none;
-  color: #FF3371;
+  color: #fff;
+  background-color: #DB2C65;
+  padding: 15px;
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
-  padding: 10px 0 10px 0;
- /* text-align: center;
-  align-items: center;
-  background-color: white;
-  vertical-align: middle;
-  align-self: center;
-*/
+  border: 0;
 }
 
 @media screen and (min-width: 240px) {
