@@ -52,34 +52,36 @@
       <p class="wow animated fadeIn">This is a quick blurb encouraging business inquiries.</p>
 
         <!-- Left-most column section for business inquiry form -->
-      <div class="row">
-        <div class="col-md-12">
-          <form class="form-horizontal" name="business_inq_form">
-            <div>
-              <h3 for="exampleInputName2">Name</h3>
-              <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" ng-model="vm.data.contactName" required="true">
-            </div>
-            <div>
-              <h3 for="exampleInputEmail2">Email</h3>
-              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" ng-model="vm.data.contactEmail" required="true">
-            </div>
+      <div class="container container-padding">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-horizontal" name="business_inq_form">
+              <div>
+                <h3 for="exampleInputName2">Name</h3>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" ng-model="vm.data.contactName" required="true">
+              </div>
+              <div>
+                <h3 for="exampleInputEmail2">Email</h3>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" ng-model="vm.data.contactEmail" required="true">
+              </div>
 
-            <!-- ADDED EXTRA PARAMETER FOR COMPANY NAME FORM INPUT, NEED TO MAKE SURE THIS IS CONNECTED ALSO -->
-            <div>
-              <h3 for="exampleInputCompanyName2">Company Name</h3>
-              <input type="company" class="form-control" id="exampleInputCompanyName2" placeholder="Antioxidant Infusion 'R' Us" ng-model="vm.data.companyName" required="true">
-            </div>
-            <!-- ********************************************************************************************* -->
+              <!-- ADDED EXTRA PARAMETER FOR COMPANY NAME FORM INPUT, NEED TO MAKE SURE THIS IS CONNECTED ALSO -->
+              <div>
+                <h3 for="exampleInputCompanyName2">Company Name</h3>
+                <input type="company" class="form-control" id="exampleInputCompanyName2" placeholder="Antioxidant Infusion 'R' Us" ng-model="vm.data.companyName" required="true">
+              </div>
+              <!-- ********************************************************************************************* -->
 
-            <div>
-              <h3 for="exampleInputText">Your Message</h3>
-             <textarea  class="form-control" placeholder="Description" ng-model="vm.data.contactMsg" required="true"></textarea> 
-            </div>
-            <br>
-            <div class="row-padding">
-              <button type="submit" class="custom-button" ng-disabled="business_inq_form.$invalid" ng-click="vm.sendMail()">Send Message</button>
-            </div>
-          </form>
+              <div>
+                <h3 for="exampleInputText">Your Message</h3>
+               <textarea  class="form-control" placeholder="Description" ng-model="vm.data.contactMsg" required="true"></textarea> 
+              </div>
+              <br>
+              <div class="row-padding">
+                <button type="submit" class="custom-button" ng-disabled="business_inq_form.$invalid" ng-click="vm.sendMail()">Send Message</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
 
