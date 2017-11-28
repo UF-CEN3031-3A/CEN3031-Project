@@ -5,7 +5,7 @@
     .module('faqs')
     .controller('FaqsListController', FaqsListController);
 
-  FaqsListController.$inject = ['FaqsService','PublictextsService'];
+  FaqsListController.$inject = ['FaqsService', 'PublictextsService'];
 
   function FaqsListController(FaqsService, PublictextsService) {
     var vm = this;

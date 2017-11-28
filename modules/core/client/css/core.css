@@ -330,8 +330,8 @@ a:hover, a:visited, a:link, a:active {
 
 .footer-link {
   color: #FF3371;
-  font-family: 'Oswald', sans-serif;
   cursor: pointer; 
+  font-family: 'Oswald', sans-serif;
 }
 
 /*Attempted to restyle button, will most likely have to work with Jon to do it correctly/effectively/efficiently.*/
@@ -516,14 +516,14 @@ a:hover, a:visited, a:link, a:active {
 
 /* showing something */
 .fade.ng-hide-remove {
-    transition: all 4.0s linear;
     display: block !important;
+    transition: all 4.0s linear;
 }
 
 /* hiding something */
 .fade.ng-hide-add {
-    transition: all 2.0s linear;
     display: block !important;
+    transition: all 2.0s linear;
 }
 
 .fade-in {
@@ -534,8 +534,8 @@ a:hover, a:visited, a:link, a:active {
 }
 /* showing something */
 .fade-in.ng-hide-remove {
-    transition: all 4.0s linear;
     display: block !important;
+    transition: all 4.0s linear;
 }
 
 .txtTitle {
