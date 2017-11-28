@@ -5,12 +5,14 @@
     .module('faqs')
     .controller('FaqsListController', FaqsListController);
 
-  FaqsListController.$inject = ['FaqsService'];
+  FaqsListController.$inject = ['FaqsService','PublictextsService'];
 
-  function FaqsListController(FaqsService) {
+  function FaqsListController(FaqsService, PublictextsService) {
     var vm = this;
 
     vm.faqs = FaqsService.query();
+
+    vm.publictext = PublictextsService.query();
 
     vm.oneAtATime = false;
 

@@ -5,15 +5,16 @@
     .module('releases')
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['ReleasesService', '$http', '$rootScope', '$timeout'];
+  HomeController.$inject = ['ReleasesService','HometextsService', '$http', '$rootScope', '$timeout'];
 
-  function HomeController(ReleasesService, $http, $rootScope, $timeout) {
+  function HomeController(ReleasesService, HometextsService, $http, $rootScope, $timeout) {
 
     var vm = this;
 
     vm.oneAtATime = false;
 
     vm.releases = ReleasesService.query();
+    vm.hometext = HometextsService.query();
 
     // Variables to hold text for different titles and blurbs in the view
     vm.bannerText = 'Just One Drop.';

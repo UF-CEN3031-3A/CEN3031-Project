@@ -88,14 +88,14 @@
 
       <div class="parallax-blue">
         <div class="parallax-window">
-          <span class="para-caption">Meet Our Team</span>
+          <span class="para-caption">{{vm.abouttext[0].parallaxCapt1}}</span>
         </div>
      </div>
 
      <div class="container container-padding">
-        <h1>Allow Us to Introduce Ourselves</h1>
+        <h1>{{vm.abouttext[0].heading1}}</h1>
         <br>
-        <p>At Heart Healthy Spirits, this is a blurb to serve as a brief introduction for introducing a personal team who is dedicated to bring the heart healthy benefits of t*Rez, and put a face to the representatives and advocates who are working to get their antioxidant boost into all products.</p>
+        <p>{{vm.abouttext[0].shortText1}}</p>
      </div>
       <!-- Jumbotron Set Up for the Page title-->
       <!-- <div class="jumbotron">
@@ -128,14 +128,14 @@
       <!-- <div class="row"> -->
       <div class="parallax-blue">
         <div class="parallax-window">
-          <span class="para-caption">Our Mission</span>
+          <span class="para-caption">{{vm.abouttext[0].parallaxCapt2}}</span>
         </div>
       </div>
 
       <div class="container container-padding">
-        <h1>Let Us Tell You What We Are All About</h1>
+        <h1>{{vm.abouttext[0].heading2}}</h1>
         <br>
-        <p> Very brief blurb urging the user to click to expand the more detailed information about Heart Healthy Spirit's Mission and vision.</p>
+        <p>{{vm.abouttext[0].shortText2}}</p>
       </div>
 
       <div class="container">
@@ -148,14 +148,14 @@
 
       <div class="parallax-blue">
         <div class="parallax-window">
-          <span class="para-caption">Gallery</span>
+          <span class="para-caption">{{vm.abouttext[0].parallaxCapt3}}</span>
         </div>
       </div>
 
       <div class="container container-padding">
-        <h1>Feel Free to Explore and Get to Know Us</h1>
+        <h1>{{vm.abouttext[0].heading3}}</h1>
         <br>
-        <p> Very brief blurb urging the user to click to expand to explore other company content (stock photos, videos, etc.)</p>
+        <p>{{vm.abouttext[0].shortText3}}</p>
 
         <button class="btn btn-default col-md-offset-6" ng-click="vm.slideDeckModal()">Find out more!</button>
 
