@@ -1,7 +1,10 @@
 <!-- Original page view document created by Tess Bianchi -->
 <!-- Major style updates made by: Michael Levecque -->
 
-<head>
+<!DOCTYPE html>
+<html>
+
+  <head>
     <!-- Referencing core.css style sheet under modules/core/client/css -->
     <link rel="stylesheet" href="/core/client/css/core.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,78 +25,78 @@
         <div class="para-caption wow animated fadeInDown">Business Inquiry</div>
       </div>
     </div>
-  </section>
 
-  <!-- "Snack" section with header and short blurb between parallax dividers -->
-  <div class="container container-padding">
-    <h1 class="wow animated fadeInLeft">What It Means to Work with Us</h1>
-    <p class="wow animated fadeIn">This is a blurb statement to clarify what it means to partner with Heart Healthy Spirits, and also what constitutes a business inquiry over a general, public inquiry.  This inquiry's goal is to establish connections with companies interested in licensing deals to get the t*Rez product into their respective products.</p>
+    <!-- "Snack" section with header and short blurb between parallax dividers -->
+    <div class="container container-padding">
+      <h1 class="wow animated fadeInLeft">What It Means to Work with Us</h1>
+      <p class="wow animated fadeIn">This is a blurb statement to clarify what it means to partner with Heart Healthy Spirits, and also what constitutes a business inquiry over a general, public inquiry.  This inquiry's goal is to establish connections with companies interested in licensing deals to get the t*Rez product into their respective products.</p>
 
-    <div class="row">
-      <div class="col-md-12">
-        <button class="custom-button center-block" ng-click="vm.slideDeckModal()">Find Out More!</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Parallax divider -->
-  <div class="parallax-blue">
-    <div class="parallax-window">
-      <div class="para-caption wow animated fadeInDown">I Like Where this is Going...</div>
-    </div>
-  </div>
-
-  <!-- Container for section containing Business Inquiry submission form -->
-  <div class="container container-padding">
-    <div class="row">
-      <h1 class="wow animated fadeInLeft">Let's Discuss the Possibilities</h1>
-
-      <!-- Left-most column section for business inquiry form -->
-      <div class="col-md-12">
-        <form class="form-horizontal" name="business_inq_form">
-          <div>
-            <h3 for="exampleInputName2">Name</h3>
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" ng-model="vm.data.contactName" required="true">
-          </div>
-          <div>
-            <h3 for="exampleInputEmail2">Email</h3>
-            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" ng-model="vm.data.contactEmail" required="true">
-          </div>
-
-          <!-- ADDED EXTRA PARAMETER FOR COMPANY NAME FORM INPUT, NEED TO MAKE SURE THIS IS CONNECTED ALSO -->
-          <div>
-            <h3 for="exampleInputCompanyName2">Company Name</h3>
-            <input type="company" class="form-control" id="exampleInputCompanyName2" placeholder="Antioxidant Infusion 'R' Us" ng-model="vm.data.companyName" required="true">
-          </div>
-          <!-- ********************************************************************************************* -->
-
-          <div>
-            <h3 for="exampleInputText">Your Message</h3>
-           <textarea  class="form-control" placeholder="Description" ng-model="vm.data.contactMsg" required="true"></textarea> 
-          </div>
-          <br>
-          <div class="row-padding">
-            <button type="submit" class="custom-button" ng-disabled="business_inq_form.$invalid" ng-click="vm.sendMail()">Send Message</button>
-          </div>
-        </form>
+      <div class="row">
+        <div class="col-md-12">
+          <button class="custom-button center-block" ng-click="vm.slideDeckModal()">Find Out More!</button>
+        </div>
       </div>
     </div>
 
-    <!-- Final centered section for social media links -->
-    <!-- WILL HAVE TO ADAPT THESE TO THE SOCIAL MEDIA ACCOUNTS THEY ACTUALLY HAVE -->
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <hr>
-        <h2>Visit Our Social Sites</h2>
-        <ul class="list-inline banner-social-buttons">
-
-          <li><a href="#"><i class="fa fa-twitter" style="font-size:36px;color:#55ACEE"></i></a></li>
-
-          <li><a href="#"><i class="fa fa-facebook" style="font-size:36px;color:#3B5998"></i></a></li>
-
-          <li><a href="#"><i class="fa fa-youtube-play" style="font-size:36px;color:#CC181E"></i></a></li>
-        </ul>
+    <!-- Parallax divider -->
+    <div class="parallax-blue">
+      <div class="parallax-window">
+        <div class="para-caption wow animated fadeInDown">I Like Where this is Going...</div>
       </div>
     </div>
-  </div>
-</body>
+
+    <!-- Container for section containing Business Inquiry submission form -->
+    <div class="container container-padding">
+      <div class="row">
+        <h1 class="wow animated fadeInLeft">Does it Make Sense for Us to Work Together?</h1>
+
+        <!-- Left-most column section for business inquiry form -->
+        <div class="col-md-12">
+          <form class="form-horizontal" name="business_inq_form">
+            <div>
+              <h3 for="exampleInputName2">Name</h3>
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" ng-model="vm.data.contactName" required="true">
+            </div>
+            <div>
+              <h3 for="exampleInputEmail2">Email</h3>
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" ng-model="vm.data.contactEmail" required="true">
+            </div>
+
+            <!-- ADDED EXTRA PARAMETER FOR COMPANY NAME FORM INPUT, NEED TO MAKE SURE THIS IS CONNECTED ALSO -->
+            <div>
+              <h3 for="exampleInputCompanyName2">Company Name</h3>
+              <input type="company" class="form-control" id="exampleInputCompanyName2" placeholder="Antioxidant Infusion 'R' Us" ng-model="vm.data.companyName" required="true">
+            </div>
+            <!-- ********************************************************************************************* -->
+
+            <div>
+              <h3 for="exampleInputText">Your Message</h3>
+             <textarea  class="form-control" placeholder="Description" ng-model="vm.data.contactMsg" required="true"></textarea> 
+            </div>
+            <br>
+            <div class="row-padding">
+              <button type="submit" class="custom-button" ng-disabled="business_inq_form.$invalid" ng-click="vm.sendMail()">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Final centered section for social media links -->
+      <!-- WILL HAVE TO ADAPT THESE TO THE SOCIAL MEDIA ACCOUNTS THEY ACTUALLY HAVE -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <hr>
+          <h2>Visit Our Social Sites</h2>
+          <ul class="list-inline banner-social-buttons">
+
+            <li><a href="#"><i class="fa fa-twitter" style="font-size:36px;color:#55ACEE"></i></a></li>
+
+            <li><a href="#"><i class="fa fa-facebook" style="font-size:36px;color:#3B5998"></i></a></li>
+
+            <li><a href="#"><i class="fa fa-youtube-play" style="font-size:36px;color:#CC181E"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
