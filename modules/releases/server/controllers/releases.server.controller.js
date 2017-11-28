@@ -47,6 +47,8 @@ exports.update = function (req, res) {
   var release = req.release;
 
   release.title = req.body.title;
+  release.source = req.body.source;
+  release.author = req.body.author;
   release.content = req.body.content;
 
   release.save(function (err) {
