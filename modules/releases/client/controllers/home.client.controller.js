@@ -148,6 +148,9 @@
         }
       } // end for loop
 
+      document.getElementById('drop').beginElement();
+      document.getElementById('line').beginElement();
+
       // Setting the timeout after the csv loads
       $timeout(function () {
         $rootScope.hide_animation = true;
