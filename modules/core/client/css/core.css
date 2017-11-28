@@ -138,13 +138,16 @@ a:hover, a:visited, a:link, a:active {
   color: #b9b9b9;
 }
 
-.navbar-default .navbar-nav > .active > a {
+.navbar-default .navbar-nav > .active > a{
+  /*Scrapped the linear gradient navbar for a solid call-to-action color*/
   background-color: #DB2C65;
+  background-image: none;
 }
 
 .navbar-default {
+  /*Scrapped the linear gradient navbar for a solid call-to-action color*/
   background-color: #DB2C65;
-  border-color: #DB2C65;
+  background-image: none;
 }
 
 .navbar-brand {
