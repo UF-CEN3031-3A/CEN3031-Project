@@ -5,7 +5,7 @@
     .module('abouts')
     .controller('AboutsListController', AboutsListController);
 
-  AboutsListController.$inject = ['AboutsService','AbouttextsService'];
+  AboutsListController.$inject = ['AboutsService', 'AbouttextsService'];
 
   function AboutsListController(AboutsService, AbouttextsService) {
     var vm = this;

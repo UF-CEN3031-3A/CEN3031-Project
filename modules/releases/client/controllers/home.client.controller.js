@@ -5,7 +5,7 @@
     .module('releases')
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['ReleasesService','HometextsService', '$http', '$rootScope', '$timeout'];
+  HomeController.$inject = ['ReleasesService', 'HometextsService', '$http', '$rootScope', '$timeout'];
 
   function HomeController(ReleasesService, HometextsService, $http, $rootScope, $timeout) {
 
