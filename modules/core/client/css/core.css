@@ -59,8 +59,9 @@ a:hover .header-profile-image {
   display:table;
 }
 
-/* custom css */
+/* Our Custom CSS classes */
 
+/* h1-h5 and p custom classes with chosen font*/
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
@@ -91,6 +92,7 @@ a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
 
+/*Custom container padding class to wrap page content*/
 .container-padding {
   padding-bottom: 10vh;
   padding-top: 10vh;
@@ -110,12 +112,15 @@ a:hover, a:visited, a:link, a:active {
   padding-top: 25px;
 }
 
+/*Navbar classes*/
+/*General font styling control for tabs*/
 .navbar {
   color: #fff;
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
 }
 
+/*General font styling control for homepage link*/
 .navbar-default .navbar-brand {
   color: #fff;
 }
@@ -138,6 +143,7 @@ a:hover, a:visited, a:link, a:active {
   color: #b9b9b9;
 }
 
+/*Style class to control styling of overall navbar*/
 .navbar-default .navbar-nav > .active > a{
   /*Scrapped the linear gradient navbar for a solid call-to-action color*/
   background-color: #DB2C65;
@@ -156,6 +162,7 @@ a:hover, a:visited, a:link, a:active {
   padding: 20px 25px 20px 25px;
 }
 
+/*Styling for video cover on home page*/
 .video-cover {
   background-image: url("/modules/core/client/img/testImages/res.png");
   background-position: center;
@@ -163,6 +170,7 @@ a:hover, a:visited, a:link, a:active {
   background-size: cover;
 }
 
+/*Custom parallax styling, each with a respective background image*/
 .parallax-window {
   text-align: center;
   vertical-align: middle;
@@ -209,6 +217,7 @@ a:hover, a:visited, a:link, a:active {
   padding: 20px 25px 20px 25px;
 }
 
+/*Other subtitle, sub-heading, and parallax caption styling controls*/
 .subtitle {
   color: white;
   font-family: 'Oswald', sans-serif;
@@ -231,6 +240,7 @@ a:hover, a:visited, a:link, a:active {
   text-align: center;
 }
 
+/*More video wrapper styling*/
 .video-wrapper {
   background-color: #000;
   position: relative;
@@ -270,6 +280,7 @@ a:hover, a:visited, a:link, a:active {
   100%{background-position:84%}
 }
 
+/*Panel styling*/
 .panel {
   box-shadow: none;
 }
@@ -303,6 +314,7 @@ a:hover, a:visited, a:link, a:active {
   border: 0;
 }
 
+/*Accordion styling to control structure for press release collapsibles*/
 .accordion-block {
   border-top: solid 1px #ddd;
 }
@@ -348,6 +360,7 @@ a:hover, a:visited, a:link, a:active {
   border: 0;
 }
 
+/*Custom font sizes per h1-h5*/
 @media screen and (min-width: 240px) {
   h1 {
     font-size: 36px;
