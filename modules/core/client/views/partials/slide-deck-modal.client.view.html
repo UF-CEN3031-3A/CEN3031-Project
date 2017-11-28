@@ -1,24 +1,50 @@
-<div class="modal-header">
-  <h3>Request Information</h3>
-</div>
-<div class="modal-body">
+<!-- Original page view document created by Tess Bianchi -->
+<!-- Style updates made and edited by: Michael Levecque -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Referencing core.css style sheet under modules/core/client/css -->
+    <link rel="stylesheet" href="/core/client/css/core.css">
+  </head>
+
+  <body>
+
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h2>Request Information</h2>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="modal-body">
+
+    <!-- Sub-header style consistent with full page views -->
+      <h3>Want to Find Out About Our Market Vision?</h3>
+      <!-- Snack blurb to explain why they are entering their information and what they are getting in return -->
+      <p>Enter your information and we'll send you our company pitch deck so you can learn more about our business approach and the possibilities we see in the market today for antioxidant infused technology.</p>
 
 
-<form class="form-horizontal" name="modal_form" style="padding-left: 15px; padding-right: 15px;">
-  <div class="form-group">
-    <h3>Name</h3>
-    <input type="text" class="form-control" placeholder="Jane Doe" ng-model="vm.data.contactName" required="true">
-  </div>
+      <form class="form-horizontal" name="modal_form" style="padding-left: 15px; padding-right: 15px;">
 
-  <div class="form-group">
-    <h3>Email</h3>
-    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" ng-model="vm.data.contactEmail" required="true">
-  </div>
+        <!-- Form field for user entered name -->
+        <div class="form-group">
+          <h3>Name</h3>
+          <input type="text" class="form-control" placeholder="Jane Doe" ng-model="vm.data.contactName" required="true">
+        </div>
 
- </form>
+        <!-- Form field for user entered email address -->
+        <div class="form-group">
+          <h3>Email</h3>
+          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" ng-model="vm.data.contactEmail" required="true">
+        </div>
 
+      </form>
+    </div>
 
-</div>
-<div class="modal-footer">
-    <button type="submit" class="btn btn-default" ng-disabled="modal_form.$invalid" ng-click="vm.send_mail()">Get More Info</button>
-</div>
+    <!-- Modal footer containing submission button -->
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-default" ng-disabled="modal_form.$invalid" ng-click="vm.send_mail()">Get More Info</button>
+    </div>
+    
+  </body>
+</html>
