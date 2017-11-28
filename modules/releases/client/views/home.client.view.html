@@ -16,17 +16,15 @@
         font-family="Oswald"
         >
       Just One Drop
-      <animate id="text" attributeName="y" values={{vm.text_path}} fill="freeze" begin="2s" dur="{{vm.animation_length}}" />
-
   </text>
     
 
   <circle cx="700" cy="-20" r="3" fill="white">
-    <animate id="drop" attributeName="cy" values={{vm.drop_path}} fill="freeze" begin="2s" dur="{{vm.animation_length}}" />
+    <animate id="drop" attributeName="cy" values={{vm.drop_path}} fill="freeze" begin="click" dur="{{vm.animation_length}}" />
   </circle>
 
   <path  d="M0,300 L 760, 300" stroke="white" stroke-width="2" fill="none">
-    <animate id="line" attributeName="d" values={{vm.line_path}} fill="freeze" begin="2s" dur="{{vm.animation_length}}" />
+    <animate id="line" attributeName="d" values={{vm.line_path}} fill="freeze" begin="click" dur="{{vm.animation_length}}" />
   </path>
   </svg>
 </div>
