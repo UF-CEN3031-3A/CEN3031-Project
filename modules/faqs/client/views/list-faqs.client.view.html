@@ -54,11 +54,13 @@
     <!-- Container for all added FAQ collapsibles -->
     <div class="container container-padding">
       <div class="row">
-        <uib-accordion close-others="vm.oneAtATime">
-          <div uib-accordion-group class="panel-default" heading="{{faq.title}}" ng-repeat="faq in vm.faqs">
-            {{faq.content}}
-          </div>
-        </uib-accordion>
+        <div class="col-md-12">
+          <uib-accordion close-others="vm.oneAtATime">
+            <div uib-accordion-group class="panel-default" heading="{{faq.title}}" ng-repeat="faq in vm.faqs">
+              {{faq.content}}
+            </div>
+          </uib-accordion>
+        </div>
       </div>
       <!-- Message at end of FAQ section to let the user know that they are able to submit a inquiry to the company -->
       <h2 style="text-align: center;">Still got something on your mind? Want to voice your opinion? <div style="color: #DB2C65"><b>Submit an inquiry below!</b></div></h2>
@@ -79,7 +81,8 @@
       <!-- Animated blurb -->
       <p class="wow animated fadeIn">{{vm.publictext[0].shortText3}}</p>
 
-        <div class="row">
+
+      <div class="row">
         <!-- Column section for inquiry form to keep style consistent with form on Business Inquiry page.-->
         <div class="col-md-12">
           <form class="form-horizontal">
@@ -99,7 +102,7 @@
               <textarea  class="form-control" placeholder="Description"></textarea> 
             </div>
 
-            <button type="submit" class="btn btn-default">Send Message</button>
+            <button type="submit" class="custom-button" ng-click="vm.sendMail()">Send Message</button>
         
           </form>
         </div>
