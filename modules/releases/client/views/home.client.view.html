@@ -32,9 +32,7 @@
 </div>
 <!-- End Animation -->
 
-
 <section class="fade" ng-hide="hide_main">
-
     <!-- Consistent gradient banner under navbar -->
     <section>
       <div class="jumbotron gradient-banner text-center">
@@ -47,34 +45,33 @@
       <div class="parallax-window">
 
         <!-- Client wanted to add this as the parallax title to get the best of both worlds by having "Heart Healthy Spirits" the name of the domain/site title, and then "Antioxidant Infusion Technology" as the main page opening parallax title-->
-        <span class="para-caption">Antioxidant Infusion Technology</span>
+        <span class="para-caption wow animated fadeInDown">Antioxidant Infusion Technology</span>
 
       </div>
     </div>
 
     <!-- Video wrapper to act as a cover for featured product video -->
-    <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-     <img class="img-responsive" src="/modules/core/client/img/testImages/res.png" style="cursor:pointer" />
+    <div class="video-cover" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
     </div>
     <div style="display:none">
       <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/si0TOwUMlIM?rel=0" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/si0TOwUMlIM?rel=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
 
     <!-- Parallax section divider -->
     <div class="parallax-drop">
       <div class="parallax-window">
-        <span class="para-caption">{{vm.ParallaxCaption1}}</span>
+        <span class="para-caption wow animated fadeInDown">{{vm.ParallaxCaption1}}</span>
       </div>
     </div>
 
     <!-- "Snack" section with header and short blurb between parallax divider -->
     <div class="container container-padding">
-      <h1>{{vm.Heading1}}</h1>
-      <h1>{{vm.Heading2}}</h1>
+      <h1 class="wow animated fadeInLeft">{{vm.Heading1}}</h1>
+      <h1 class="wow animated fadeInLeft">{{vm.Heading2}}</h1>
       <br>
-      <p>{{vm.mainText1}}</p>
+      <p class="wow animated fadeIn">{{vm.mainText1}}</p>
       <!-- 
       <p>This is a blurb that serves to briefly summarize the initial product video featured above, and reaffirm the impact and power of this product to bring the heart-healthy, antioxidant-based benefits of resveratrol into the new t*Rez solution.  This blurb should entice the reader to continue down the page to explore different artifacts (articles, releases, studies, etc).</p> -->
     </div>
@@ -82,7 +79,7 @@
     <!-- Parallax section divider -->
     <div class="parallax-news">
       <div class="parallax-window">
-        <span class="para-caption">{{vm.ParallaxCaption2}}</span>
+        <span class="para-caption wow animated fadeInDown">{{vm.ParallaxCaption2}}</span>
       </div>
     </div>
 
@@ -90,8 +87,8 @@
     <!-- News articles/related images -->
     <section>
       <div class="container container-padding">
-        <h1>{{vm.ReleasesHeading}}</h1>
-        <p>{{vm.ReleasesText}}</p>
+        <h1 class="wow animated fadeInLeft">{{vm.ReleasesHeading}}</h1>
+        <p class="wow animated fadeIn">{{vm.ReleasesText}}</p>
 
         <div class="row">
           <div class="col-md-12">
@@ -100,11 +97,11 @@
                 <uib-accordion-heading>
                   <div class="accordion-block">
                     <!-- Press Release Source -->
-                    <div class="accordion-source">Source: {{release.source}}<span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span></div>
+                    <div class="accordion-source wow animated fadeIn">Source: {{release.source}}<span class="pull-right glyphicon glyphicon-menu-down" aria-hidden="true"></span></div>
                     <!-- Press Release Title -->
-                    <span class="accordion-title">{{release.title}},</span>
+                    <span class="accordion-title wow animated fadeIn">{{release.title}},</span>
                     <!-- Press Release Author -->
-                    <span class="accordion-author">By: {{release.author}}</span>
+                    <span class="accordion-author wow animated fadeIn">By: {{release.author}}</span>
                   </div>
                 </uib-accordion-heading>
                 {{release.content}}
