@@ -21,27 +21,27 @@
     <!-- Parallax with stock heart healthy photo, see core.css -->
     <div class="parallax-heart">
       <div class="parallax-window">
-        <div class="container para-caption img-resposive">Public Inquiry</div>
+        <div class="container para-caption img-resposive">{{vm.publictext[0].parallaxCapt1}}</div>
       </div>
     </div>
 
     <!-- "Snack" header with blurb -->
     <div class="container container-padding">
-      <h1>What We Want for You</h1>
-      <p>This is a blurb statement to express the company's commitment to the general public (the user viewing this page) health and the desire to establish a connection with the user</p>
+      <h1>{{vm.publictext[0].heading1}}</h1>
+      <p>{{vm.publictext[0].shortText1}}</p>
     </div>
 
     <!-- Parllax divider -->
     <div class="parallax-heart">
       <div class="parallax-window">
-        <div class="container para-caption img-resposive">Frequently Asked Questions</div>
+        <div class="container para-caption img-resposive">{{vm.publictext[0].parallaxCapt2}}</div>
       </div>
     </div>
 
     <!-- Beginning FAQ section  with header and short blurb -->
     <div class="container container-padding">
-      <h1>Let Us Clarify Some Quick Things</h1>
-      <p>Very short blurb to introduce the FAQs.</p>
+      <h1>{{vm.publictext[0].heading2}}</h1>
+      <p>{{vm.publictext[0].shortText2}}</p>
     </div>
 
     <!-- Container for all added FAQ collapsibles -->
@@ -60,15 +60,15 @@
     <!-- Parallax divider -->
     <div class="parallax-heart">
       <div class="parallax-window">
-        <div class="container para-caption img-resposive">We Want to Hear from You!</div>
+        <div class="container para-caption img-resposive">{{vm.publictext[0].parallaxCapt3}}</div>
       </div>
     </div>
 
     <!-- Beginning of Section for the public inquiry form -->
     <div class="container container-padding">
       <div class="row">
-        <h1>We Value Your Interest</h1>
-        <p>Very short blurb saying that the company is there to address any questions and thank the user in advance for their support.</p>
+        <h1>{{vm.publictext[0].heading3}}</h1>
+        <p>{{vm.publictext[0].shortText3}}</p>
 
         <!-- Column section for inquiry form to keep style consistent with form on Business Inquiry page.-->
         <div class="col-md-6">
