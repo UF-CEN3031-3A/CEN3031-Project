@@ -6,74 +6,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="/modules/core/client/css/core.css">
-
-  <!-- Experimentation with styling-->
-  <style>
-    uib-accordion {
-      background-color: Lemonchiffon;
-      color: Black;
-      cursor: pointer;
-/*      padding: 20px 20px;
-*/      border: none;
-      width: 100%;
-      text-align: center;
-      outline: hidden;
-      font-size: 20px;
-      transition: 0.5s;
-    }
-
-    button.accordion.active, button.accordion:hover {
-      background-color: Gold;
-    }
-
-    .subtitle {
-      text-align: left;
-      font-size: 30px;
-      padding-left: 50px;
-      padding-top: 50px;
-    }
-
-/*    div.panel {
-      padding: 0 20px;
-      display: none;
-      background-color: LightYellow;
-    }*/
-
-    div.card-deck{
-      padding: 0px 100px 20px 100px;
-      background-color: #FFFFFF;
-    }
-
-    div.card {
-
-      padding: 50px 70px 50px 70px;
-    }
-
-    div.card-header {
-      font-family: 'Oswald', sans-serif;
-      font-size: 50px;
-    }
-
-    div.card-block {
-      font-family: 'Merriwether';
-    }
-
-    img {
-      padding: 4px;
-    }
-
-    div.head {
-      /*background-color: PaleVioletRed;*/
-      text-align: center;
-      color: White;
-/*      padding: 20px;
-*/    }
-
-  </style>
   </head>
 
   <body>
-
     <section>
       <div class="jumbotron gradient-banner text-center">
         <span class="subtitle">Just One Drop.</span>
@@ -82,42 +17,29 @@
 
     <!-- Start of the section-->
     <section>
-
-    <!--Placeholder for banner, image or anything we/client decide is most appropriate-->
-    <!-- <img class="card-img-top img-responsive center-block img-rounded" src="/modules/core/client/img/testImages/antioxidants.jpg" alt="Image not displaying"> -->
+      <!--Placeholder for banner, image or anything we/client decide is most appropriate-->
+      <!-- <img class="card-img-top img-responsive center-block img-rounded" src="/modules/core/client/img/testImages/antioxidants.jpg" alt="Image not displaying"> -->
 
       <div class="parallax-blue">
         <div class="parallax-window">
-          <span class="para-caption">{{vm.abouttext[0].parallaxCapt1}}</span>
+          <span class="para-caption wow animated fadeInDown">{{vm.abouttext[0].parallaxCapt1}}</span>
         </div>
-     </div>
+      </div>
 
-     <div class="container container-padding">
-        <h1>{{vm.abouttext[0].heading1}}</h1>
+      <div class="container container-padding">
+        <h1 class="wow animated fadeInLeft">{{vm.abouttext[0].heading1}}</h1>
         <br>
-        <p>{{vm.abouttext[0].shortText1}}</p>
-     </div>
-      <!-- Jumbotron Set Up for the Page title-->
-      <!-- <div class="jumbotron">
-        <h1>Get To Know</h1>
-        <h1>Heart Healthy Spirits!</h1>
-      </div> -->
+        <p class="wow animated fadeIn">{{vm.abouttext[0].shortText1}}</p>
 
-
-
-      <!-- Setting up permanent display for the team memver profiles-->
-      <!-- <div class="card text-center"> -->
-      <!-- <div class="head"><i><b>Allow us to introduce ourselves</b></i></div> -->
-      <!-- </div> -->
-
-      <div class="row card-deck">
-        <div class="card col-md-4" ng-repeat="about in vm.abouts">
-          <img class="card-img-top img-responsive center-block" ng-src="{{about.image}}" alt="Picture not up">
-          <div class="card-header text-center">
-            <h3 ng-bind="about.title"></h3>
-          </div>
-          <div class="card-block">
-            <p class="card-text" ng-bind="about.content"></p>
+        <div class="row card-deck">
+          <div class="card col-md-4" ng-repeat="about in vm.abouts">
+            <img class="card-img-top img-responsive center-block" ng-src="{{about.image}}" alt="Picture not up">
+            <div class="card-header text-center">
+              <h3 ng-bind="about.title"></h3>
+            </div>
+            <div class="card-block">
+              <p class="card-text" ng-bind="about.content"></p>
+            </div>
           </div>
         </div>
       </div>
@@ -125,41 +47,41 @@
       <!--***************************************************************************************************************************************************-->
       <!--Accordion setup for the Mission Statement and the Gallery Accordions-->
 
-      <!-- <div class="row"> -->
       <div class="parallax-blue">
         <div class="parallax-window">
-          <span class="para-caption">{{vm.abouttext[0].parallaxCapt2}}</span>
+          <span class="para-caption wow animated fadeInDown">{{vm.abouttext[0].parallaxCapt2}}</span>
         </div>
       </div>
 
       <div class="container container-padding">
-        <h1>{{vm.abouttext[0].heading2}}</h1>
+        <h1 class="wow animated fadeInLeft">{{vm.abouttext[0].heading2}}</h1>
         <br>
-        <p>{{vm.abouttext[0].shortText2}}</p>
+        <p class="wow animated fadeIn">{{vm.abouttext[0].shortText2}}</p>
       </div>
 
       <div class="container">
         <uib-accordion>
           <div uib-accordion-group class="panel-default" heading="Click to Expand">
             <p> THIS IS PLACEHOLDER CONTENT </p>
+            <div class="row">
+              <div class="col-md-12">
+                <button class="custom-button center-block" ng-click="vm.slideDeckModal()">Find out more!</button>
+              </div>
+            </div>
           </div>
         </uib-accordion>
       </div>
 
       <div class="parallax-blue">
         <div class="parallax-window">
-          <span class="para-caption">{{vm.abouttext[0].parallaxCapt3}}</span>
+          <span class="para-caption wow animated fadeInDown">{{vm.abouttext[0].parallaxCapt3}}</span>
         </div>
       </div>
 
       <div class="container container-padding">
-        <h1>{{vm.abouttext[0].heading3}}</h1>
+        <h1 class="wow animated fadeInLeft">{{vm.abouttext[0].heading3}}</h1>
         <br>
-        <p>{{vm.abouttext[0].shortText3}}</p>
-
-        <button class="btn btn-default col-md-offset-6" ng-click="vm.slideDeckModal()">Find out more!</button>
-
-
+        <p class="wow animated fadeIn">{{vm.abouttext[0].shortText3}}</p>
       </div>
 
       <div class="container">
@@ -169,38 +91,6 @@
           </div>
         </uib-accordion>
       </div>
-      <!-- </div> -->
-
-<!--       <button class="accordion">OUR MISSION</button>
-      <div class="panel">
-        <p>TEST PLACEHOLDER FOR CONTENT</p>
-
-      </div>
-
-      <button class="accordion">GALLERY</button>
-      <div class="panel">
-        <p>TEST PLACEHOLDER FOR CONTENT</p>
-
-      </div>
-
-
-      <script>
-      var acc = this.getElementsByClassName("accordion");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-          acc[i].onclick = function(){
-              this.classList.toggle("active");
-              var panel = this.nextElementSibling;
-              if (panel.style.display === "block") {
-                  panel.style.display = "none";
-              } else {
-                  panel.style.display = "block";
-              }
-          }
-      }
-      </script>
- -->      <!--***************************************************************************************************************************************************-->
     </section>
   </body>
 </html>
