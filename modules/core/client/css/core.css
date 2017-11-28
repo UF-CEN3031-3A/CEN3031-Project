@@ -140,7 +140,7 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #b9b9b9;
+  color: #fff;
 }
 
 /*Style class to control styling of overall navbar*/
