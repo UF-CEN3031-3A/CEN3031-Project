@@ -23,7 +23,7 @@
       <!-- Snack blurb to explain why they are entering their information and what they are getting in return -->
       <p>Enter your information and we'll send you our company pitch deck so you can learn more about our business approach and the possibilities we see in the market today for antioxidant infused technology.</p>
 
-
+      <!-- Modal content form -->
       <form class="form-horizontal" name="modal_form" style="padding-left: 15px; padding-right: 15px;">
 
         <!-- Form field for user entered name -->
@@ -43,8 +43,12 @@
 
     <!-- Modal footer containing submission button -->
     <div class="modal-footer">
-        <button type="submit" class="custom-button" ng-disabled="modal_form.$invalid" ng-click="vm.send_mail()">Get More Info</button>
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="custom-button" ng-disabled="modal_form.$invalid" ng-click="vm.send_mail()">Get More Info</button>
+        </div>
+      </div>
     </div>
-    
+
   </body>
 </html>
