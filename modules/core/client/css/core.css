@@ -525,34 +525,18 @@ a:hover, a:visited, a:link, a:active {
   }
 }
 
-.fade {
-    opacity: 1;
+.fade-out{
+  transition: all linear 1.0s;
 }
-.fade.ng-hide {
+.fade-out.ng-hide {
+    pointer-events: none;
     opacity: 0;
-}
-
-/* showing something */
-.fade.ng-hide-remove {
-    display: block !important;
-    transition: all 4.0s linear;
-}
-
-/* hiding something */
-.fade.ng-hide-add {
-    display: block !important;
-    transition: all 2.0s linear;
 }
 
 .fade-in {
-    opacity: 1;
+    transition: all linear 0.5s;
 }
-.fade-in.ng-hide {
-    opacity: 0;
-}
-/* showing something */
 .fade-in.ng-hide-remove {
-    display: block !important;
     transition: all 4.0s linear;
 }
 
