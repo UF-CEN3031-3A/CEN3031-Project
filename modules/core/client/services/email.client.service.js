@@ -52,37 +52,38 @@
       var email_data = {};
 
       if (data.type === 'public') {
-        email_data.contactEmail = "admin_email";
+        email_data.contactEmail = 'admin_email';
         email_data.subject = 'Public Inquiry from ' + data.contactName;
-        email_data.text = 'Name: ' + data.contactName + '\n' +
-                            'Email: ' + data.contactEmail + '\n' +
-                            'Message: ' + data.contactMsg + '\n';
+        email_data.text = '<b>Name:</b> ' + data.contactName + '<br>' +
+                          '<b>Email:</b>' + data.contactEmail + '<br>' +
+                          '<b>Message:</b> ' + data.contactMsg + '<br>';
         email_data.sendSlideDeck = false;
         send_with_feedback(email_data);
 
       } else if (data.type === 'business') {
-        email_data.contactEmail = "admin_email";
+        email_data.contactEmail = 'admin_email';
         email_data.subject = 'Business Inquiry from ' + data.contactName;
-        email_data.text = 'Name: ' + data.contactName + '\n' +
-                            'Company Name: ' + data.companyName + '\n' +
-                            'Email: ' + data.contactEmail + '\n' +
-                            'Message: ' + data.contactMsg + '\n';
+        email_data.text = '<b>Name:</b> ' + data.contactName + '<br>' +
+                          '<b>Company Name:</b> ' + data.companyName + '<br>' +
+                          '<b>Email:</b> ' + data.contactEmail + '<br>' +
+                          '<b>Message:</b> ' + data.contactMsg + '<br>';
         email_data.sendSlideDeck = false;
         send_with_feedback(email_data);
 
       } else if (data.type === 'slide_deck') {
         var email_data_admin = {};
-        email_data_admin.contactEmail = "admin_email";
+        email_data_admin.contactEmail = 'admin_email';
         email_data_admin.subject = 'Slide Deck Inquiry from ' + data.contactName;
-        email_data_admin.text = 'Name: ' + data.contactName + '\n' +
-                            'Email: ' + data.contactEmail + '\n';
+        email_data_admin.text = '<b>Name:</b> ' + data.contactName + '<br>' +
+                                '<b>Email:</b> ' + data.contactEmail + '<br>';
         email_data_admin.sendSlideDeck = false;
         send(email_data_admin);
 
         var email_data_user = {};
         email_data_user.contactEmail = data.contactEmail;
         email_data_user.subject = 'Additional info on t*Rez';
-        email_data_user.text = 'Thank you for taking interest in t*Rez! Here is the information you requested.';
+        email_data_user.text = 'Dear ' + data.contactName + ',' + '<br><br>' +
+                               'Thank you for taking interest in t*Rez! Here is the information you requested.';
 
         email_data_user.sendSlideDeck = true;
         send_with_feedback(email_data_user);
