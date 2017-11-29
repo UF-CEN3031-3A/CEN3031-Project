@@ -7,7 +7,6 @@
 
   EmailService.$inject = ['$http', 'Notification'];
 
-  var link_to_pdf = 'docs.google.com';
   var admin_email = 'tess.bianchi@yahoo.com';
 
   function EmailService($http, Notification) {
@@ -85,9 +84,7 @@
         var email_data_user = {};
         email_data_user.contactEmail = data.contactEmail;
         email_data_user.subject = 'Additional info on t*Rez';
-        email_data_user.text = 'Thank you for taking interest in t*Rez! Here is the information you requested. \n\n' +
-                                 'Please past the following link into your web browser \n' +
-                                 link_to_pdf;
+        email_data_user.text = 'Thank you for taking interest in t*Rez! Here is the information you requested.';
 
         email_data_user.sendSlideDeck = true;
         send_with_feedback(email_data_user);

@@ -127,8 +127,8 @@ a:hover, a:visited, a:link, a:active {
 
 .navbar-default .navbar-nav > li > a {
   color: #fff;
-  font-size: 18px;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -315,10 +315,10 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .archive-title {
-  color: #fff;
   background-color: #DB2C65;
-  padding: 15px;
+  color: #fff;
   font-size: 26px; 
+  padding: 15px;
 }
 
 /*Accordion styling to control structure for press release collapsibles*/
@@ -359,12 +359,12 @@ a:hover, a:visited, a:link, a:active {
 /*Attempted to restyle button, will most likely have to work with Jon to do it correctly/effectively/efficiently.*/
 
 .custom-button {
-  color: #fff;
   background-color: #DB2C65;
-  padding: 15px;
+  border: 0;
+  color: #fff;
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
-  border: 0;
+  padding: 15px;
 }
 
 /*Custom font sizes per h1-h5*/
@@ -529,8 +529,8 @@ a:hover, a:visited, a:link, a:active {
   transition: all linear 1.0s;
 }
 .fade-out.ng-hide {
-    pointer-events: none;
     opacity: 0;
+    pointer-events: none;
 }
 
 .fade-in {
