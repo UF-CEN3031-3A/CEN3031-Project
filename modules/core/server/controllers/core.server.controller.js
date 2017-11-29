@@ -84,6 +84,11 @@ exports.sendMail = function (req, res) {
     - sendSlideDeck : boolean whether or not to send the slide deck
   */
 
+  if(data.contactEmail === 'admin_email')
+  {
+    data.contactEmail = process.env.MAILER_ADMIN_EMAIL;
+  }
+
   if (data.sendSlideDeck) {
     base64.encode('modules/core/client/img/pitch_deck.pdf', function (err, base64String) {
       if (err) {

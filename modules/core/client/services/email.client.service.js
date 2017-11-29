@@ -7,8 +7,6 @@
 
   EmailService.$inject = ['$http', 'Notification'];
 
-  var admin_email = 'tess.bianchi@yahoo.com';
-
   function EmailService($http, Notification) {
 
     /*
@@ -54,7 +52,7 @@
       var email_data = {};
 
       if (data.type === 'public') {
-        email_data.contactEmail = admin_email;
+        email_data.contactEmail = "admin_email";
         email_data.subject = 'Public Inquiry from ' + data.contactName;
         email_data.text = 'Name: ' + data.contactName + '\n' +
                             'Email: ' + data.contactEmail + '\n' +
@@ -63,7 +61,7 @@
         send_with_feedback(email_data);
 
       } else if (data.type === 'business') {
-        email_data.contactEmail = admin_email;
+        email_data.contactEmail = "admin_email";
         email_data.subject = 'Business Inquiry from ' + data.contactName;
         email_data.text = 'Name: ' + data.contactName + '\n' +
                             'Company Name: ' + data.companyName + '\n' +
@@ -74,7 +72,7 @@
 
       } else if (data.type === 'slide_deck') {
         var email_data_admin = {};
-        email_data_admin.contactEmail = admin_email;
+        email_data_admin.contactEmail = "admin_email";
         email_data_admin.subject = 'Slide Deck Inquiry from ' + data.contactName;
         email_data_admin.text = 'Name: ' + data.contactName + '\n' +
                             'Email: ' + data.contactEmail + '\n';
