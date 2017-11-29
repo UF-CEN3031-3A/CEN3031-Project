@@ -84,8 +84,7 @@ exports.sendMail = function (req, res) {
     - sendSlideDeck : boolean whether or not to send the slide deck
   */
 
-  if(data.contactEmail === 'admin_email')
-  {
+  if (data.contactEmail === 'admin_email') {
     data.contactEmail = process.env.MAILER_ADMIN_EMAIL;
   }
 
@@ -99,7 +98,7 @@ exports.sendMail = function (req, res) {
           to: data.contactEmail,
           from: process.env.MAILER_FROM,
           subject: data.subject,
-          text: data.text
+          html: data.text
         };
         console.log(msg);
         msg.attachments = [
@@ -120,7 +119,7 @@ exports.sendMail = function (req, res) {
       to: data.contactEmail,
       from: process.env.MAILER_FROM,
       subject: data.subject,
-      text: data.text
+      html: data.text
     };
     console.log(msg);
     sgMail.send(msg);
