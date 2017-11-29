@@ -3,11 +3,11 @@
 var validator = require('validator'),
   path = require('path'),
   config = require(path.resolve('./config/config')),
-  nodemailer = require('nodemailer');
+  nodemailer = require('nodemailer'),
+  base64 = require('file-base64');
 
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
 
 /**
  * Render the main application page
@@ -74,23 +74,53 @@ exports.sendMail = function (req, res) {
 
   var data = req.body;
 
-  console.log(data);
+  console.log('MSG:');
 
-    /*
-      'data' has the following properties
-      - contactEmail : email address
-      - subject : subject line
-      - text : Message to write to the user
-      - sendSlideDeck : boolean whether or not to send the slide deck
-    */
+  /*
+    'data' has the following properties
+    - contactEmail : email address
+    - subject : subject line
+    - text : Message to write to the user
+    - sendSlideDeck : boolean whether or not to send the slide deck
+  */
 
-  const msg = {
-    to: data.contactEmail,
-    from: process.env.MAILER_FROM,
-    subject: data.subject,
-    text: data.text
-  };
-  sgMail.send(msg);
+  if (data.sendSlideDeck) {
+    base64.encode('modules/core/client/img/pitch_deck.pdf', function (err, base64String) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('success encoding pdf!');
+        const msg = {
+          to: data.contactEmail,
+          from: process.env.MAILER_FROM,
+          subject: data.subject,
+          text: data.text
+        };
+        console.log(msg);
+        msg.attachments = [
+          {
+            filename: 'pitch_deck.pdf',
+            content: base64String,
+            contentType: 'application/pdf'
+          }];
+        console.log('sending pdf!');
+        sgMail.send(msg);
+        res.json(data);
+      }
+    });
 
-  res.json(data);
+
+  } else {
+    const msg = {
+      to: data.contactEmail,
+      from: process.env.MAILER_FROM,
+      subject: data.subject,
+      text: data.text
+    };
+    console.log(msg);
+    sgMail.send(msg);
+    res.json(data);
+  }
+
+
 };
