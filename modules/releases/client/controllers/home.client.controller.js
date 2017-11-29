@@ -9,6 +9,12 @@
 
   function HomeController(ReleasesService, HometextsService, $http, $rootScope, $timeout) {
 
+    if ($rootScope.first_time === undefined) {
+      $rootScope.hide_main = true;
+      $rootScope.hide_animation = false;
+      $rootScope.hide_footer = true;
+      $rootScope.hide_header = true;
+    }
     var vm = this;
 
     vm.oneAtATime = false;
@@ -32,17 +38,27 @@
     vm.animation_length = 15;
     vm.animation_length = vm.animation_length.toString() + 's';
 
+    vm.timeout_1 = 0;
+    vm.timeout_2 = 0;
 
-    if ($rootScope.first_time === undefined) {
-      $rootScope.hide_main = true;
-      $rootScope.hide_animation = false;
-      $rootScope.hide_footer = true;
-      $rootScope.hide_header = true;
-    }
+    vm.skip_animation = function () {
+      console.log('skip');
+      $rootScope.hide_animation = true;
+      $rootScope.first_time = true;
+      $rootScope.hide_main = false;
+      $rootScope.hide_footer = false;
+      $rootScope.hide_header = false;
+
+      if (vm.timeout_1) {
+        $timeout.cancel(vm.timeout_1);
+      }
+      if (vm.timeout_2) {
+        $timeout.cancel(vm.timeout_2);
+      }
+
+    };
 
     // Animation stuff
-
-
     var transform_x = function (x) {
       return x * 760 / 3.140;
     };
@@ -153,12 +169,13 @@
       document.getElementById('line').beginElement();
 
       // Setting the timeout after the csv loads
-      $timeout(function () {
+
+      vm.timeout_1 = $timeout(function () {
         $rootScope.hide_animation = true;
         $rootScope.first_time = true;
       }, 6000);
 
-      $timeout(function () {
+      vm.timeout_2 = $timeout(function () {
         $rootScope.hide_main = false;
         $rootScope.hide_footer = false;
         $rootScope.hide_header = false;
