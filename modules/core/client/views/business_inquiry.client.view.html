@@ -22,7 +22,7 @@
     <!-- Parallax with stock blueberry photo, see core.css -->
     <div class="parallax-blue">
       <div class="parallax-window">
-        <span class="para-caption wow animated fadeInDown">Business Inquiry</span>
+        <span class="para-caption wow animated fadeInDown">{{vm.businesstext[0].parallaxCapt1}}</span>
       </div>
     </div>
 
@@ -30,9 +30,9 @@
     <div class="container container-padding">
 
       <!-- Animated header -->
-      <h1 class="wow animated fadeInLeft">What It Means to Work with Us</h1>
+      <h1 class="wow animated fadeInLeft">{{vm.businesstext[0].heading1}}</h1>
       <!-- Animated blurb -->
-      <p class="wow animated fadeIn">This is a blurb statement to clarify what it means to partner with Heart Healthy Spirits, and also what constitutes a business inquiry over a general, public inquiry.  This inquiry's goal is to establish connections with companies interested in licensing deals to get the t*Rez product into their respective products.</p>
+      <p class="wow animated fadeIn">{{vm.businesstext[0].shortText1}}</p>
 
       <div class="row">
         <div class="col-md-12">
@@ -44,7 +44,7 @@
     <!-- Parallax divider -->
     <div class="parallax-blue">
       <div class="parallax-window">
-        <span class="para-caption wow animated fadeInDown">I Like Where this is Going...</span>
+        <span class="para-caption wow animated fadeInDown">{{vm.businesstext[0].parallaxCapt2}}</span>
       </div>
     </div>
 
@@ -52,9 +52,9 @@
     <div class="container container-padding">
 
       <!-- Animated header -->
-      <h1 class="wow animated fadeInLeft">Does it Make Sense for Us to Work Together?</h1>
+      <h1 class="wow animated fadeInLeft">{{vm.businesstext[0].heading2}}</h1>
       <!-- Animated header -->
-      <p class="wow animated fadeIn">This is a quick blurb encouraging business inquiries.</p>
+      <p class="wow animated fadeIn">{{vm.businesstext[0].shortText2}}</p>
 
       <!-- Row-column section for business inquiry form -->
       <div class="row">

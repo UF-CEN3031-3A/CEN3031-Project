@@ -33,6 +33,14 @@
         <li ui-sref-active="active">
           <a ui-sref="admin.abouttext.list">Text Fields: About Us Page</a>
         </li>
+        <!-- businesstexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.businesstext.list">Text Fields: Business Inquiry Page</a>
+        </li>
+        <!-- blogtexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.blogtext.list">Text Fields: Blog Page</a>
+        </li>
         <li ui-sref-active="active">
           <a ui-sref="admin.users">Users</a>
         </li>
@@ -50,7 +58,7 @@
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
-        <h1>{{vm.abouttext._id ? 'Edit About Text' : 'New About Text'}}</h1>
+        <h1>{{vm.abouttext._id ? 'Edit About Us Page Text' : 'New About Us Page Text'}}</h1>
       </div>
       <div class="pull-right">
         <a ng-show="vm.abouttext._id" class="btn btn-primary" ng-click="vm.remove()">
@@ -66,7 +74,7 @@
               <label class="control-label" for="parallaxCapt1">Parallax Caption 1</label>
               <input name="parallaxCapt1" type="text" ng-model="vm.abouttext.parallaxCapt1" id="parallaxCapt1" class="form-control" placeholder="Parallax Caption 1" required autofocus>
               <div ng-messages="vm.form.abouttextForm.parallaxCapt1.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Parallax Caption 1 is required.</p>
+                <p class="help-block error-text" ng-message="required">Parallax Caption is required.</p>
               </div>
             </div>
 
@@ -74,7 +82,7 @@
               <label class="control-label" for="heading1">Heading1</label>
               <input name="heading1" type="text" ng-model="vm.abouttext.heading1" id="heading1" class="form-control" placeholder="Heading 1" required autofocus>
               <div ng-messages="vm.form.abouttextForm.heading1.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Heading 1 is required.</p>
+                <p class="help-block error-text" ng-message="required">Heading is required.</p>
               </div>
             </div>
 
@@ -87,7 +95,7 @@
               <label class="control-label" for="parallaxCapt2">Parallax Caption 2</label>
               <input name="parallaxCapt2" type="text" ng-model="vm.abouttext.parallaxCapt2" id="parallaxCapt2" class="form-control" placeholder="Parallax Caption 2" required autofocus>
               <div ng-messages="vm.form.abouttextForm.parallaxCapt2.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Parallax Caption 2 is required.</p>
+                <p class="help-block error-text" ng-message="required">Parallax Caption is required.</p>
               </div>
             </div>
 
@@ -95,7 +103,7 @@
               <label class="control-label" for="heading2">Heading2</label>
               <input name="heading2" type="text" ng-model="vm.abouttext.heading2" id="heading2" class="form-control" placeholder="Heading 2" required autofocus>
               <div ng-messages="vm.form.abouttextForm.heading2.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Heading 2 is required.</p>
+                <p class="help-block error-text" ng-message="required">Heading is required.</p>
               </div>
             </div>
 
@@ -108,7 +116,7 @@
               <label class="control-label" for="parallaxCapt3">Parallax Caption 3</label>
               <input name="parallaxCapt3" type="text" ng-model="vm.abouttext.parallaxCapt3" id="parallaxCapt3" class="form-control" placeholder="Parallax Caption 3" required autofocus>
               <div ng-messages="vm.form.abouttextForm.parallaxCapt3.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Parallax Caption 3 is required.</p>
+                <p class="help-block error-text" ng-message="required">Parallax Caption is required.</p>
               </div>
             </div>
 
@@ -116,7 +124,7 @@
               <label class="control-label" for="heading3">Heading3</label>
               <input name="heading3" type="text" ng-model="vm.abouttext.heading3" id="heading3" class="form-control" placeholder="Heading 3" required autofocus>
               <div ng-messages="vm.form.abouttextForm.heading3.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Heading 3 is required.</p>
+                <p class="help-block error-text" ng-message="required">Heading is required.</p>
               </div>
             </div>
 

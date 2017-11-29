@@ -33,6 +33,14 @@
         <li ui-sref-active="active">
           <a ui-sref="admin.abouttext.list">Text Fields: About Us Page</a>
         </li>
+        <!-- businesstexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.businesstext.list">Text Fields: Business Inquiry Page</a>
+        </li>
+        <!-- blogtexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.blogtext.list">Text Fields: Blog Page</a>
+        </li>
         <li ui-sref-active="active">
           <a ui-sref="admin.users">Users</a>
         </li>
@@ -51,7 +59,7 @@
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
           <h1>
-            Public Text
+            Public Inquiry Page Text
             <a class="btn btn-primary pull-right" data-ui-sref="admin.publictext.create">
               <i class="glyphicon glyphicon-plus"></i>
             </a>
@@ -66,13 +74,13 @@
               <span ng-if="publictext.user" ng-bind="publictext.user.displayName"></span>
               <span ng-if="!publictext.user">Deleted User</span>
             </small>
-            <h4 class="list-group-item-heading" data-ng-bind="publictext.parallaxCapt1"></h4>
+            <h2 class="list-group-item-heading" data-ng-bind="publictext.parallaxCapt1"></h2>
             <h4 class="list-group-item-heading" data-ng-bind="publictext.heading1"></h4>
             <p class="list-group-item-text" data-ng-bind="publictext.shortText1"></p>
-            <h4 class="list-group-item-heading" data-ng-bind="publictext.parallaxCapt2"></h4>
+            <h2 class="list-group-item-heading" data-ng-bind="publictext.parallaxCapt2"></h2>
             <h4 class="list-group-item-heading" data-ng-bind="publictext.heading2"></h4>
             <p class="list-group-item-text" data-ng-bind="publictext.shortText2"></p>
-            <h4 class="list-group-item-heading" data-ng-bind="publictext.parallaxCapt3"></h4>
+            <h2 class="list-group-item-heading" data-ng-bind="publictext.parallaxCapt3"></h2>
             <h4 class="list-group-item-heading" data-ng-bind="publictext.heading3"></h4>
             <p class="list-group-item-text" data-ng-bind="publictext.shortText3"></p>
           </a>

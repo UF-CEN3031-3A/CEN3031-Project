@@ -46,8 +46,7 @@ exports.read = function (req, res) {
 exports.update = function (req, res) {
   var hometext = req.hometext;
 
-
-  hometext.bannerText = req.body.bannerText;
+  hometext.parallaxCapt0 = req.body.parallaxCapt0;
   hometext.parallaxCapt1 = req.body.parallaxCapt1;
   hometext.heading1 = req.body.heading1;
   hometext.heading2 = req.body.heading2;

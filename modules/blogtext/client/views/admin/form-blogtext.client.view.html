@@ -1,0 +1,101 @@
+<section>
+  <div class="page-header">
+    <h1>Admin</h1>
+  </div>
+  <div class="row">
+    <nav class="col-sm-3 col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li ui-sref-active="active">
+          <!-- articles edit page!-->
+          <a ui-sref="admin.articles.list">Blog</a>
+        </li>
+        <li ui-sref-active="active">
+          <!-- releases edit page!-->
+          <a ui-sref="admin.releases.list">Press Releases</a>
+        </li>
+        <li ui-sref-active="active">
+          <!-- FAQ edit page!-->
+          <a ui-sref="admin.faqs.list">FAQ</a>
+        </li>
+          <!-- About Us User description edit page! -->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.abouts.list">About Us</a>
+        </li>
+        <!-- hometexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.hometext.list">Text Fields: Home Page</a>
+        </li>
+        <!-- publictexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.publictext.list">Text Fields: Public Inquiry Page</a>
+        </li>
+        <!-- abouttexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.abouttext.list">Text Fields: About Us Page</a>
+        </li>
+        <!-- businesstexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.businesstext.list">Text Fields: Business Inquiry Page</a>
+        </li>
+        <!-- blogtexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.blogtext.list">Text Fields: Blog Page</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.users">Users</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="settings.profile">Profile</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="settings.password">Change Password</a>
+        </li>
+        <li ui-sref-active="active">
+          <a href="/api/auth/signout" target="_self">Signout</a>
+        </li>
+        <!-- Add new links to site management here !-->
+      </ul>
+    </nav>
+    <div class="col-sm-9 col-md-8 settings-view">
+      <div class="page-header">
+        <h1>{{vm.blogtext._id ? 'Edit Blog Page Text' : 'New Blog Page Text'}}</h1>
+      </div>
+      <div class="pull-right">
+        <a ng-show="vm.blogtext._id" class="btn btn-primary" ng-click="vm.remove()">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>
+      <div class="col-md-12">
+        <form name="vm.form.blogtextForm" class="form-horizontal" ng-submit="vm.save(vm.form.blogtextForm.$valid)" novalidate>
+          <fieldset>
+
+
+            <div class="form-group" show-errors>
+              <label class="control-label" for="parallaxCapt1">Parallax Caption 1</label>
+              <input name="parallaxCapt1" type="text" ng-model="vm.blogtext.parallaxCapt1" id="parallaxCapt1" class="form-control" placeholder="Parallax Caption 1" required autofocus>
+              <div ng-messages="vm.form.blogtextForm.parallaxCapt1.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Parallax Caption is required.</p>
+              </div>
+            </div>
+
+            <div class="form-group" show-errors>
+              <label class="control-label" for="heading1">Heading1</label>
+              <input name="heading1" type="text" ng-model="vm.blogtext.heading1" id="heading1" class="form-control" placeholder="Heading 1" required autofocus>
+              <div ng-messages="vm.form.blogtextForm.heading1.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Heading is required.</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="shortText1">Short Text 1</label>
+              <textarea name="shortText1" data-ng-model="vm.blogtext.shortText1" id="shortText1" class="form-control" cols="30" rows="10" placeholder="Short Text 1" required autofocus></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-default">{{vm.blogtext._id ? 'Update' : 'Create'}}</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+  </div>
+</section>

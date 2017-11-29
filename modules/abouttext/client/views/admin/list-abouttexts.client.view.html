@@ -33,6 +33,14 @@
         <li ui-sref-active="active">
           <a ui-sref="admin.abouttext.list">Text Fields: About Us Page</a>
         </li>
+        <!-- businesstexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.businesstext.list">Text Fields: Business Inquiry Page</a>
+        </li>
+        <!-- blogtexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.blogtext.list">Text Fields: Blog Page</a>
+        </li>
         <li ui-sref-active="active">
           <a ui-sref="admin.users">Users</a>
         </li>
@@ -46,14 +54,12 @@
           <a href="/api/auth/signout" target="_self">Signout</a>
         </li>
         <!-- Add new links to site management here !-->
-
-
       </ul>
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
           <h1>
-            About Text
+            About Us Page Text
             <a class="btn btn-primary pull-right" data-ui-sref="admin.abouttext.create">
               <i class="glyphicon glyphicon-plus"></i>
             </a>
@@ -68,13 +74,13 @@
               <span ng-if="abouttext.user" ng-bind="abouttext.user.displayName"></span>
               <span ng-if="!abouttext.user">Deleted User</span>
             </small>
-            <h4 class="list-group-item-heading" data-ng-bind="abouttext.parallaxCapt1"></h4>
+            <h2 class="list-group-item-heading" data-ng-bind="abouttext.parallaxCapt1"></h2>
             <h4 class="list-group-item-heading" data-ng-bind="abouttext.heading1"></h4>
             <p class="list-group-item-text" data-ng-bind="abouttext.shortText1"></p>
-            <h4 class="list-group-item-heading" data-ng-bind="abouttext.parallaxCapt2"></h4>
+            <h2 class="list-group-item-heading" data-ng-bind="abouttext.parallaxCapt2"></h2>
             <h4 class="list-group-item-heading" data-ng-bind="abouttext.heading2"></h4>
             <p class="list-group-item-text" data-ng-bind="abouttext.shortText2"></p>
-            <h4 class="list-group-item-heading" data-ng-bind="abouttext.parallaxCapt3"></h4>
+            <h2 class="list-group-item-heading" data-ng-bind="abouttext.parallaxCapt3"></h2>
             <h4 class="list-group-item-heading" data-ng-bind="abouttext.heading3"></h4>
             <p class="list-group-item-text" data-ng-bind="abouttext.shortText3"></p>
 
