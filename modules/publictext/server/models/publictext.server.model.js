@@ -21,53 +21,55 @@ var PublictextSchema = new Schema({
     type: String,
     default: '',
     trim: true,
-    required: 'Source cannot be blank'
+    required: 'Parallax cannot be blank'
   },
   heading1: {
     type: String,
     default: '',
     trim: true,
-    required: 'Author cannot be blank'
+    required: 'Heading cannot be blank'
   },
   shortText1: {
     type: String,
     default: '',
     trim: true,
-    required: 'Author cannot be blank'
+    required: 'Short Text cannot be blank'
   },
   parallaxCapt2: {
     type: String,
     default: '',
     trim: true,
-    required: 'Source cannot be blank'
+    required: 'Parallax cannot be blank'
   },
   heading2: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Heading cannot be blank'
   },
   shortText2: {
     type: String,
     default: '',
     trim: true,
-    required: 'Author cannot be blank'
+    required: 'Short Text cannot be blank'
   },
   parallaxCapt3: {
     type: String,
     default: '',
     trim: true,
-    required: 'Source cannot be blank'
+    required: 'Parallax cannot be blank'
   },
   heading3: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Heading cannot be blank'
   },
   shortText3: {
     type: String,
     default: '',
     trim: true,
-    required: 'Author cannot be blank'
+    required: 'Short Text cannot be blank'
   },
   user: {
     type: Schema.ObjectId,

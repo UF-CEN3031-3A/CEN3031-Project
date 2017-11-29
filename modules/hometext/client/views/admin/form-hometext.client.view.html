@@ -33,6 +33,14 @@
         <li ui-sref-active="active">
           <a ui-sref="admin.abouttext.list">Text Fields: About Us Page</a>
         </li>
+        <!-- businesstexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.businesstext.list">Text Fields: Business Inquiry Page</a>
+        </li>
+        <!-- blogtexts edit page!-->
+        <li ui-sref-active="active">
+          <a ui-sref="admin.blogtext.list">Text Fields: Blog Page</a>
+        </li>
         <li ui-sref-active="active">
           <a ui-sref="admin.users">Users</a>
         </li>
@@ -50,7 +58,7 @@
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">
       <div class="page-header">
-        <h1>{{vm.hometext._id ? 'Edit Home Text' : 'New Home Text'}}</h1>
+        <h1>{{vm.hometext._id ? 'Edit Home Page Text' : 'New Home Page Text'}}</h1>
       </div>
       <div class="pull-right">
         <a ng-show="vm.hometext._id" class="btn btn-primary" ng-click="vm.remove()">
@@ -61,10 +69,10 @@
         <form name="vm.form.hometextForm" class="form-horizontal" ng-submit="vm.save(vm.form.hometextForm.$valid)" novalidate>
           <fieldset>
             <div class="form-group" show-errors>
-              <label class="control-label" for="bannerText">Banner Text</label>
-              <input name="bannerText" type="text" ng-model="vm.hometext.bannerText" id="bannerText" class="form-control" placeholder="Banner Text" required autofocus>
-              <div ng-messages="vm.form.hometextForm.bannerText.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Banner Text is required.</p>
+              <label class="control-label" for="parallaxCapt0">Parallax Caption 0</label>
+              <input name="parallaxCapt0" type="text" ng-model="vm.hometext.parallaxCapt0" id="parallaxCapt0" class="form-control" placeholder="parallax Caption 0" required autofocus>
+              <div ng-messages="vm.form.hometextForm.parallaxCapt0.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Parallax Caption is required.</p>
               </div>
             </div>
 
@@ -72,7 +80,7 @@
               <label class="control-label" for="parallaxCapt1">Parallax Caption 1</label>
               <input name="parallaxCapt1" type="text" ng-model="vm.hometext.parallaxCapt1" id="parallaxCapt1" class="form-control" placeholder="Parallax Caption 1" required autofocus>
               <div ng-messages="vm.form.hometextForm.parallaxCapt1.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Parallax Caption 1 is required.</p>
+                <p class="help-block error-text" ng-message="required">Parallax Caption is required.</p>
               </div>
             </div>
 
@@ -80,7 +88,7 @@
               <label class="control-label" for="heading1">Heading1</label>
               <input name="heading1" type="text" ng-model="vm.hometext.heading1" id="heading1" class="form-control" placeholder="Heading 1" required autofocus>
               <div ng-messages="vm.form.hometextForm.heading1.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Heading 1 is required.</p>
+                <p class="help-block error-text" ng-message="required">Heading is required.</p>
               </div>
             </div>
 
@@ -98,7 +106,7 @@
               <label class="control-label" for="parallaxCapt2">Parallax Caption 2</label>
               <input name="parallaxCapt2" type="text" ng-model="vm.hometext.parallaxCapt2" id="parallaxCapt2" class="form-control" placeholder="Parallax Caption 2" required autofocus>
               <div ng-messages="vm.form.hometextForm.parallaxCapt2.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">Parallax Caption 2 is required.</p>
+                <p class="help-block error-text" ng-message="required">Parallax Caption is required.</p>
               </div>
             </div>
 

@@ -17,23 +17,23 @@ var HometextSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  bannerText: {
+  parallaxCapt0: {
     type: String,
     default: '',
     trim: true,
-    required: 'Title cannot be blank'
+    required: 'Parallax cannot be blank'
   },
   parallaxCapt1: {
     type: String,
     default: '',
     trim: true,
-    required: 'Source cannot be blank'
+    required: 'Parallax cannot be blank'
   },
   heading1: {
     type: String,
     default: '',
     trim: true,
-    required: 'Author cannot be blank'
+    required: 'Heading cannot be blank'
   },
   heading2: {
     type: String,
@@ -44,25 +44,25 @@ var HometextSchema = new Schema({
     type: String,
     default: '',
     trim: true,
-    required: 'Author cannot be blank'
+    required: 'Main Text cannot be blank'
   },
   parallaxCapt2: {
     type: String,
     default: '',
     trim: true,
-    required: 'Source cannot be blank'
+    required: 'Parallax cannot be blank'
   },
   releasesHeading: {
     type: String,
     default: '',
     trim: true,
-    required: 'Source cannot be blank'
+    required: 'Releases Heading cannot be blank'
   },
   releasesText: {
     type: String,
     default: '',
     trim: true,
-    required: 'Source cannot be blank'
+    required: 'Releases Text cannot be blank'
   },
   user: {
     type: Schema.ObjectId,
