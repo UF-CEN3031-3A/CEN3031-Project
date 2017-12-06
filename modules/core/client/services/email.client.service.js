@@ -82,9 +82,14 @@
         var email_data_user = {};
         email_data_user.contactEmail = data.contactEmail;
         email_data_user.subject = 'Additional info on t*Rez';
-        email_data_user.text = 'Dear ' + data.contactName + ',' + '<br><br>' +
-                               'Thank you for taking interest in t*Rez! Here is the information you requested.';
-
+        email_data_user.text = 'Hey ' + data.contactName + ',' + '<br><br>' +
+                               'Thank you for your interest in Heart Healthy Spirits. Attached here is our standard information deck ' +
+                               'taking a closer look at the science and the promise of our antioxidant infusion technology.' + '<br>' +
+                               'If you\'d still like to learn more about the t*ReZ technology or the ongoing development of new infusion ' +  
+                               'products, feel free to respond to this email with your inquiry. We\'ll have someone from our team respond to you directly.' + '<br><br>' +
+                               'Appreciatively,<br><br>' +
+                               'The HHS Team';
+                               
         email_data_user.sendSlideDeck = true;
         send_with_feedback(email_data_user);
 
