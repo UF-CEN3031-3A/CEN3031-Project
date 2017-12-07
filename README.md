@@ -60,4 +60,11 @@ Seeding will provide some example blog posts, FAQ, and press releases for you to
 ## Admin Access
 The url `http://localhost:8080/authentication/signin` will take you to the signin page. Likewise, `http://localhost:8080/admin/users` will take you to the admin panel if you are already logged in. From here you can manage most aspects of the website content as well as user management and password management. 
 
+## Features Not Implemented
+For this first development iteration, there are only a few features that are not refined and have not been fully implemented:
+##1) The social media icons are not linked to their actual social media pages.  We ran out of time for the development iteration before the client was able to get everything together in terms of social media.
+##2) We currently only have a placeholder section for the Gallery on the About Us page.  There is no underlying functionality, it is just an area of the page that we have set up for further implementation of a gallery of company stock photos and whatnot that the client did not have available to them during development.
+##3) The parallax background photos are hardcoded and are not editable via the admin panel.
+##4) The client originally proposed the idea or an Affiliates page to feature their partnered companies.  This feature was ultimately scrapped from this development because they did not have any official partners yet and they couldn't decide how they wanted to handle something like that in the site.
+##5) The archive folders in the blog page do not function properly.  The priority for this feature was very high for this development seeing that they don't have a stock of blog post to store and organize in the archive.
 
